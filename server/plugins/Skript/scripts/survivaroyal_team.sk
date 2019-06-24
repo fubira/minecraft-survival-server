@@ -1,5 +1,5 @@
 options:
-  HEADER: <gray>[<dark aqua>SurvivaRoyal-Team<gray>]<reset>
+  HEADER: <gray>[<dark green>SurvivaRoyal<gray>]<reset>
   WORLD: world
 
 variables:
