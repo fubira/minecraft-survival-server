@@ -62,7 +62,7 @@ command /leave [<text>]:
     if arg 1 is not set:
       set {_player} to player
     else:
-      set {_player} to "%arg 1%"
+      set {_player} to "%the 1st argument%"
 
     if {team.%{_player}%} is not set:
       stop

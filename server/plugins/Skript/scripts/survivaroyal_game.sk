@@ -21,7 +21,7 @@ command /sr <text>:
 
   usage: /sr <command>
   trigger:
-    set {_cmd} to {arg 1}
+    set {_cmd} to "%the 1st argument%"
 
     if {_cmd} is "reload":
       execute console command "/skript reload survivaroyal_game.sk"
@@ -101,7 +101,7 @@ command /sr <text>:
         message "{@HEADER} SurvivaRoyalは開催されていません"
 
     else:
-      message "{@HEADER} /sr [reload|start|stop|info|score|give|tcon|tcoff]"
+      message "{@HEADER} /sr [reload|start|stop|info|score|give]"
 
 
 #

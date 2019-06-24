@@ -1,5 +1,5 @@
 options:
-  HEADER: <gray>[<dark purple>SurvivaRoyal-Rule<gray>]<reset>
+  HEADER: <gray>[<gold>SurvivaRoyal<gray>]<reset>
 
 variables:
   {rule_enable_frame} = 0
@@ -10,48 +10,50 @@ variables:
   {rule_enable_autotnt} = 0
 
 function showRule():
-  if {rule_enable_frame} is 0:
-    broadcast "{@HEADER} <gray>アイテムフレーム利用不可<reset>"
-  else:
-    broadcast "{@HEADER} <white>アイテムフレーム利用可<reset>"
-
-  if {rule_enable_hopper} is 0:
-    broadcast "{@HEADER} <gray>ホッパー利用不可<reset>"
-  else:
-    broadcast "{@HEADER} <white>ホッパー利用可<reset>"
-
+  broadcast "{@HEADER} <gray>==== Game Rule ====<reset>"
   if {rule_enable_bedcontrol} is 0:
-    broadcast "{@HEADER} <white>ベッド管理なし<reset>"
+    broadcast "{@HEADER} <white>ベッド管理 ... <dark red>なし<reset>"
   else:
-    broadcast "{@HEADER} <gray>ベッド管理あり<reset>"
-
-  if {rule_enable_eggbomb} is 0:
-    broadcast "{@HEADER} <gray>エッグボムなし<reset>"
-  else:
-    broadcast "{@HEADER} <white>エッグボムあり<reset>"
+    broadcast "{@HEADER} <white>ベッド管理 ... <green>あり<reset>"
 
   if {rule_enable_strongtnt} is 0:
-    broadcast "{@HEADER} <gray>TNT威力通常<reset>"
+    broadcast "{@HEADER} <white>TNT威力 ... <dark red>通常<reset>"
   else:
-    broadcast "{@HEADER} <white>TNT威力強化<reset>"
+    broadcast "{@HEADER} <white>TNT威力 ... <green>強化<reset>"
 
   if {rule_enable_autotnt} is 0:
-    broadcast "{@HEADER} <gray>TNT自動着火なし<reset>"
+    broadcast "{@HEADER} <white>TNT自動着火 ... <dark red>なし<reset>"
   else:
-    broadcast "{@HEADER} <white>TNT自動着火あり<reset>"
+    broadcast "{@HEADER} <white>TNT自動着火 ... <green>あり<reset>"
+
+  if {rule_enable_eggbomb} is 0:
+    broadcast "{@HEADER} <white>エッグボム ... <dark red>なし<reset>"
+  else:
+    broadcast "{@HEADER} <white>エッグボム ... <green>あり<reset>"
+
+  if {rule_enable_frame} is 0:
+    broadcast "{@HEADER} <white>アイテムフレーム ... <dark red>利用不可<reset>"
+  else:
+    broadcast "{@HEADER} <white>アイテムフレーム ... <green>利用可<reset>"
+
+  if {rule_enable_hopper} is 0:
+    broadcast "{@HEADER} <white>ホッパー ... <dark red>利用不可<reset>"
+  else:
+    broadcast "{@HEADER} <white>ホッパー ... <green>利用可<reset>"
+
 
 #
 # ルール設定コマンド
 
-command /rule <text> <text>:
+command /rule [<text>] [<text>]:
   description: Survivor Game Rule
   permission: survivor.rule
-  usage: /rule <command> allow/deny
+  usage: /rule <command> [allow/deny]
   trigger:
-    set {_cmd} to {arg 1}
-    set {_value} to {arg 2}
+    set {_cmd} to "%the 1st argument%"
+    set {_value} to "%the 2nd argument%"
 
-    else if {_cmd} is "frame":
+    if {_cmd} is "frame":
       if {_value} is "deny":
         set {rule_enable_frame} to 0
         message "<gray>ルール設定: アイテムフレーム利用不可<reset>"
@@ -250,8 +252,8 @@ on break of a bed:
     set {_team} to {team.%player%}
     broadcast "{@HEADER} <yellow>どこかでベッドが破壊されました<reset>"
 
-    if damage was caused by block explosion:
-      message "{@HEADER} TNT!TNT!"
+    #if damage was caused by block explosion:
+    #  message "{@HEADER} TNT!TNT!"
 
     distance between block's location and {bed.red} is smaller than 2:
       delete {bed.red}
