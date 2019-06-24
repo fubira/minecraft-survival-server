@@ -1,0 +1,135 @@
+# KenmoMinecraftClub SurvivaRoyal support script
+
+options:
+  HEADER: <gray>[<dark green>SurvivaRoyal<gray>]<reset>
+  WORLD: world
+
+variables:
+  {survivaroyal_game_running} = 0
+  {survivaroyal_game_progress} = 0
+  {survivaroyal_game_nextstar} = 0
+
+on script load:
+
+
+#
+# SurvivaRoyalコマンド
+
+command /sr <text>:
+  description: SurvivaRoyal control command
+  permission: survivaroyal.control
+
+  usage: /sr <command>
+  trigger:
+    set {_cmd} to "%arg 1%"
+
+    if {_cmd} is "reload":
+      execute console command "/skript reload survivaroyal_game.sk"
+      execute console command "/skript reload survivaroyal_rule.sk"
+      execute console command "/skript reload survivaroyal_team.sk"
+
+    else if {_cmd} is "start":
+      if {survivaroyal_game_running} is 1:
+        execute command "/sg info"
+      else:
+        set {survivaroyal_game_running} to 1
+        set {survivaroyal_game_progress} to 0
+        set {survivaroyal_game_nextstar} to 0
+        set time of {@WORLD} to 6:00
+        broadcast "{@HEADER} <light red>*** <yellow> SurvivaRoyalを開始します <light red>***<reset>"
+
+    else if {_cmd} is "stop":
+      if {survivaroyal_game_running} is 1:
+        set {survivaroyal_game_running} to 0
+        broadcast "{@HEADER} <light red>*** <yellow> SurvivaRoyalを終了します <light red>***<reset>"
+        execute command "/sr score"
+      else:
+        message "{@HEADER} SurvivaRoyalは開催されていません"
+
+    else if {_cmd} is "info":
+      if {survivaroyal_game_running} is 1:
+        broadcast "{@HEADER} SurvivaRoyalは<gold>進行中<reset>です <gray>(<light gray>%{survivaroyal_game_progress}%分経過<gray>)"
+        execute command "/sr score"
+      else:
+        message "{@HEADER} SurvivaRoyalは開催されていません"
+
+    else if {_cmd} is "score":
+      set {_red_members} to 0
+      set {_red_point} to 0
+      set {_green_members} to 0
+      set {_green_point} to 0
+      set {_blue_members} to 0
+      set {_blue_point} to 0
+
+      loop all players:
+        if {team.%loop-player%} is "red":
+          add amount of nether star in the loop-player's inventory to {_red_point}
+          add 1 to {_red_members}
+
+        if {team.%loop-player%} is "green":
+          add amount of nether star in the loop-player's inventory to {_green_point}
+          add 1 to {_green_members}
+
+        if {team.%loop-player%} is "blue":
+          add amount of nether star in the loop-player's inventory to {_blue_point}
+          add 1 to {_blue_members}
+
+      broadcast "{@HEADER} <yellow>生存者数<reset> ... <light red>赤<gray>[<white>%{_red_members}%<gray>] <light blue>青<gray>[<white>%{_blue_members}%<gray>] <light green>緑<gray>[<white>%{_green_members}%<gray>]"
+      broadcast "{@HEADER} <light cyan>ポイント<reset> ... <light red>赤<gray>[<white>%{_red_point}%<gray>] <light blue>青<gray>[<white>%{_blue_point}%<gray>] <light green>緑<gray>[<white>%{_green_point}%<gray>]"
+
+    else if {_cmd} is "give":
+      if {survivaroyal_game_running} is 1:
+        loop all players:
+          add loop-player to {_%{team.%loop-player%}%::*}
+
+        set {_red random} to a random player out of {_red::*}
+        if {_red random} is set:
+          broadcast "{@HEADER} <light red>%{_red random}%<reset>の足元に<light cyan>ネザースター<reset>が落ちてきた"
+          drop a nether star at {_red random}
+
+        set {_green random} to a random player out of {_green::*}
+        if {_green random} is set:
+          broadcast "{@HEADER} <light green>%{_green random}%<reset>の足元に<light cyan>ネザースター<reset>が落ちてきた"
+          drop a nether star at {_green random}
+
+        set {_blue random} to a random player out of {_blue::*}
+        if {_blue random} is set:
+          broadcast "{@HEADER} <light blue>%{_blue random}%<reset>の足元に<light cyan>ネザースター<reset>が落ちてきた"
+          drop a nether star at {_blue random}
+
+      else:
+        message "{@HEADER} SurvivaRoyalは開催されていません"
+
+    else:
+      message "{@HEADER} /sr [reload|start|stop|info|score|give|tcon|tcoff]"
+
+
+#
+# 経過時間のカウント
+
+every 1 minutes:
+  if {survivaroyal_game_running} is 1:
+    add 1 to {survivaroyal_game_progress}
+
+    # 開始から10分おきに経過時間を表示する
+    set {_p} to {survivaroyal_game_progress}
+    while {_p} >= 10:
+      add -10 to {_p}
+    if {_p} is 0:
+      broadcast "{@HEADER} 開始から<gold>%{survivaroyal_game_progress}%分<reset>が経過しました"
+
+    # 5～10分程度経過したらスターを配布
+    add 1 to {survivaroyal_game_nextstar}
+
+    if {survivaroyal_game_nextstar} >= 10:
+      set {survivaroyal_game_nextstar} to random integer between 0 and 5
+      #broadcast "{@HEADER} <gold>空から<light cyan>星<gold>が降り注いだ… "
+      #execute command "/sr give"
+
+
+#
+# 定期的にスコアを表示する
+
+every 5 minutes:
+  if {survivaroyal_game_running} is 1:
+    execute command "/sr score"

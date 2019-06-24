@@ -1,0 +1,158 @@
+options:
+  HEADER: <gray>[<dark green>Survivor<gray>]<reset>
+  WORLD: world
+
+variables:
+  {team_enable_teamchat} = 0
+
+on script load:
+  set {teamcolor.red} to "light red"
+  set {teamcolor.green} to "light green"
+  set {teamcolor.blue} to "light blue"
+  set {tmsghead.red} to "<gray>[<yellow>-> TO TEAM <light red>RED<gray>]<reset>"
+  set {tmsghead.green} to "<gray>[<yellow>-> TO TEAM <light green>GREEN<gray>]<reset>"
+  set {tmsghead.blue} to "<gray>[<yellow>-> TO TEAM <light blue>BLUE<gray>]<reset>"
+  set {tchathead.red} to "<gray>[<gold>TEAM <light red>RED<gray>]<reset>"
+  set {tchathead.green} to "<gray>[<gold>TEAM <light green>GREEN<gray>]<reset>"
+  set {tchathead.blue} to "<gray>[<gold>TEAM <light blue>BLUE<gray>]<reset>"
+
+  execute command "/scoreboard teams add red 赤"
+  execute command "/scoreboard teams option red color red"
+  execute command "/scoreboard teams add blue 青"
+  execute command "/scoreboard teams option blue color blue"
+  execute command "/scoreboard teams add green 緑"
+  execute command "/scoreboard teams option green color green"
+
+#
+# チームに参加する
+
+command /join <colour> [<player>]:
+  description: Join to Survivor team
+  usage: /join <team> [<player>]
+  permission: survivor.team.join
+  trigger:
+    set {_team} to "%arg 1%"
+
+    if arg 2 is not set:
+      set {_player} to player
+    else:
+      set {_player} to "%arg 2%"
+
+    if {_team} is "red" or "green" or "blue":
+      set {team.%{_player}%} to {_team}
+      execute command "/scoreboard teams join %{team.%{_player}%}% %{_player}%"
+
+    if {_team} is "red":
+      broadcast "{@HEADER} %{_player}%が<light red>赤チーム<reset>に参加しました"
+    else if {_team} is "green":
+      broadcast "{@HEADER} %{_player}%が<light green>緑チーム<reset>に参加しました"
+    else if {_team} is "blue":
+      broadcast "{@HEADER} %{_player}%が<light blue>青チーム<reset>に参加しました"
+    else:
+      message "{@HEADER} <light red>チーム指定が不正です<reset>"
+
+#
+# チームから離れる
+
+ command /leave [<text>]:
+  description: Leave from survivor team
+  usage: /srleave [<player>]
+  permission: survivor.team.leave
+  trigger:
+    if arg 1 is not set:
+      set {_player} to player
+    else:
+      set {_player} to "%arg 1%"
+
+    if {team.%{_player}%} is not set:
+      stop
+
+    execute command "/w %{_player}% チームから離脱しました。おつかれさまでした"
+    execute command "/scoreboard teams leave %{_player}%"
+    delete {team.%{_player}%}
+
+#
+# 対チームメッセージ送信
+
+command /teammsg <colour> <text>:
+  description: Send message to team
+  usage: /teammsg <team> <message>
+  permission: survivor.team.message
+  aliases: /tmsg, /tm
+  trigger:
+    set {_team} to "%arg 1%"
+    if player is set:
+      set {_sender} to player
+      set {_sender_team} to {team.%player%}
+      if {_sender_team} is set:
+        set {_sender_color} to {teamcolor.%{team.%player%}%}
+      else:
+        set {_sender_color} to "white"
+      set {_sender_tag} to "<<%{_sender_color}%>%{_sender}%<reset>>"
+    else:
+      set {_sender} to "CONSOLE"
+      delete {_sender_team}
+      set {_sender_color} to "white"
+      set {_sender_tag} to ""
+
+    loop all players:
+      if {team.%loop-player%} is "%{_team}%":
+        message "%{tmsghead.%{_team}%}% %{_sender_tag}% %arg 2%" to loop-player
+    if {_sender} is player:
+      if {_team} is not "%{_sender_team}%":
+        message "%{tmsghead.%{_team}%}% %{_sender_tag}% %arg 2%" to player
+    message "%{tmsghead.%{_team}%}% %{_sender_tag}% %arg 2%" to console 
+
+#
+# チームチャット
+
+command /tchat [<boolean>]:
+  description: Teamchat activate / deactivate
+  usage: /tchat [on | off]
+  permission: survivor.team.control
+  aliases: /tc
+  trigger:
+    set {_arg} to "%arg 1%"
+    if {_arg} is "true":
+      set {team_enable_teamchat} to 1
+      message "<gray>チームチャットを有効にしました<reset>"
+    else if {_arg} is "false":
+      set {team_enable_teamchat} to 0
+      message "<gray>チームチャットを無効にしました<reset>"
+    else:
+      if {team_enable_teamchat} is 0:
+        message "<gray>チームチャットは無効です<reset>"
+      else:
+        message "<gray>チームチャットは有効です<reset>"
+
+
+on chat:
+  if {team_enable_teamchat} is 1:
+    if first 3 character of the message is not "<light green>>":
+      if {team.%player%} is not set:
+        # 観客チャット
+        loop all players:
+          if {team.%loop-player%} is not set:
+            message "<dark aqua>[SPEC]<reset> <%player%> %message%" to loop-player
+        message "<dark aqua>[SPEC]<reset> <%player%> %message%" to console
+        cancel event
+
+      if {team.%player%} is set:
+        # チームチャット
+        loop all players:
+          if {team.%loop-player%} is "%{team.%player%}%":
+            message "%{tchathead.%{team.%player%}%}% <%player%> %message%" to loop-player
+          if {team.%loop-player%} is not set:
+            message "%{tchathead.%{team.%player%}%}% <%player%> %message%" to loop-player
+        message "%{tchathead.%{team.%player%}%}% <%player%> %message%" to console
+        cancel event
+
+#
+# ゲーム参加者がリログすると名前の色が消えるのでログイン時に前のチームに入り直す
+
+on join:
+  if {survivaroyal_game_running} is 1:
+    if {team.%player%} is set:
+      execute command "/scoreboard teams join %{team.%{_player}%}% %{_player}%"
+
+

@@ -1,0 +1,286 @@
+options:
+  HEADER: <gray>[<blue>Survivor<gray>]<reset>
+
+variables:
+  {rule_enable_frame} = 0
+  {rule_enable_hopper} = 0
+  {rule_enable_bedcontrol} = 1
+  {rule_enable_eggbomb} = 1
+  {rule_enable_strongtnt} = 1
+  {rule_enable_autotnt} = 0
+
+function showRule():
+  if {rule_enable_frame} is 0:
+    broadcast "{@HEADER} <gray>アイテムフレーム利用不可<reset>"
+  else:
+    broadcast "{@HEADER} <white>アイテムフレーム利用可<reset>"
+
+  if {rule_enable_hopper} is 0:
+    broadcast "{@HEADER} <gray>ホッパー利用不可<reset>"
+  else:
+    broadcast "{@HEADER} <white>ホッパー利用可<reset>"
+
+  if {rule_enable_bedcontrol} is 0:
+    broadcast "{@HEADER} <white>ベッド管理なし<reset>"
+  else:
+    broadcast "{@HEADER} <gray>ベッド管理あり<reset>"
+
+  if {rule_enable_eggbomb} is 0:
+    broadcast "{@HEADER} <gray>エッグボムなし<reset>"
+  else:
+    broadcast "{@HEADER} <white>エッグボムあり<reset>"
+
+  if {rule_enable_strongtnt} is 0:
+    broadcast "{@HEADER} <gray>TNT威力通常<reset>"
+  else:
+    broadcast "{@HEADER} <white>TNT威力強化<reset>"
+
+  if {rule_enable_autotnt} is 0:
+    broadcast "{@HEADER} <gray>TNT自動着火なし<reset>"
+  else:
+    broadcast "{@HEADER} <white>TNT自動着火あり<reset>"
+
+#
+# ルール設定コマンド
+
+command /rule <command> <value>:
+  description: Survivor Game Rule
+  permission: survivor.rule
+  usage: /rule <command> allow/deny
+  trigger:
+    set {_cmd} to "%arg 1%"
+    set {_value} to "%arg 2%"
+
+    if {_cmd} is "reload":
+      set {_skript} to "%arg 0%"
+      execute console command "/skript reload %{_skript}%"
+
+    else if {_cmd} is "frame":
+      if {_value} is "deny":
+        set {rule_enable_frame} to 0
+        message "<gray>ルール設定: アイテムフレーム利用不可<reset>"
+      else:
+        set {rule_enable_frame} to 1
+        message "<gray>ルール設定: アイテムフレーム利用可<reset>"
+
+    else if {_cmd} is "hopper":
+      if {_value} is "deny":
+        set {rule_enable_hopper} to 0
+        message "<gray>ルール設定: ホッパー利用不可<reset>"
+      else:
+        set {rule_enable_hopper} to 1
+        message "<gray>ルール設定: ホッパー利用可<reset>"
+
+    else if {_cmd} is "bed":
+      if {_value} is "deny":
+        set {rule_enable_bedcontrol} to 0
+        message "<gray>ルール設定: ベッド管理なし<reset>"
+      else:
+        set {rule_enable_bedcontrol} to 1
+        message "<gray>ルール設定: ベッド管理あり<reset>"
+
+    else if {_cmd} is "strongtnt":
+      if {_value} is "deny":
+        set {rule_enable_strongtnt} to 0
+        message "<gray>ルール設定: TNT威力通常<reset>"
+      else:
+        set {rule_enable_strongtnt} to 1
+        message "<gray>ルール設定: TNT威力強化<reset>"
+
+    else if {_cmd} is "autotnt":
+      if {_value} is "deny":
+        set {rule_enable_autotnt} to 0
+        message "<gray>ルール設定: TNT自動着火なし<reset>"
+      else:
+        set {rule_enable_autotnt} to 1
+        message "<gray>ルール設定: TNT自動着火あり<reset>"
+
+    else if {_cmd} is "eggbomb":
+      if {_value} is "deny":
+        set {rule_enable_eggbomb} to 0
+        message "<gray>ルール設定: エッグボム・エンチャント瓶ボムなし<reset>"
+      else:
+        set {rule_enable_eggbomb} to 1
+        message "<gray>ルール設定: エッグボム・エンチャント瓶ボムあり<reset>"
+
+    else:
+      showRule()
+
+#
+# Item frameクラフト禁止
+
+on craft of a item frame:
+  if {rule_enable_frame} is 1:
+    message "{@HEADER} <light red>アイテムフレームのクラフトは禁止されています<reset>"
+    cancel event
+
+on place of a item frame:
+  if {rule_enable_frame} is 1:
+    message "{@HEADER} <light red>アイテムフレームの設置は禁止されています<reset>"
+    cancel event
+
+
+#
+# Hopperクラフト禁止
+
+on craft of a hopper:
+  if {rule_enable_hopper} is 1:
+    message "{@HEADER} <light red>ホッパーのクラフトは禁止されています<reset>"
+    cancel event
+
+on place of a hopper:
+  if {rule_enable_hopper} is 1:
+    message "{@HEADER} <light red>ホッパーの設置は禁止されています<reset>"
+    cancel event
+
+#
+# Bedクラフト禁止
+
+on craft of a bed:
+  if {rule_enable_bedcontrol} is 1:
+    message "{@HEADER} <light red>ベッドのクラフトは禁止されています<reset>"
+    cancel event
+
+
+#
+# TNT強化
+
+on explosion:
+  entity is tnt:
+    if {rule_enable_strongtnt} is 1:
+      make an explosion with power 6 at entity
+
+#
+# TNT自動着火・スニークで無着火
+
+on place of tnt:
+  if {rule_enable_autotnt} is 1:
+    set event-block to air
+    spawn primed tnt at event-location
+
+on rightclick:
+  if clicked block is tnt:
+    if {rule_enable_autotnt} is 1:
+      if player is not sneaking:
+        set event-block to air
+        spawn primed tnt at event-location
+        cancel event
+
+#
+# エッグボム・エンチャントボトルボム  
+on projectile hit:
+  if {rule_enable_eggbomb} is 1:
+    if projectile is bottle of enchanting:
+      create explosion of power 3 at the projectile 
+    if projectile is egg:
+      create explosion of power 1 at the projectile 
+
+
+#
+# 各プレイヤーのコンパスのターゲットを最も近いベッドに設定する
+
+every 5 seconds in "{@WORLD}":
+  if {rule_enable_bedcontrol} is 1:
+    loop all players:
+      set {_distance} to 99999
+      delete {_target}
+
+      if {bed.red} is set:
+        set {_d_red} to distance between the loop-player and {bed.red} 
+        if {_distance} is larger than {_d_red}:
+          set {_distance} to {_d_red}
+          set {_target} to {bed.red}
+        
+      if {bed.green} is set:
+        set {_d_green} to distance between the loop-player and {bed.green}
+        if {_distance} is larger than {_d_green}:
+          set {_distance} to {_d_green}
+          set {_target} to {bed.green}
+        
+      if {bed.blue} is set:
+        set {_d_blue} to distance between the loop-player and {bed.blue}
+        if {_distance} is larger than {_d_blue}:
+          set {_distance} to {_d_blue}
+          set {_target} to {bed.blue}
+
+      if {_target} is set:
+        set the loop-player's compass target to {_target}
+
+      #message "%location of loop-player% %{_distance}% %{bed.red}% %{_target}%" to console 
+
+#
+# ベッドの範囲指定、設置チームの記録
+
+on place of a bed:
+  if {rule_enable_bedcontrol} is 1:
+    world is "{@WORLD}":
+      #block's y-coordinate is smaller than 65:
+      #  message "{@HEADER} <light red>y65より下でのベッドの設置はできません<reset>"
+      #  cancel event
+      #block's y-coordinate is larger than 165:
+      #  message "{@HEADER} <light red>y165より上でのベッドの設置はできません<reset>"
+      #  cancel event
+
+    # 自チームのベッドが既に存在している場合、警告
+    if {bed.%{team.%player%}%} is set:
+      if player has permission "survivaroyal.control":
+        message "{@HEADER} <yellow>チームベッドを上書きしました。古いベッドが残っている可能性があります。%{bed.%{team.%player%}%}%<reset>"
+      else:
+        message "{@HEADER} <yellow>チームベッドは既に設置済みです。<reset>"
+        cancel event
+
+    # 各チームのメンバーが置いたベッドの座標を覚えておく
+    set {bed.%{team.%player%}%} to block's location
+
+
+#
+# Bedを拾ったことを周知する
+
+on pick up of a bed:
+  if {rule_enable_bedcontrol} is 1:
+    set {_player} to player
+    set {_team} to {team.%player%}
+    world is "{@WORLD}":
+      message "{@HEADER} <yellow>ベッドを拾いました！<reset>"
+      execute command "/tm %{_team}% <yellow>%{_player}%がベッドを拾いました！<reset>"
+
+
+#
+# ベッドの破壊判定
+
+on break of a bed:
+  if {rule_enable_bedcontrol} is 1:
+    set {_player} to player
+    set {_team} to {team.%player%}
+    broadcast "{@HEADER} <yellow>どこかでベッドが破壊されました<reset>"
+
+    if damage was caused by block explosion:
+      message "{@HEADER} TNT!TNT!"
+
+    world is "{@WORLD}":
+      distance between block's location and {bed.red} is smaller than 2:
+        delete {bed.red}
+        {_team} is not "red":
+          execute command "/tm %{_team}% %{_player}%が<light red>赤チーム<reset>のベッドを破壊した！"
+      distance between block's location and {bed.green} is smaller than 2:
+        delete {bed.green}
+        {_team} is not "green":
+          execute command "/tm %{_team}% %{_player}%が<light green>緑チーム<reset>のベッドを破壊した！"
+      distance between block's location and {bed.blue} is smaller than 2:
+        delete {bed.blue}
+        {_team} is not "blue":
+          execute command "/tm %{_team}% %{_player}%が<light blue>青チーム<reset>のベッドを破壊した！"
+
+on burn of a bed:
+  if {rule_enable_bedcontrol} is 1:
+    broadcast "{@HEADER} <yellow>どこかでベッドが燃えました<reset>"
+
+#
+# リスポーン時にベッドがなければチームから抜ける
+
+on respawn:
+  wait 1 tick
+  if {rule_enable_bedcontrol} is 1:
+    if {team.%player%} is set:
+      if {bed.%{team.%player%}%} is not set:
+        execute command "/srleave %player%"
