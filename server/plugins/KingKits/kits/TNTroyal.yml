@@ -1,0 +1,137 @@
+Name: TNTroyal
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Totem
+  Slot 1:
+    Type: Arrow
+  Slot 2:
+    Type: Grilled Pork
+    Amount: 32
+  Slot 3:
+    Type: Bow
+    Repair cost: 3
+    Enchantments:
+      Arrow Fire: 1
+      Arrow Infinite: 1
+  Slot 4:
+    Type: Elytra
+    Durability: 382
+  Slot 5:
+    Type: Flint And Steel
+  Slot 6:
+    Type: Flint And Steel
+  Slot 7:
+    Type: Flint And Steel
+  Slot 8:
+    Type: Flint And Steel
+  Slot 9:
+    Type: Tnt
+    Amount: 32
+  Slot 10:
+    Type: Tnt
+    Amount: 32
+  Slot 11:
+    Type: Tnt
+    Amount: 32
+  Slot 12:
+    Type: Tnt
+    Amount: 32
+  Slot 13:
+    Type: Tnt
+    Amount: 32
+  Slot 14:
+    Type: Tnt
+    Amount: 32
+  Slot 15:
+    Type: Tnt
+    Amount: 32
+  Slot 16:
+    Type: Tnt
+    Amount: 32
+  Slot 17:
+    Type: Tnt
+    Amount: 32
+  Slot 18:
+    Type: Tnt
+    Amount: 32
+  Slot 19:
+    Type: Tnt
+    Amount: 32
+  Slot 20:
+    Type: Tnt
+    Amount: 32
+  Slot 21:
+    Type: Tnt
+    Amount: 32
+  Slot 22:
+    Type: Tnt
+    Amount: 32
+  Slot 23:
+    Type: Tnt
+    Amount: 32
+  Slot 24:
+    Type: Tnt
+    Amount: 32
+  Slot 25:
+    Type: Tnt
+    Amount: 32
+  Slot 26:
+    Type: Tnt
+    Amount: 32
+  Slot 27:
+    Type: Tnt
+    Amount: 32
+  Slot 28:
+    Type: Tnt
+    Amount: 32
+  Slot 29:
+    Type: Tnt
+    Amount: 32
+  Slot 30:
+    Type: Tnt
+    Amount: 32
+  Slot 31:
+    Type: Tnt
+    Amount: 32
+  Slot 32:
+    Type: Tnt
+    Amount: 32
+  Slot 33:
+    Type: Tnt
+    Amount: 32
+  Slot 34:
+    Type: Tnt
+    Amount: 32
+  Slot 35:
+    Type: Tnt
+    Amount: 32
+
+Armour: {}
+
+Potion effects: {}

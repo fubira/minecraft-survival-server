@@ -1,0 +1,161 @@
+Name: SantaClaus
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Golden Carrot
+    Amount: 64
+  Slot 9:
+    Type: Leather Boots
+    Name: サンタ装備
+    Dye:
+      Red: 128
+      Green: 0
+      Blue: 64
+    Attributes:
+      0:
+        UUID: 00000000-26a1-f9b1-0000-000026a1f9b1
+        Name: HaruEditor
+        Type: generic.armorToughness
+        Amount: 3.0
+        Slot: feet
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-26a1-f9b1-0000-000026a1f9b1
+        Name: HaruEditor
+        Type: generic.armor
+        Amount: 4.0
+        Slot: feet
+        Operation: ADD_NUMBER
+  Slot 10:
+    Type: Leather Leggings
+    Name: サンタ装備
+    Dye:
+      Red: 255
+      Green: 0
+      Blue: 0
+    Attributes:
+      0:
+        UUID: 00000000-0f47-23d1-0000-00000f4723d1
+        Name: HaruEditor
+        Type: generic.armorToughness
+        Amount: 3.0
+        Slot: legs
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-0f47-23d1-0000-00000f4723d1
+        Name: HaruEditor
+        Type: generic.armor
+        Amount: 7.0
+        Slot: legs
+        Operation: ADD_NUMBER
+  Slot 11:
+    Type: Leather Chestplate
+    Name: サンタ装備
+    Dye:
+      Red: 255
+      Green: 0
+      Blue: 0
+    Attributes:
+      0:
+        UUID: 00000000-5447-f79a-0000-00005447f79a
+        Name: HaruEditor
+        Type: generic.armorToughness
+        Amount: 3.0
+        Slot: chest
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-5447-f79a-0000-00005447f79a
+        Name: HaruEditor
+        Type: generic.armor
+        Amount: 9.0
+        Slot: chest
+        Operation: ADD_NUMBER
+  Slot 12:
+    Type: Leather Helmet
+    Name: サンタ装備
+    Dye:
+      Red: 255
+      Green: 0
+      Blue: 0
+    Attributes:
+      0:
+        UUID: 00000000-1347-506c-0000-00001347506c
+        Name: HaruEditor
+        Type: generic.armorToughness
+        Amount: 3.0
+        Slot: head
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-1347-506c-0000-00001347506c
+        Name: HaruEditor
+        Type: generic.armor
+        Amount: 4.0
+        Slot: head
+        Operation: ADD_NUMBER
+  Slot 13:
+    Type: Monster Egg
+    Amount: 32
+    Name: 召使い(ヴィンディケーター)
+    Egg: Vindicator
+  Slot 14:
+    Type: Chorus Fruit
+    Amount: 32
+  Slot 15:
+    Type: Firework
+    Amount: 64
+    Name: 強化ロケット
+  Slot 16:
+    Type: Elytra
+    Name: 超空のエリトラ
+    Enchantments:
+      Protection Fall: 5
+  Slot 17:
+    Type: Splash Potion
+    Amount: 64
+    Name: 深夜の金縛り
+    Potion:
+      Type: Water
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow
+        Level: 1
+        Duration: 60.0
+        Ambient: false
+        Particles: false
+      Potion 2:
+        Type: Blindness
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: false
+
+Armour: {}
+
+Potion effects: {}

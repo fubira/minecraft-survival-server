@@ -1,0 +1,110 @@
+Name: police
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Tipped Arrow
+    Amount: 20
+    Name: 弾丸
+    Potion:
+      Type: Instant Damage
+      Extended: false
+      Upgraded: false
+  Slot 6:
+    Type: Shield
+    Name: 防弾シールド
+  Slot 7:
+    Type: Stick
+    Name: 警棒
+    Enchantments:
+      Damage All: 1
+  Slot 8:
+    Type: Bow
+    Name: UZISMG 9mm+
+    Lore:
+    - 銃の中では初期装弾数が最も多い
+    Attributes:
+      0:
+        UUID: 00000000-055d-7321-0000-0000055d7321
+        Name: generic.movementSpeed.mccmd
+        Type: generic.movementSpeed
+        Amount: -0.25
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+      1:
+        UUID: 00000000-055d-7322-0000-0000055d7322
+        Name: generic.movementSpeed.mccmd
+        Type: generic.movementSpeed
+        Amount: -0.25
+        Slot: offhand
+        Operation: MULTIPLY_PERCENTAGE
+    Enchantments:
+      Arrow Damage: 5
+
+Armour:
+  Helmet:
+    Type: Leather Helmet
+    Name: 制服
+    Dye:
+      Red: 102
+      Green: 153
+      Blue: 216
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Chestplate:
+    Type: Leather Chestplate
+    Name: 防刃ケプラー
+    Dye:
+      Red: 102
+      Green: 153
+      Blue: 216
+    Enchantments:
+      Protection Environmental: 3
+      Protection Projectile: 1
+  Leggings:
+    Type: Leather Leggings
+    Name: 制服
+    Dye:
+      Red: 102
+      Green: 153
+      Blue: 216
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Boots:
+    Type: Leather Boots
+    Name: 革靴
+    Dye:
+      Red: 160
+      Green: 101
+      Blue: 64
+    Enchantments:
+      Protection Fall: 2
+      Durability: 1
+
+Potion effects: {}

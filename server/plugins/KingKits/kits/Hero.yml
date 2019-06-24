@@ -1,0 +1,43 @@
+Name: Hero
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 21:
+    Type: Diamond Sword
+    Name: 英雄の剣
+    Enchantments:
+      Damage All: 4
+      Durability: 2
+  Slot 23:
+    Type: Elytra
+    Name: 英雄のマント
+    Enchantments:
+      Durability: 1
+
+Armour: {}
+
+Potion effects: {}

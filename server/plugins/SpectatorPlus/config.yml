@@ -1,0 +1,71 @@
+# This is the SpectatorPlus configuration file. It can be edited in-game
+# using the /spec config command.
+# 
+# If you don't see the comments below, explaining each configuration option,
+# see https://github.com/pgmann/SpectatorPlus/blob/master/SpectatorPlus/config.yml .
+# 
+# 
+# 
+# All the tools available in the spectators' hotbar
+tools:
+  teleporter:
+    enabled: true
+    item: COMPASS
+    inspector: true
+    health: true
+    location: true
+  arenaChooser:
+    enabled: true
+    item: WATCH
+    playersCount: true
+    technicalInfos: true
+  tools:
+    enabled: true
+    item: MAGMA_CREAM
+    glowEffectIfActive: true
+    speed: true
+    nightVision: true
+    divingSuit: true
+    noClipMode: true
+    tpToDeath:
+      enabled: true
+      displayCause: true
+  inspector:
+    enabled: true
+    item: FEATHER
+  leave:
+    enabled: true
+    item: BED
+  newbieMode: true
+chat:
+  spectatorChat: false
+  shout:
+    enabled: true
+    prefix: '>'
+  blockCommands:
+    enabled: true
+    adminBypass: true
+    whitelist:
+    - /login
+    - /spec
+  autocompleteSpectators:
+    forPlayers: false
+    forSpectators: true
+spectators:
+  tabList:
+    prefix: false
+    health: false
+  spectatorsSeeSpectators: false
+  useVanillaMode: false
+  reduceDebugInfo: false
+onSpectatorModeChanged:
+  teleportation:
+    toSpawnWithoutLobby: false
+    usingSpawnCommand: false
+  saveSpectators: true
+skriptIntegration: false
+outputMessages: true
+spectatorModeOnDeath: false
+enforceBoundaries:
+  arenas: false
+  lobby: 0

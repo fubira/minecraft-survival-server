@@ -1,0 +1,73 @@
+Name: BattleRoyale
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 5:
+    Type: Saddle
+  Slot 6:
+    Type: Bread
+    Amount: 9
+  Slot 7:
+    Type: Potion
+    Potion:
+      Type: Regen
+      Extended: false
+      Upgraded: false
+  Slot 8:
+    Type: Potion
+    Potion:
+      Type: Instant Heal
+      Extended: false
+      Upgraded: true
+
+Armour:
+  Helmet:
+    Type: Chainmail Helmet
+    Name: 戦闘用スーツ
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Chestplate:
+    Type: Chainmail Chestplate
+    Name: 戦闘用スーツ
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Leggings:
+    Type: Chainmail Leggings
+    Name: 戦闘用スーツ
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Boots:
+    Type: Chainmail Boots
+    Name: 戦闘用スーツ
+    Enchantments:
+      Protection Fall: 3
+      Durability: 1
+
+Potion effects: {}

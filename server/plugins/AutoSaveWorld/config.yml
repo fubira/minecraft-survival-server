@@ -1,0 +1,129 @@
+var:
+  debug: false
+  commandsonlyfromconsole: false
+save:
+  enabled: true
+  disablestructuresaving: false
+  forceregioncachedump: true
+  interval: 1800
+  broadcast: false
+  onplugindisable: true
+backup:
+  enabled: false
+  interval: 18000
+  savebefore: true
+  broadcast: true
+  rateLimit: -1
+  localfs:
+    enabled: true
+    destinationfolders:
+    - /mnt/backup/survival
+    zip: true
+    worlds:
+    - '*'
+    MaxNumberOfWorldsBackups: 60
+    pluginsfolder: true
+    MaxNumberOfPluginsBackups: 20
+    otherfolders: []
+    MaxNumberOfOtherFoldersBackups: 15
+    excludefolders:
+    - plugins/dynmap/web
+  ftp:
+    enabled: false
+    sftp: false
+    hostname: 14.3.223.82
+    port: 21
+    login: minecraft
+    password: minecraft
+    path: /minecraft-backup/survival-1.8/
+    zip: true
+    worlds:
+    - '*'
+    pluginsfolder: true
+    otherfolders: []
+    excludefolders:
+    - plugins/dynmap/web
+    maxNumberOfBackups: 720
+  script:
+    enabled: false
+    scriptpaths: []
+  dropbox:
+    enabled: false
+    token: ''
+    path: asw
+    worlds:
+    - '*'
+    pluginsfolder: false
+    otherfolders: []
+    excludefolders: []
+    maxNumberOfBackups: 4
+    zip: false
+purge:
+  enabled: false
+  interval: 86400
+  awaytime: 2592000
+  ignorednicks: []
+  ignoreduuids: []
+  broadcast: true
+  wg:
+    enabled: true
+    regenpurgedregion: false
+    noregenoverlapregion: true
+  lwc:
+    enabled: true
+    deletepurgedblocks: false
+  residence:
+    enabled: true
+    regenpurgedresidence: false
+  permissions:
+    enabled: true
+    savecmd: mansave
+  mywarp:
+    enabled: true
+  dat:
+    enabled: true
+crashrestart:
+  enabled: false
+  startdelay: 20
+  scriptpath: ''
+  timeout: 60
+  juststop: false
+autorestart:
+  enabled: false
+  broadcast: true
+  time:
+  - '14:00'
+  countdown:
+    enabled: true
+    broadcastonsecond:
+    - 60
+    - 30
+    - 10
+    - 9
+    - 8
+    - 7
+    - 6
+    - 5
+    - 4
+    - 3
+    - 2
+    - 1
+  commands: []
+  scriptpath: ''
+  juststop: true
+consolecommand:
+  timemode:
+    enabled: false
+    times: {}
+  intervalmode:
+    enabled: false
+    intervals: {}
+worldregen:
+  newseed: false
+  savewg: true
+  savefactions: true
+  savegp: true
+  savetowny: true
+  savepstones: true
+networkwatcher:
+  warnmainthreadnetwrokaccess: true

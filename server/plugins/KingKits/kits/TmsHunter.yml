@@ -1,0 +1,136 @@
+Name: TmsHunter
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Golden Carrot
+    Amount: 32
+  Slot 9:
+    Type: Iron Axe
+    Enchantments:
+      Durability: 2
+  Slot 10:
+    Type: Bow
+    Name: 軍用剛弓
+    Enchantments:
+      Durability: 1
+      Arrow Damage: 2
+  Slot 11:
+    Type: Leather Boots
+    Dye:
+      Red: 160
+      Green: 101
+      Blue: 64
+    Enchantments:
+      Protection Fall: 3
+      Durability: 1
+  Slot 12:
+    Type: Leather Helmet
+    Dye:
+      Red: 160
+      Green: 101
+      Blue: 64
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 1
+  Slot 13:
+    Type: Tipped Arrow
+    Amount: 48
+    Potion:
+      Type: Poison
+      Extended: true
+      Upgraded: false
+  Slot 14:
+    Type: Tipped Arrow
+    Amount: 48
+    Potion:
+      Type: Instant Damage
+      Extended: false
+      Upgraded: true
+  Slot 15:
+    Type: Tipped Arrow
+    Amount: 48
+    Potion:
+      Type: Slowness
+      Extended: true
+      Upgraded: false
+  Slot 18:
+    Type: Monster Egg
+    Egg: Wolf
+  Slot 19:
+    Type: Monster Egg
+    Egg: Wolf
+  Slot 20:
+    Type: Monster Egg
+    Egg: Wolf
+  Slot 21:
+    Type: Monster Egg
+    Egg: Wolf
+  Slot 22:
+    Type: Bone
+    Amount: 64
+  Slot 23:
+    Type: Rabbit
+    Amount: 6
+  Slot 27:
+    Type: Potion
+    Potion:
+      Type: Speed
+      Extended: false
+      Upgraded: true
+  Slot 28:
+    Type: Potion
+    Potion:
+      Type: Speed
+      Extended: false
+      Upgraded: true
+  Slot 29:
+    Type: Potion
+    Potion:
+      Type: Jump
+      Extended: false
+      Upgraded: true
+  Slot 30:
+    Type: Potion
+    Potion:
+      Type: Jump
+      Extended: false
+      Upgraded: true
+  Slot 31:
+    Type: Fishing Rod
+    Name: 漁師の釣り竿
+    Lore:
+    - 大漁！
+    Enchantments:
+      Durability: 3
+      Luck: 3
+      Lure: 5
+      Mending: 1
+
+Armour: {}
+
+Potion effects: {}

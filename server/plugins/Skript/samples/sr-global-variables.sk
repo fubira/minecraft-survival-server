@@ -1,0 +1,5 @@
+options:
+  {SR_MESSAGE_HEADER} = "<gray>[<yellow>SURVIVAROYAL<gray>]<reset>"
+  {SR_GAME_WORLD} = "world"
+
+

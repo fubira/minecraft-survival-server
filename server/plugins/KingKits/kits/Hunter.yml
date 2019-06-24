@@ -1,0 +1,157 @@
+Name: Hunter
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Leather Helmet
+    Dye:
+      Red: 160
+      Green: 101
+      Blue: 64
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 1
+  Slot 1:
+    Type: Leather Boots
+    Dye:
+      Red: 160
+      Green: 101
+      Blue: 64
+    Enchantments:
+      Durability: 1
+      Protection Fall: 3
+  Slot 2:
+    Type: Bow
+    Name: 軍用剛弓
+    Enchantments:
+      Arrow Damage: 2
+      Durability: 1
+  Slot 3:
+    Type: Iron Axe
+    Enchantments:
+      Durability: 2
+  Slot 4:
+    Type: Flint And Steel
+  Slot 6:
+    Type: Cooked Chicken
+    Amount: 32
+  Slot 7:
+    Type: Painting
+    Amount: 8
+  Slot 8:
+    Type: Watch
+    Name: 懐中時計
+  Slot 9:
+    Type: Rails
+    Amount: 64
+  Slot 10:
+    Type: Powered Rail
+    Amount: 16
+  Slot 11:
+    Type: Piston Sticky Base
+    Amount: 16
+  Slot 12:
+    Type: Hopper
+    Amount: 16
+  Slot 13:
+    Type: Dispenser
+    Amount: 8
+  Slot 14:
+    Type: Tripwire Hook
+    Amount: 16
+  Slot 16:
+    Type: Sulphur
+    Amount: 48
+  Slot 17:
+    Type: Tnt
+    Amount: 12
+  Slot 18:
+    Type: String
+    Amount: 64
+  Slot 19:
+    Type: Redstone Block
+    Amount: 8
+  Slot 20:
+    Type: Iron Ingot
+    Amount: 24
+  Slot 21:
+    Type: Slime Block
+    Amount: 64
+  Slot 22:
+    Type: Stone
+    Amount: 32
+  Slot 23:
+    Type: Cobblestone
+    Amount: 32
+  Slot 24:
+    Type: Spectral Arrow
+    Amount: 32
+  Slot 25:
+    Type: Tipped Arrow
+    Amount: 8
+    Potion:
+      Type: Slowness
+      Extended: true
+      Upgraded: false
+  Slot 26:
+    Type: Tipped Arrow
+    Amount: 8
+    Potion:
+      Type: Weakness
+      Extended: true
+      Upgraded: false
+  Slot 27:
+    Type: Arrow
+    Amount: 64
+  Slot 28:
+    Type: Arrow
+    Amount: 64
+  Slot 29:
+    Type: Arrow
+    Amount: 64
+  Slot 30:
+    Type: Arrow
+    Amount: 64
+  Slot 31:
+    Type: Arrow
+    Amount: 64
+  Slot 32:
+    Type: Arrow
+    Amount: 64
+  Slot 33:
+    Type: Arrow
+    Amount: 64
+  Slot 34:
+    Type: Arrow
+    Amount: 64
+  Slot 35:
+    Type: Arrow
+    Amount: 64
+
+Armour: {}
+
+Potion effects: {}

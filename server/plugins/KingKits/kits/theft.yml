@@ -1,0 +1,97 @@
+Name: theft
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Tipped Arrow
+    Amount: 8
+    Name: 弾丸
+    Potion:
+      Type: Instant Damage
+      Extended: false
+      Upgraded: false
+  Slot 6:
+    Type: End Rod
+    Name: ペンライト
+  Slot 7:
+    Type: Iron Sword
+    Name: コンバットナイフ
+    Enchantments:
+      Damage All: 4
+      Durability: 2
+  Slot 8:
+    Type: Bow
+    Name: ワルサーPPK/S
+    Lore:
+    - 銃の中では唯一移動速度が下がらない
+    Enchantments:
+      Arrow Damage: 2
+      Arrow Knockback: 1
+
+Armour:
+  Helmet:
+    Type: Leather Helmet
+    Name: 作業服
+    Dye:
+      Red: 25
+      Green: 25
+      Blue: 25
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Chestplate:
+    Type: Leather Chestplate
+    Name: 防弾ケプラー
+    Dye:
+      Red: 25
+      Green: 25
+      Blue: 25
+    Enchantments:
+      Protection Environmental: 1
+      Protection Projectile: 3
+  Leggings:
+    Type: Leather Leggings
+    Name: 作業服
+    Dye:
+      Red: 25
+      Green: 25
+      Blue: 25
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Boots:
+    Type: Leather Boots
+    Name: 安全靴
+    Dye:
+      Red: 25
+      Green: 25
+      Blue: 25
+    Enchantments:
+      Protection Fall: 4
+      Durability: 1
+
+Potion effects: {}

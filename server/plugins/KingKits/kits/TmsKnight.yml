@@ -1,0 +1,119 @@
+Name: TmsKnight
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Golden Carrot
+    Amount: 32
+  Slot 9:
+    Type: Iron Sword
+    Name: 騎士の剣
+    Enchantments:
+      Damage All: 3
+      Durability: 2
+  Slot 10:
+    Type: Shield
+    Name: 騎士の盾
+    Block state:
+      Base:
+        Red: 25
+        Green: 25
+        Blue: 25
+  Slot 11:
+    Type: Bow
+    Name: 騎士の弓
+    Enchantments:
+      Arrow Damage: 1
+  Slot 12:
+    Type: Arrow
+    Amount: 64
+  Slot 13:
+    Type: Arrow
+    Amount: 64
+  Slot 14:
+    Type: Iron Boots
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Slot 15:
+    Type: Iron Leggings
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Slot 16:
+    Type: Iron Chestplate
+    Enchantments:
+      Protection Environmental: 2
+      Protection Projectile: 1
+      Durability: 1
+  Slot 17:
+    Type: Iron Helmet
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Slot 18:
+    Type: Monster Egg
+    Egg: Horse
+  Slot 19:
+    Type: Monster Egg
+    Egg: Horse
+  Slot 20:
+    Type: Diamond Barding
+  Slot 21:
+    Type: Diamond Barding
+  Slot 22:
+    Type: Saddle
+  Slot 23:
+    Type: Saddle
+  Slot 27:
+    Type: Potion
+    Potion:
+      Type: Instant Heal
+      Extended: false
+      Upgraded: true
+  Slot 28:
+    Type: Potion
+    Potion:
+      Type: Instant Heal
+      Extended: false
+      Upgraded: true
+  Slot 29:
+    Type: Potion
+    Potion:
+      Type: Strength
+      Extended: false
+      Upgraded: true
+  Slot 30:
+    Type: Potion
+    Potion:
+      Type: Strength
+      Extended: false
+      Upgraded: true
+
+Armour: {}
+
+Potion effects: {}

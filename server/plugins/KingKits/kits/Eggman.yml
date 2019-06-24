@@ -1,0 +1,122 @@
+Name: Eggman
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Monster Egg
+    Egg: Chicken
+  Slot 7:
+    Type: Monster Egg
+    Egg: PolarBear
+  Slot 8:
+    Type: Monster Egg
+    Egg: Villager
+  Slot 9:
+    Type: Monster Egg
+    Egg: Creeper
+  Slot 10:
+    Type: Monster Egg
+    Egg: Skeleton
+  Slot 11:
+    Type: Monster Egg
+    Egg: Spider
+  Slot 12:
+    Type: Monster Egg
+    Egg: Zombie
+  Slot 13:
+    Type: Monster Egg
+    Egg: Slime
+  Slot 14:
+    Type: Monster Egg
+    Egg: Ghast
+  Slot 15:
+    Type: Monster Egg
+    Egg: PigZombie
+  Slot 16:
+    Type: Monster Egg
+    Egg: Enderman
+  Slot 17:
+    Type: Monster Egg
+    Egg: CaveSpider
+  Slot 18:
+    Type: Monster Egg
+    Egg: LavaSlime
+  Slot 19:
+    Type: Monster Egg
+    Egg: Bat
+  Slot 20:
+    Type: Monster Egg
+    Egg: Witch
+  Slot 21:
+    Type: Monster Egg
+    Egg: Endermite
+  Slot 22:
+    Type: Monster Egg
+    Egg: Guardian
+  Slot 23:
+    Type: Monster Egg
+    Egg: Shulker
+  Slot 24:
+    Type: Monster Egg
+    Egg: Pig
+  Slot 25:
+    Type: Monster Egg
+    Egg: Silverfish
+  Slot 26:
+    Type: Monster Egg
+    Egg: Blaze
+  Slot 27:
+    Type: Monster Egg
+    Egg: Sheep
+  Slot 28:
+    Type: Monster Egg
+    Egg: Cow
+  Slot 29:
+    Type: Monster Egg
+    Egg: Chicken
+  Slot 30:
+    Type: Monster Egg
+    Egg: Wolf
+  Slot 31:
+    Type: Monster Egg
+    Egg: Squid
+  Slot 32:
+    Type: Monster Egg
+    Egg: MushroomCow
+  Slot 33:
+    Type: Monster Egg
+    Egg: Ozelot
+  Slot 34:
+    Type: Monster Egg
+    Egg: EntityHorse
+  Slot 35:
+    Type: Monster Egg
+    Egg: Rabbit
+
+Armour: {}
+
+Potion effects: {}

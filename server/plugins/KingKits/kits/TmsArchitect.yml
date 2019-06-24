@@ -1,0 +1,111 @@
+Name: TmsArchitect
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Golden Carrot
+    Amount: 32
+  Slot 9:
+    Type: Diamond Hoe
+    Name: 建築士の工具
+    Enchantments:
+      Damage All: 1
+      Dig Speed: 2
+      Durability: 3
+  Slot 10:
+    Type: Iron Pickaxe
+    Enchantments:
+      Dig Speed: 2
+  Slot 11:
+    Type: Iron Axe
+    Enchantments:
+      Dig Speed: 2
+  Slot 12:
+    Type: Iron Spade
+    Enchantments:
+      Dig Speed: 2
+  Slot 13:
+    Type: Iron Boots
+    Enchantments:
+      Protection Environmental: 2
+      Protection Fall: 2
+  Slot 18:
+    Type: Monster Egg
+    Egg: Cow
+  Slot 19:
+    Type: Monster Egg
+    Egg: Cow
+  Slot 20:
+    Type: Monster Egg
+    Egg: Cow
+  Slot 21:
+    Type: Monster Egg
+    Egg: Cow
+  Slot 22:
+    Type: Monster Egg
+    Egg: Cow
+  Slot 23:
+    Type: Monster Egg
+    Egg: Cow
+  Slot 24:
+    Type: Monster Egg
+    Egg: Cow
+  Slot 25:
+    Type: Monster Egg
+    Egg: Cow
+  Slot 26:
+    Type: Monster Egg
+    Egg: Cow
+  Slot 27:
+    Type: Workbench
+  Slot 28:
+    Type: Furnace
+    Amount: 16
+  Slot 29:
+    Type: Chest
+    Amount: 8
+  Slot 30:
+    Type: Ender Stone
+    Amount: 64
+  Slot 31:
+    Type: Web
+    Amount: 64
+  Slot 32:
+    Type: Water Bucket
+  Slot 33:
+    Type: Seeds
+    Amount: 64
+  Slot 34:
+    Type: Seeds
+    Amount: 64
+  Slot 35:
+    Type: Seeds
+    Amount: 64
+
+Armour: {}
+
+Potion effects: {}

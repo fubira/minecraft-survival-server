@@ -1,0 +1,9 @@
+on place of a bed 
+  world is {@SR_GAME_WORLD}:
+  block's y-coordinate is smaller than 50:
+    message "%{SR_MESSAGE_HEADER}% <light red>y50より下でのベッドの設置はできません<reset>"
+    cancel event
+  block's y-coordinate is larger than 100:
+    message "%{SR_MESSAGE_HEADER}% <light red>y100より上でのベッドの設置はできません<reset>"
+    cancel event
+

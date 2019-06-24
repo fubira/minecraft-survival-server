@@ -1,0 +1,105 @@
+General:
+  Command error: '&cAn error occurred.'
+  Command permission: '&4You do not have access to that command.'
+  Command usage: '&cUsage: &4/%s %s'
+  Player not found: '%s does not exist or is not online.'
+  Player command: '&cYou must be a player to use that command!'
+  Command disabled: '&cThat command has been disabled.'
+Command:
+  Create kit:
+    Created: '&4%s &6has been created.'
+    Overwrote: '&4%s &6has been overwritten.'
+  Create user kit:
+    Created: '&4%s &6has been created.'
+    Maximum kits: '&cYou have reached the maximum number of personal kits you can
+      create.'
+    Overwrote: '&4%s &6has been overwritten.'
+  Delete kit:
+    Deleted: '&4%s &6was successfully deleted.'
+    Deleted all: '&6Successfully deleted &c%d &6kit(s).'
+  Delete user kit:
+    Deleted: '&4%s &6was successfully deleted.'
+    Deleted all: '&6Successfully deleted &c%d &6user kit(s).'
+  Kit:
+    List:
+      Title: '&aKits (%d):'
+      No kits: '&cNo kits available'
+      Message: <colour>%s
+      Cooldown on: '&cOn cooldown'
+      Cooldown off: '&aAvailable'
+      No cooldown: '&aNo cooldown'
+  Rename kit:
+    Renamed: '&6Successfully renamed %s to %s.'
+  Rename user kit:
+    Renamed: '&6Successfully renamed %s to %s.'
+  Refill:
+    Bowl: '&cYou must have a bowl in your hand.'
+    Not enough money: '&aYou do not have enough money to refill your bowl(s).'
+    Full inventory: '&cYou have a full inventory!'
+  Reload:
+    Successful: '&6Successfully reloaded KingKits v%s.'
+    Failed: '&cFailed to reload KingKits'' configurations.'
+  Config:
+    Added: '&6You have received a book and a quill with the config in it. Type ''/kk
+      config'' with a signed book to save it.'
+    Saved: '&6Successfully saved the book''s contents to the config.'
+  Killstreak:
+    Self: '&6You are on a(n) &b%d &6killstreak.'
+    Other: '&6%s is on a(n) &b%d &6killstreak.'
+  Score:
+    Self: '&6Score: &b%d'
+    Other: '&6%s''s score: &b%d'
+  View kit:
+    Self:
+      Has kit: '&6You are using the kit &c%s&6.'
+      No kit: '&6You are not using a kit.'
+    Other:
+      Has kit: '&6%s is using the kit &c%s&6.'
+      No kit: '&6%s is using not using a kit.'
+Compass:
+  Player: '&eYour compass is pointing to %s.'
+  Spawn: Your compass is pointing to spawn.
+Kit:
+  Delay: '&cYou must wait %s %s before using this kit again.'
+  Illegal characters: '&6The kit name must only consist of letters, numbers and underscores.'
+  No permission: '&cYou do not have permission to use the kit &4%s&c.'
+  Not enough money: '&aYou do not have enough money to change kits.'
+  Not found: '&4%s &6does not exist.'
+  One per life: '&6You have already chosen a kit!'
+  Unlocked: '&6Congratulations! You had enough points and unlocked &c%s&6!'
+  Set: '&6You have chosen the kit &c<kit>&6.'
+  Multiple found: '&cMultiple kits exist with that name. The kit name is case sensitive.'
+Sign:
+  Create:
+    No permission: '&4You do not have access to create a KingKits %s sign.'
+    Incorrectly setup: '&cThat sign has incorrectly been set up.'
+  Use:
+    No permission: '&cYou do not have permission to use this sign.'
+Time:
+  Second: second
+  Seconds: seconds
+  Minute: minute
+  Minutes: minutes
+  Hour: hour
+  Hours: hours
+  Day: day
+  Days: days
+Economy:
+  Kit cost: '&a%.2f was taken from your balance.'
+  Money per death: '&aYou lost %.2f for being killed by %s.'
+  Money per kill: '&aYou received %.2f for killing %s.'
+Event:
+  Block:
+    Break: '&cYou cannot break blocks here!'
+    Place: '&cYou cannot place blocks here!'
+Gui:
+  Kits menu:
+    Title: '&aKits'
+    Global: '&cGlobal kits'
+    User: '&eUser kits'
+  Kits:
+    Title: '&aPvP Kits'
+  User kits:
+    Title: '&aUser Kits'
+  Preview kit:
+    Title: '&aPreview - &b<kit>'

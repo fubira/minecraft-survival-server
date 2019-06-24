@@ -1,0 +1,96 @@
+Name: putirowa_1
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Iron Axe
+  Slot 1:
+    Type: Iron Pickaxe
+  Slot 5:
+    Type: Shield
+  Slot 6:
+    Type: Grilled Pork
+    Amount: 32
+  Slot 7:
+    Type: Bow
+    Enchantments:
+      Arrow Damage: 3
+  Slot 8:
+    Type: Diamond Sword
+    Name: ハフリン剣
+    Repair cost: 1
+    Enchantments:
+      Damage All: 5
+  Slot 9:
+    Type: Tnt
+    Amount: 8
+  Slot 10:
+    Type: Flint And Steel
+  Slot 16:
+    Type: Golden Apple
+    Durability: 1
+  Slot 17:
+    Type: Ender Pearl
+    Amount: 4
+  Slot 18:
+    Type: Firework
+    Amount: 4
+  Slot 19:
+    Type: Elytra
+    Durability: 410
+  Slot 25:
+    Type: Golden Apple
+    Amount: 3
+  Slot 26:
+    Type: Arrow
+    Amount: 64
+  Slot 27:
+    Type: Diamond Helmet
+  Slot 28:
+    Type: Diamond Chestplate
+  Slot 29:
+    Type: Diamond Leggings
+  Slot 30:
+    Type: Diamond Boots
+  Slot 34:
+    Type: Splash Potion
+    Name: グレネード
+    Potion:
+      Type: Instant Damage
+      Extended: false
+      Upgraded: true
+  Slot 35:
+    Type: Splash Potion
+    Name: グレネード
+    Potion:
+      Type: Instant Damage
+      Extended: false
+      Upgraded: true
+
+Armour: {}
+
+Potion effects: {}

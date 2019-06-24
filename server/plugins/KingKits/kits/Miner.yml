@@ -1,0 +1,133 @@
+Name: Miner
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Golden Carrot
+    Amount: 32
+  Slot 9:
+    Type: Iron Sword
+    Enchantments:
+      Damage All: 2
+  Slot 10:
+    Type: Iron Spade
+    Enchantments:
+      Dig Speed: 2
+  Slot 11:
+    Type: Iron Pickaxe
+    Enchantments:
+      Loot Bonus Blocks: 2
+  Slot 12:
+    Type: Diamond Pickaxe
+    Name: 採掘士のツルハシ
+    Enchantments:
+      Dig Speed: 2
+      Durability: 3
+  Slot 13:
+    Type: Chainmail Boots
+    Enchantments:
+      Protection Explosions: 1
+      Depth Strider: 2
+  Slot 14:
+    Type: Chainmail Leggings
+    Enchantments:
+      Protection Fire: 2
+      Durability: 1
+  Slot 15:
+    Type: Chainmail Chestplate
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Slot 16:
+    Type: Chainmail Helmet
+    Enchantments:
+      Protection Projectile: 2
+      Oxygen: 1
+      Water Worker: 1
+  Slot 18:
+    Type: Ladder
+    Amount: 64
+  Slot 19:
+    Type: Powered Rail
+    Amount: 64
+  Slot 20:
+    Type: Water Bucket
+  Slot 21:
+    Type: Stick
+    Amount: 64
+  Slot 22:
+    Type: Coal
+    Amount: 64
+  Slot 23:
+    Type: White Shulker Box
+  Slot 24:
+    Type: Orange Shulker Box
+  Slot 25:
+    Type: Chest
+    Amount: 2
+  Slot 27:
+    Type: Potion
+    Potion:
+      Type: Fire Resistance
+      Extended: true
+      Upgraded: false
+  Slot 28:
+    Type: Potion
+    Potion:
+      Type: Fire Resistance
+      Extended: true
+      Upgraded: false
+  Slot 29:
+    Type: Potion
+    Potion:
+      Type: Night Vision
+      Extended: true
+      Upgraded: false
+  Slot 30:
+    Type: Potion
+    Potion:
+      Type: Night Vision
+      Extended: true
+      Upgraded: false
+  Slot 31:
+    Type: Potion
+    Name: 採掘速度上昇
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Fast Digging
+        Level: 4
+        Duration: 300.0
+        Ambient: false
+        Particles: false
+
+Armour: {}
+
+Potion effects: {}

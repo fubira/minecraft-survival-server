@@ -1,0 +1,15 @@
+broadcast:
+  pre: '&8ワールドを保存しています'
+  post: '&8Complete.'
+broadcastbackup:
+  pre: '&8バックアップしています'
+  post: '&8Complete.'
+broadcastpurge:
+  pre: '&9AutoPurging'
+  post: '&9AutoPurge Complete'
+insufficentpermissions: '&cYou do not have access to that command.'
+autorestart:
+  restarting: '&9Server is restarting'
+  countdown: '&9Server will restart in {SECONDS} seconds'
+worldregen:
+  kickmessage: '&9Server is regenerating map, please come back later'

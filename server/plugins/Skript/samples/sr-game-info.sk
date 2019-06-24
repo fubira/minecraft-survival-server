@@ -1,0 +1,14 @@
+every 10 second in %{SR_GAME_WORLD}%:
+  set {red_point} to 0
+  set {green_point} to 0
+  set {blue_point} to 0
+  loop all players:
+    if loop-player has nether star:
+      add 1 to {red_point} 
+    #if team of loop-player is "green":
+    #  add {blue_point} to number of nether_star in player
+    #if team of loop-player is "blue":
+    #  add {green_point} to number of nether_star in player
+
+  broadcast "%{SR_MESSAGE_HEADER}% <light cyan>現在のポイント <light red>赤<gray>[<white>%{red_point}%<gray>] <light blue>青<gray>[<white>%{blue_point}%<gray>] <light green>緑<gray>[<white>%{green_point}%<gray>]"
+

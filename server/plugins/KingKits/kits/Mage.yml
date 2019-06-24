@@ -1,0 +1,132 @@
+Name: Mage
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Golden Carrot
+    Amount: 32
+  Slot 9:
+    Type: Bookshelf
+    Amount: 16
+  Slot 10:
+    Type: Enchantment Table
+  Slot 11:
+    Type: Anvil
+    Amount: 4
+  Slot 12:
+    Type: Exp Bottle
+    Amount: 64
+  Slot 13:
+    Type: Exp Bottle
+    Amount: 64
+  Slot 14:
+    Type: Exp Bottle
+    Amount: 64
+  Slot 15:
+    Type: Ink Sack
+    Amount: 16
+    Durability: 4
+  Slot 18:
+    Type: Monster Egg
+    Egg: Witch
+  Slot 19:
+    Type: Monster Egg
+    Egg: Witch
+  Slot 20:
+    Type: Monster Egg
+    Egg: Witch
+  Slot 21:
+    Type: Monster Egg
+    Egg: Witch
+  Slot 22:
+    Type: Monster Egg
+    Egg: Skeleton Horse
+  Slot 23:
+    Type: Monster Egg
+    Egg: Zombie Horse
+  Slot 24:
+    Type: Monster Egg
+    Egg: Wither Skeleton
+  Slot 25:
+    Type: Monster Egg
+    Egg: Zombie Villager
+  Slot 26:
+    Type: Monster Egg
+    Amount: 64
+    Egg: Bat
+  Slot 27:
+    Type: Splash Potion
+    Potion:
+      Type: Night Vision
+      Extended: true
+      Upgraded: false
+  Slot 28:
+    Type: Splash Potion
+    Potion:
+      Type: Night Vision
+      Extended: true
+      Upgraded: false
+  Slot 29:
+    Type: Splash Potion
+    Potion:
+      Type: Fire Resistance
+      Extended: true
+      Upgraded: false
+  Slot 30:
+    Type: Splash Potion
+    Potion:
+      Type: Fire Resistance
+      Extended: true
+      Upgraded: false
+  Slot 31:
+    Type: Splash Potion
+    Potion:
+      Type: Speed
+      Extended: true
+      Upgraded: false
+  Slot 32:
+    Type: Splash Potion
+    Potion:
+      Type: Speed
+      Extended: true
+      Upgraded: false
+  Slot 33:
+    Type: Splash Potion
+    Potion:
+      Type: Water Breathing
+      Extended: true
+      Upgraded: false
+  Slot 34:
+    Type: Splash Potion
+    Potion:
+      Type: Water Breathing
+      Extended: true
+      Upgraded: false
+
+Armour: {}
+
+Potion effects: {}

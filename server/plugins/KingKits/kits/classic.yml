@@ -1,0 +1,79 @@
+Name: classic
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Tnt
+    Amount: 4
+  Slot 4:
+    Type: Potion
+    Potion:
+      Type: Regen
+      Extended: false
+      Upgraded: false
+  Slot 5:
+    Type: Potion
+    Potion:
+      Type: Instant Heal
+      Extended: false
+      Upgraded: true
+  Slot 6:
+    Type: Cooked Beef
+    Amount: 24
+  Slot 7:
+    Type: Iron Pickaxe
+  Slot 8:
+    Type: Iron Sword
+
+Armour:
+  Helmet:
+    Type: Chainmail Helmet
+    Name: 戦闘用スーツ
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Chestplate:
+    Type: Chainmail Chestplate
+    Name: 戦闘用スーツ
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Leggings:
+    Type: Chainmail Leggings
+    Name: 戦闘用スーツ
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Boots:
+    Type: Chainmail Boots
+    Name: 戦闘用スーツ
+    Enchantments:
+      Protection Environmental: 1
+      Protection Fall: 4
+      Durability: 1
+
+Potion effects: {}

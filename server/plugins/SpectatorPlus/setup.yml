@@ -1,0 +1,17 @@
+active: true
+xPos: 0.5
+yPos: 158.84283872482038
+zPos: 74.5
+pitch: 0.7494968
+yaw: 1.5
+world: lobby
+mode: ANY
+arenas:
+  2ba111e6-7515-4bdb-9eb6-b692b8698f90:
+    name: world
+    uuid: 2ba111e6-7515-4bdb-9eb6-b692b8698f90
+    corner1: lobby;-864.0;0.0;-864.0;0.0;0.0
+    corner2: lobby;864.0;256.0;864.0;0.0;0.0
+    lobby: lobby;1.3070935105480173;157.0625;74.3859741305408;13.949493;292.4995
+    registered: true
+    enabled: true
