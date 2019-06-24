@@ -48,12 +48,8 @@ command /rule <text> <text>:
   permission: survivor.rule
   usage: /rule <command> allow/deny
   trigger:
-    set {_cmd} to "%arg 1%"
-    set {_value} to "%arg 2%"
-
-    if {_cmd} is "reload":
-      set {_skript} to "%arg 0%"
-      execute console command "/skript reload %{_skript}%"
+    set {_cmd} to {arg 1}
+    set {_value} to {arg 2}
 
     else if {_cmd} is "frame":
       if {_value} is "deny":
