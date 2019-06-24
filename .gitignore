@@ -4,7 +4,5 @@ logs
 spigot*.jar*
 paper*.jar*
 
-/world/
-/world_nether/
-/world_the_end/
-/lobby/
+/server/world*/
+/server/lobby/
