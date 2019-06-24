@@ -26,21 +26,22 @@ on script load:
 #
 # チームに参加する
 
-command /join <colour> [<player>]:
+command /join <text> [<player>]:
   description: Join to Survivor team
   usage: /join <team> [<player>]
   permission: survivor.team.join
   trigger:
-    set {_team} to "%arg 1%"
+    set {_team} to the 1st argument
 
     if arg 2 is not set:
       set {_player} to player
     else:
-      set {_player} to "%arg 2%"
+      set {_player} to the 2nd argument
 
     if {_team} is "red" or "green" or "blue":
       set {team.%{_player}%} to {_team}
       execute command "/scoreboard teams join %{team.%{_player}%}% %{_player}%"
+      message "/scoreboard teams join %{team.%{_player}%}% %{_player}%"
 
     if {_team} is "red":
       broadcast "{@HEADER} %{_player}%が<light red>赤チーム<reset>に参加しました"
@@ -62,7 +63,7 @@ command /leave [<text>]:
     if arg 1 is not set:
       set {_player} to player
     else:
-      set {_player} to "%the 1st argument%"
+      set {_player} to the 1st argument
 
     if {team.%{_player}%} is not set:
       stop
@@ -74,13 +75,13 @@ command /leave [<text>]:
 #
 # 対チームメッセージ送信
 
-command /teammsg <colour> <text>:
+command /teammsg <text> <text>:
   description: Send message to team
   usage: /teammsg <team> <message>
   permission: survivor.team.message
   aliases: /tmsg, /tm
   trigger:
-    set {_team} to "%arg 1%"
+    set {_team} to the 1st argument
     if player is set:
       set {_sender} to player
       set {_sender_team} to {team.%player%}

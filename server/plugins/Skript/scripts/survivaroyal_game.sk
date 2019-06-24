@@ -21,7 +21,7 @@ command /sr <text>:
 
   usage: /sr <command>
   trigger:
-    set {_cmd} to "%the 1st argument%"
+    set {_cmd} to the 1st argument
 
     if {_cmd} is "reload":
       execute console command "/skript reload survivaroyal_game.sk"

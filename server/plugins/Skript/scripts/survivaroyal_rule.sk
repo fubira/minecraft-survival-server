@@ -10,44 +10,44 @@ variables:
   {rule_enable_autotnt} = 0
 
 function showRule():
-  broadcast "{@HEADER} <gray>==== <red>ゲームルール <gray>====<reset>"
+  broadcast "{@HEADER} <gray>==== <gold>ゲームルール <gray>====<reset>"
   if {rule_enable_bedcontrol} is 0:
-    broadcast "{@HEADER} <white>ベッド管理 ... <dark red>なし<reset>"
+    broadcast "{@HEADER} <white>ベッド管理 ... <light red>なし<reset>"
   else:
     broadcast "{@HEADER} <white>ベッド管理 ... <yellow>あり<reset>"
 
   if {rule_enable_friendlyfire} is 0:
-    broadcast "{@HEADER} <white>フレンドリファイア ... <dark red>なし<reset>"
+    broadcast "{@HEADER} <white>フレンドリファイア ... <light red>なし<reset>"
   else:
     broadcast "{@HEADER} <white>フレンドリファイア ... <yellow>あり<reset>"
 
   if {rule_enable_nametag} is 0:
-    broadcast "{@HEADER} <white>ネームタグ ... <dark red>なし<reset>"
+    broadcast "{@HEADER} <white>ネームタグ ... <light red>なし<reset>"
   else:
     broadcast "{@HEADER} <white>ネームタグ ... <yellow>あり<reset>"
 
   if {rule_enable_strongtnt} is 0:
-    broadcast "{@HEADER} <white>TNT威力 ... <dark red>通常<reset>"
+    broadcast "{@HEADER} <white>TNT威力 ... <light red>通常<reset>"
   else:
     broadcast "{@HEADER} <white>TNT威力 ... <yellow>強化<reset>"
 
   if {rule_enable_autotnt} is 0:
-    broadcast "{@HEADER} <white>TNT自動着火 ... <dark red>なし<reset>"
+    broadcast "{@HEADER} <white>TNT自動着火 ... <light red>なし<reset>"
   else:
     broadcast "{@HEADER} <white>TNT自動着火 ... <yellow>あり<reset>"
 
   if {rule_enable_eggbomb} is 0:
-    broadcast "{@HEADER} <white>エッグボム ... <dark red>なし<reset>"
+    broadcast "{@HEADER} <white>エッグボム ... <light red>なし<reset>"
   else:
     broadcast "{@HEADER} <white>エッグボム ... <yellow>あり<reset>"
 
   if {rule_enable_frame} is 0:
-    broadcast "{@HEADER} <white>アイテムフレーム ... <dark red>利用不可<reset>"
+    broadcast "{@HEADER} <white>アイテムフレーム ... <light red>利用不可<reset>"
   else:
     broadcast "{@HEADER} <white>アイテムフレーム ... <yellow>利用可<reset>"
 
   if {rule_enable_hopper} is 0:
-    broadcast "{@HEADER} <white>ホッパー ... <dark red>利用不可<reset>"
+    broadcast "{@HEADER} <white>ホッパー ... <light red>利用不可<reset>"
   else:
     broadcast "{@HEADER} <white>ホッパー ... <yellow>利用可<reset>"
 
@@ -81,18 +81,13 @@ command /rule [<text>] [<text>]:
   permission: survivor.rule
   usage: /rule <command> [allow/deny]
   trigger:
-    set {_cmd} to "%the 1st argument%"
-    set {_value} to "%the 2nd argument%"
+    set {_cmd} to the 1st argument
+    set {_value} to the 2nd argument
 
     if {survivaroyal_game_running} is 1:
-      message "<red>ゲーム進行中です。ルール変更には注意してください<reset>"
+      message "<light red>ゲーム進行中です。ルール変更には注意してください<reset>"
 
-    if {_cmd} is empty:
-      message "{@HEADER} /rule show"
-      message "{@HEADER} /rule template [team|team-notag|battleroyal]"
-      message "{@HEADER} /rule <type> [allow|deny]"
-      message "{@HEADER} type: bed,friendlyfire,nametag,frame,hopper,strongtnt,autotnt,eggbomb"
-    else if {_cmd} is "show":
+    if {_cmd} is "show":
       showRule()
     else if {_cmd} is "frame":
       if {_value} is "deny":
@@ -159,6 +154,14 @@ command /rule [<text>] [<text>]:
       else:
         set {rule_enable_eggbomb} to 1
         message "<gray>ルール設定: エッグボム・エンチャント瓶ボムあり<reset>"
+
+    else:
+      message "{@HEADER} Usage: rule"
+      message "<light red>/rule show"
+      message "<light red>/rule template [team|team-notag|battleroyal]"
+      message "<light red>/rule <rule-type> [allow|deny]"
+      message "<light red>rule-type: <yellow>bed, friendlyfire, nametag, frame, hopper, strongtnt, autotnt, eggbomb"
+
 
 #
 # Item frameクラフト禁止
