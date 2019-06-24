@@ -9,7 +9,7 @@ variables:
   {survivaroyal_game_progress} = 0
   {survivaroyal_game_nextstar} = 0
 
-on script load:
+# on script load:
 
 
 #
@@ -21,7 +21,7 @@ command /sr <text>:
 
   usage: /sr <command>
   trigger:
-    set {_cmd} to "%arg 1%"
+    set {_cmd} to {%arg 1%}
 
     if {_cmd} is "reload":
       execute console command "/skript reload survivaroyal_game.sk"

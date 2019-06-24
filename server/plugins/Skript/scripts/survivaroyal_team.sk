@@ -1,5 +1,5 @@
 options:
-  HEADER: <gray>[<dark green>Survivor<gray>]<reset>
+  HEADER: <gray>[<dark aqua>SurvivaRoyal-Team<gray>]<reset>
   WORLD: world
 
 variables:
@@ -54,7 +54,7 @@ command /join <colour> [<player>]:
 #
 # チームから離れる
 
- command /leave [<text>]:
+command /leave [<text>]:
   description: Leave from survivor team
   usage: /srleave [<player>]
   permission: survivor.team.leave

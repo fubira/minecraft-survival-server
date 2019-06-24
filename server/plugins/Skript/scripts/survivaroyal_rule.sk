@@ -1,5 +1,5 @@
 options:
-  HEADER: <gray>[<blue>Survivor<gray>]<reset>
+  HEADER: <gray>[<dark purple>SurvivaRoyal-Rule<gray>]<reset>
 
 variables:
   {rule_enable_frame} = 0
@@ -43,7 +43,7 @@ function showRule():
 #
 # ルール設定コマンド
 
-command /rule <command> <value>:
+command /rule <text> <text>:
   description: Survivor Game Rule
   permission: survivor.rule
   usage: /rule <command> allow/deny
@@ -179,7 +179,7 @@ on projectile hit:
 #
 # 各プレイヤーのコンパスのターゲットを最も近いベッドに設定する
 
-every 5 seconds in "{@WORLD}":
+every 5 seconds:
   if {rule_enable_bedcontrol} is 1:
     loop all players:
       set {_distance} to 99999
@@ -213,7 +213,7 @@ every 5 seconds in "{@WORLD}":
 
 on place of a bed:
   if {rule_enable_bedcontrol} is 1:
-    world is "{@WORLD}":
+    #world is "{@WORLD}":
       #block's y-coordinate is smaller than 65:
       #  message "{@HEADER} <light red>y65より下でのベッドの設置はできません<reset>"
       #  cancel event
@@ -240,9 +240,9 @@ on pick up of a bed:
   if {rule_enable_bedcontrol} is 1:
     set {_player} to player
     set {_team} to {team.%player%}
-    world is "{@WORLD}":
-      message "{@HEADER} <yellow>ベッドを拾いました！<reset>"
-      execute command "/tm %{_team}% <yellow>%{_player}%がベッドを拾いました！<reset>"
+
+    message "{@HEADER} <yellow>ベッドを拾いました！<reset>"
+    execute command "/tm %{_team}% <yellow>%{_player}%がベッドを拾いました！<reset>"
 
 
 #
@@ -257,19 +257,18 @@ on break of a bed:
     if damage was caused by block explosion:
       message "{@HEADER} TNT!TNT!"
 
-    world is "{@WORLD}":
-      distance between block's location and {bed.red} is smaller than 2:
-        delete {bed.red}
-        {_team} is not "red":
-          execute command "/tm %{_team}% %{_player}%が<light red>赤チーム<reset>のベッドを破壊した！"
-      distance between block's location and {bed.green} is smaller than 2:
-        delete {bed.green}
-        {_team} is not "green":
-          execute command "/tm %{_team}% %{_player}%が<light green>緑チーム<reset>のベッドを破壊した！"
-      distance between block's location and {bed.blue} is smaller than 2:
-        delete {bed.blue}
-        {_team} is not "blue":
-          execute command "/tm %{_team}% %{_player}%が<light blue>青チーム<reset>のベッドを破壊した！"
+    distance between block's location and {bed.red} is smaller than 2:
+      delete {bed.red}
+      {_team} is not "red":
+        execute command "/tm %{_team}% %{_player}%が<light red>赤チーム<reset>のベッドを破壊した！"
+    distance between block's location and {bed.green} is smaller than 2:
+      delete {bed.green}
+      {_team} is not "green":
+        execute command "/tm %{_team}% %{_player}%が<light green>緑チーム<reset>のベッドを破壊した！"
+    distance between block's location and {bed.blue} is smaller than 2:
+      delete {bed.blue}
+      {_team} is not "blue":
+        execute command "/tm %{_team}% %{_player}%が<light blue>青チーム<reset>のベッドを破壊した！"
 
 on burn of a bed:
   if {rule_enable_bedcontrol} is 1:
