@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "uuid": "05f677fe-cfc8-4e01-b4ff-ba10877bb0ab",
+    "name": "temzin",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]

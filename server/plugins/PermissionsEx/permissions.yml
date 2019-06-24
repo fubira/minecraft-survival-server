@@ -41,6 +41,7 @@ groups:
     - signutilities.signs.cmd.*
     - signutilities.signs.cmd.custom.*
     - inventorypresets.*
+    - instantreset.*
     inheritance:
     - default
   admin:
@@ -50,3 +51,10 @@ groups:
     - '*'
 schema-version: 1
 users:
+  05f677fe-cfc8-4e01-b4ff-ba10877bb0ab:
+    group:
+    - moderator
+    options:
+      name: temzin
+      last-login-time: '1561385840'
+      last-logout-time: '1561385835'

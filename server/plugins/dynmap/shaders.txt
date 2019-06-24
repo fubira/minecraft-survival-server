@@ -1,3 +1,5 @@
+%YAML 1.1
+---
 shaders:
 -   class: org.dynmap.hdmap.TexturePackHDShader
     name: default
@@ -204,3 +206,10 @@ shaders:
     name: amidst
     biomecolored: biome
     colorscheme: amidst
+-   class: org.dynmap.hdmap.TexturePackHDUnderwaterShader
+    name: stdtexture-underwater
+    texturepack: standard
+-   class: org.dynmap.hdmap.TexturePackHDUnderwaterShader
+    name: stdtexture-underwater-keep-land
+    texturepack: standard
+    hide-land: false

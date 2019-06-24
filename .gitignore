@@ -4,5 +4,8 @@ logs
 spigot*.jar*
 paper*.jar*
 
+templates
+
 /server/world*/
 /server/lobby/
+/server/cache

@@ -18,8 +18,8 @@ prevent-block-place: false
 prevent-mob-spawn: false
 worlds:
   world:
-    x: 36.458720566099245
-    z: -22.395608671264764
-    radiusX: 900
-    radiusZ: 900
+    x: -150.0
+    z: -150.0
+    radiusX: 1100
+    radiusZ: 1100
     wrapping: false
