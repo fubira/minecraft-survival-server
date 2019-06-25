@@ -66,7 +66,7 @@ command /world [<text>] [<text>]:
       loop {_dir::*}:
         set {_template} to loop-value
         replace all "{@SERVER_ROOT_DIR}/{@TEMPLATE_DIR}/" in {_template} with ""
-        if skutil dir "{@TEMPLATE_DIR}/%{_template}%" is exists:
+        if skutil dir "{@TEMPLATE_DIR}/%{_template}%" exists:
           if {_templates} is "":
             set {_templates} to {_template}
           else:
