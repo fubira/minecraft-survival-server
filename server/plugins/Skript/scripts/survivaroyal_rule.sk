@@ -80,31 +80,31 @@ function setNameTag():
 
 function updateRuleItem(_player: player, _variable: string, _value: string, _desc: string, _desc_allow: string, desc_deny: string):
   if {_value} is "allow":
-    set {%_variable%} to 1
+    set {%{_variable}%} to 1
     send "ルール更新: %{_desc}% ... %{_desc_allow}%<reset>" to {_player}
   else:
-    set {%_variable%} to 0
+    set {%{_variable}%} to 0
     send "ルール更新: %{_desc}% ... %{_desc_allow}%<deny>" to {_player}
 
 function setRule(_player: player, _article: string, _value: string):
   if {_article} is "bedcontrol":
-    updateRuleItem({_player}, rule_enable_bedcontrol, {_value}, "ベッド管理", "あり", "なし")
+    updateRuleItem({_player}, "rule_enable_bedcontrol", {_value}, "ベッド管理", "あり", "なし")
   else if {_article} is "friendlyfire":
-    updateRuleItem({_player}, rule_enable_friendlyfire, {_value}, "フレンドリファイア", "あり", "なし")
+    updateRuleItem({_player}, "rule_enable_friendlyfire", {_value}, "フレンドリファイア", "あり", "なし")
     setFriendlyFire()
   else if {_article} is "nametag":
-    updateRuleItem({_player}, rule_enable_nametag, {_value}, "ネームタグ", "あり", "なし")
+    updateRuleItem({_player}, "rule_enable_nametag", {_value}, "ネームタグ", "あり", "なし")
     setNameTag()
   else if {_article} is "strongtnt":
-    updateRuleItem({_player}, rule_enable_strongtnt, {_value}, "TNT威力", "強化", "通常")
+    updateRuleItem({_player}, "rule_enable_strongtnt", {_value}, "TNT威力", "強化", "通常")
   else if {_article} is "autotnt":
-    updateRuleItem({_player}, rule_enable_autotnt, {_value}, "TNT自動着火", "あり", "なし")
+    updateRuleItem({_player}, "rule_enable_autotnt", {_value}, "TNT自動着火", "あり", "なし")
   else if {_article} is "eggbomb":
-    updateRuleItem({_player}, rule_enable_eggbomb, {_value}, "エッグボム、エンチャント瓶ボム", "あり", "なし")
+    updateRuleItem({_player}, "rule_enable_eggbomb", {_value}, "エッグボム、エンチャント瓶ボム", "あり", "なし")
   #else if {_article} is "frame":
-  #  updateRuleItem({_player}, rule_enable_frame, {_value}, "アイテムフレーム", "利用可", "利用不可")
+  #  updateRuleItem({_player}, "rule_enable_frame", {_value}, "アイテムフレーム", "利用可", "利用不可")
   #else if {_article} is "hopper":
-  #  updateRuleItem({_player}, rule_enable_hopper, {_value}, "ホッパー", "利用可", "利用不可")
+  #  updateRuleItem({_player}, "rule_enable_hopper", {_value}, "ホッパー", "利用可", "利用不可")
 
 function presetRule(_player: player, _preset: string):
   if {_preset} is "team":
@@ -162,7 +162,7 @@ command /rule [<text>] [<text>]:
     if {_cmd} is "show":
       showRule()
     else if {_cmd} is "set":
-      setRule(player, the 2nd argument, the 3nd argument)
+      setRule(player, the 2nd argument, the 3rd argument)
     else if {_cmd} is "preset":
       presetRule(player, the 2nd argument)
     else:
