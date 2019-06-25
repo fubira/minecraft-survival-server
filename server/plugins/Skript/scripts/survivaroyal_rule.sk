@@ -78,61 +78,64 @@ function setNameTag():
     execute command "/scoreboard teams option blue nametagVisibility always"
     execute command "/scoreboard teams option green nametagVisibility always"
 
-function updateRuleItem(p: player, _variable: string, _value: string, _desc: string, _desc_allow: string, desc_deny: string):
+function updateRuleItem(_player: player, _variable: string, _value: string, _desc: string, _desc_allow: string, desc_deny: string):
   if {_value} is "allow":
     set {%_variable%} to 1
-    message "ルール更新: %{_desc}% ... %{_desc_allow}%<reset>" to p
+    send "ルール更新: %{_desc}% ... %{_desc_allow}%<reset>" to {_player}
   else:
     set {%_variable%} to 0
-    message "ルール更新: %{_desc}% ... %{_desc_allow}%<deny>" to p
+    send "ルール更新: %{_desc}% ... %{_desc_allow}%<deny>" to {_player}
 
-function setRule(p: player, _article: string, _value: string):
+function setRule(_player: player, _article: string, _value: string):
   if {_article} is "bedcontrol":
-    updateRuleItem(p, rule_enable_bedcontrol, {_value}, "ベッド管理", "あり", "なし")
+    updateRuleItem({_player}, rule_enable_bedcontrol, {_value}, "ベッド管理", "あり", "なし")
   else if {_article} is "friendlyfire":
-    updateRuleItem(p, rule_enable_friendlyfire, {_value}, "フレンドリファイア", "あり", "なし")
+    updateRuleItem({_player}, rule_enable_friendlyfire, {_value}, "フレンドリファイア", "あり", "なし")
     setFriendlyFire()
   else if {_article} is "nametag":
-    updateRuleItem(p, rule_enable_nametag, {_value}, "ネームタグ", "あり", "なし")
+    updateRuleItem({_player}, rule_enable_nametag, {_value}, "ネームタグ", "あり", "なし")
     setNameTag()
   else if {_article} is "strongtnt":
-    updateRuleItem(p, rule_enable_strongtnt, {_value}, "TNT威力", "強化", "通常")
-  else if {_article} p, is "autotnt":
-    updateRuleItem(p, rule_enable_autotnt, {_value}, "TNT自動着火", "あり", "なし")
+    updateRuleItem({_player}, rule_enable_strongtnt, {_value}, "TNT威力", "強化", "通常")
+  else if {_article} is "autotnt":
+    updateRuleItem({_player}, rule_enable_autotnt, {_value}, "TNT自動着火", "あり", "なし")
   else if {_article} is "eggbomb":
-    updateRuleItem(p, rule_enable_eggbomb, {_value}, "エッグボム、エンチャント瓶ボム", "あり", "なし")
+    updateRuleItem({_player}, rule_enable_eggbomb, {_value}, "エッグボム、エンチャント瓶ボム", "あり", "なし")
   #else if {_article} is "frame":
-  #  updateRuleItem(rule_enable_frame, {_value}, "アイテムフレーム", "利用可", "利用不可")
+  #  updateRuleItem({_player}, rule_enable_frame, {_value}, "アイテムフレーム", "利用可", "利用不可")
   #else if {_article} is "hopper":
-  #  updateRuleItem(rule_enable_hopper, {_value}, "ホッパー", "利用可", "利用不可")
+  #  updateRuleItem({_player}, rule_enable_hopper, {_value}, "ホッパー", "利用可", "利用不可")
 
-function presetRule(p, _preset: string):
+function presetRule(_player: player, _preset: string):
   if {_preset} is "team":
-    message "<gray>プリセットルール: チーム戦(サバイバロイヤル)<reset>" to p
+    send "<gray>プリセットルール: チーム戦(サバイバロイヤル)<reset>" to {_player}
     set {rule_enable_bedcontrol} to 1
     set {rule_enable_friendlyfire} to 0
     set {rule_enable_nametag} to 1
     set {rule_enable_strongtnt} to 1
     set {rule_enable_autotnt} to 0
     set {rule_enable_eggbomb} to 1
+
   else if  {_value} is "team-notag":
-    message "<gray>プリセットルール: チーム戦(名無しサバロワ)<reset>" to p
+    send "<gray>プリセットルール: チーム戦(名無しサバロワ)<reset>" to {_player}
     set {rule_enable_bedcontrol} to 1
     set {rule_enable_friendlyfire} to 0
     set {rule_enable_nametag} to 0
     set {rule_enable_strongtnt} to 1
     set {rule_enable_autotnt} to 0
     set {rule_enable_eggbomb} to 1
+
   else if  {_value} is "battleroyal":
-    message "<gray>プリセットルール: 個人戦(バトルロワイヤル)<reset>" to p
+    send "<gray>プリセットルール: 個人戦(バトルロワイヤル)<reset>" to {_player}
     set {rule_enable_bedcontrol} to 0
     set {rule_enable_friendlyfire} to 1
     set {rule_enable_nametag} to 0
     set {rule_enable_strongtnt} to 1
     set {rule_enable_autotnt} to 0
     set {rule_enable_eggbomb} to 0
+
   else if  {_value} is "tntroyal":
-    message "<gray>プリセットルール: 個人戦(TNTロワイヤル)<reset>" to p
+    send "<gray>プリセットルール: 個人戦(TNTロワイヤル)<reset>" to {_player}
     set {rule_enable_bedcontrol} to 0
     set {rule_enable_friendlyfire} to 1
     set {rule_enable_nametag} to 0
@@ -140,7 +143,8 @@ function presetRule(p, _preset: string):
     set {rule_enable_autotnt} to 1
     set {rule_enable_eggbomb} to 0
   else:
-    message "<gray>不明なルール名です: %{_preset}%" to p
+    send "<gray>不明なルール名です: %{_preset}%" to {_player}
+
   setNameTag()
   setFriendlyFire()
 
