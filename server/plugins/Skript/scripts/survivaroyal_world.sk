@@ -24,6 +24,9 @@ function loadWorld(player: player, command: string, param: string):
     send "{@HEADER} World [<yellow>%{_param}%<reset>] が見つかりません" to {_player}
 
 function saveWorld(player: player, command: string, param: string):
+  if skutil dir "{@TEMPLATE_DIR}" doesn't exists:
+    create directory "{@TEMPLATE_DIR}"
+
   if skutil dir "{@TEMPLATE_DIR}/%{_param}%" exists:
     send "{@HEADER} World [<yellow>%{_param}%<reset>] はすでに存在しています。先に<gold> /world delete <white>を実行してください" to {_player}
   else if {_param} is "world":
