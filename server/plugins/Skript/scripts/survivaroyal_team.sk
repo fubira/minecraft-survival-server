@@ -27,9 +27,9 @@ on script load:
 # チームに参加する
 
 command /join <text> [<player>]:
-  description: Join to Survivor team
+  description: Join to SurvivaRoyal team
   usage: /join <team> [<player>]
-  permission: survivor.team.join
+  permission: survivaroyal.team.join
   trigger:
     set {_team} to the 1st argument
 
@@ -56,9 +56,9 @@ command /join <text> [<player>]:
 # チームから離れる
 
 command /leave [<text>]:
-  description: Leave from survivor team
+  description: Leave from SurvivaRoyal team
   usage: /srleave [<player>]
-  permission: survivor.team.leave
+  permission: survivaroyal.team.leave
   trigger:
     if arg 1 is not set:
       set {_player} to player
@@ -78,7 +78,7 @@ command /leave [<text>]:
 command /teammsg <text> <text>:
   description: Send message to team
   usage: /teammsg <team> <message>
-  permission: survivor.team.message
+  permission: survivaroyal.team.message
   aliases: /tmsg, /tm
   trigger:
     set {_team} to the 1st argument
@@ -110,7 +110,7 @@ command /teammsg <text> <text>:
 command /tchat [<boolean>]:
   description: Teamchat activate / deactivate
   usage: /tchat [on | off]
-  permission: survivor.team.control
+  permission: survivaroyal.team.control
   aliases: /tc
   trigger:
     set {_arg} to "%arg 1%"

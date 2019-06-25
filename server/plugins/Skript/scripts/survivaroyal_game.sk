@@ -16,7 +16,7 @@ variables:
 # SurvivaRoyalコマンド
 
 command /sr <text>:
-  description: SurvivaRoyal control command
+  description: SurvivaRoyal Game control
   permission: survivaroyal.control
 
   usage: /sr <command>
@@ -28,6 +28,7 @@ command /sr <text>:
       execute console command "/skript reload survivaroyal_game.sk"
       execute console command "/skript reload survivaroyal_rule.sk"
       execute console command "/skript reload survivaroyal_team.sk"
+      execute console command "/skript reload survivaroyal_world.sk"
       message "{@HEADER} 完了."
 
     else if {_cmd} is "start":

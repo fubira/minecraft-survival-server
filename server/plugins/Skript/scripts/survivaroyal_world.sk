@@ -1,0 +1,26 @@
+options:
+  HEADER: <gray>[<dark green>SurvivaRoyal<gray>]<reset>
+  SERVER_ROOT_DIR: /data
+  TEMPLATES_DIR: templates
+
+#
+# ルール設定コマンド
+command /world [<text>] [<text>]:
+  description: SurvivaRoyal Game World Manager
+  permission: survivaroyal.control
+  usage: /world <command> [<value>]
+  trigger:
+    set {_cmd} to the 1st argument
+    set {_value} to the 2nd argument
+
+    if {_cmd} is "list":
+      set {_dir::*} to files in dir "{@TEMPLATES_DIR}"
+      set {_worlds} to ""
+      loop {_dir::*}:
+        set {_world} to loop-value
+        replace all "{@SERVER_ROOT_DIR}/{@TEMPLATES_DIR}/" in {_world} with ""
+        set {_worlds} to "%{_worlds}%, %{_world}%"
+
+      send "{@HEADER} World Template: <yellow>%{_worlds}%" to player
+
+    else if {_cmd} is "reload":

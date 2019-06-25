@@ -156,8 +156,8 @@ function presetRule(player: player, preset: string) :: boolean:
 #
 # ルール設定コマンド
 command /rule [<text>] [<text>] [<text>]:
-  description: Survivor Game Rule
-  permission: survivor.rule
+  description: SurvivaRoyal Game Rule
+  permission: survivaroyal.control
   usage: /rule <command> [on/off]
   trigger:
     set {_cmd} to the 1st argument
