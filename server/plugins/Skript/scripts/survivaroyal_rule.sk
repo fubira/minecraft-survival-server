@@ -2,12 +2,12 @@ options:
   HEADER: <gray>[<dark green>SurvivaRoyal<gray>]<reset>
 
 variables:
-  {rule_preset_name} = ""
+  {rule_preset_name} = "カスタムルール"
   {rule_enable_bedcontrol} = 1
-  {rule_enable_friendlyfire} = 0
+  {rule_enable_friendlyfire} = 1
   {rule_enable_nametag} = 1
   {rule_enable_strongtnt} = 1
-  {rule_enable_autotnt} = 0
+  {rule_enable_autotnt} = 1
   {rule_enable_eggbomb} = 1
   {rule_enable_frame} = 1
   {rule_enable_hopper} = 1
@@ -15,12 +15,12 @@ variables:
 function showRule():
   broadcast "{@HEADER} <gray>==== <gold>ゲームルール <gray>====<reset>"
   if {rule_preset_name} is not "":
-    broadcast "{@HEADER} <gray>[%{rule_preset_name}%]<reset>"
+    broadcast "{@HEADER} <white>[%{rule_preset_name}%]<reset>"
 
   if {rule_enable_bedcontrol} is 0:
-    broadcast "{@HEADER} <white>ベッド管理 ... <light red>なし<reset>"
+    # broadcast "{@HEADER} <white>ベッド争奪ルール ... <light red>なし<reset>"
   else:
-    broadcast "{@HEADER} <white>ベッド管理 ... <yellow>あり<reset>"
+    broadcast "{@HEADER} <white>ベッド争奪ルール ... <yellow>あり<reset>"
 
   if {rule_enable_friendlyfire} is 0:
     broadcast "{@HEADER} <white>フレンドリファイア ... <light red>なし<reset>"
@@ -33,17 +33,17 @@ function showRule():
     broadcast "{@HEADER} <white>ネームタグ ... <yellow>あり<reset>"
 
   if {rule_enable_strongtnt} is 0:
-    broadcast "{@HEADER} <white>TNT威力 ... <light red>通常<reset>"
+    # broadcast "{@HEADER} <white>TNT威力 ... <light red>通常<reset>"
   else:
     broadcast "{@HEADER} <white>TNT威力 ... <yellow>強化<reset>"
 
   if {rule_enable_autotnt} is 0:
-    broadcast "{@HEADER} <white>TNT自動着火 ... <light red>なし<reset>"
+    # broadcast "{@HEADER} <white>TNT自動着火 ... <light red>なし<reset>"
   else:
     broadcast "{@HEADER} <white>TNT自動着火 ... <yellow>あり<reset>"
 
   if {rule_enable_eggbomb} is 0:
-    broadcast "{@HEADER} <white>エッグボム ... <light red>なし<reset>"
+    # broadcast "{@HEADER} <white>エッグボム ... <light red>なし<reset>"
   else:
     broadcast "{@HEADER} <white>エッグボム ... <yellow>あり<reset>"
 
@@ -78,7 +78,8 @@ function setNameTag():
     execute command "/scoreboard teams option blue nametagVisibility always"
     execute command "/scoreboard teams option green nametagVisibility always"
 
-function updateRuleItem(_player: player, _variable: string, _value: string, _desc: string, _desc_allow: string, desc_deny: string):
+function updateRuleItem(player: player, variable: string, value: string, desc: string, desc_allow: string, desc_deny: string):
+  set {rule_preset_name} = "カスタムルール"
   if {_value} is "allow":
     set {%{_variable}%} to 1
     send "ルール更新: %{_desc}% ... %{_desc_allow}%<reset>" to {_player}
@@ -86,7 +87,7 @@ function updateRuleItem(_player: player, _variable: string, _value: string, _des
     set {%{_variable}%} to 0
     send "ルール更新: %{_desc}% ... %{_desc_allow}%<deny>" to {_player}
 
-function setRule(_player: player, _article: string, _value: string):
+function setRule(player: player, article: string, value: string):
   if {_article} is "bedcontrol":
     updateRuleItem({_player}, "rule_enable_bedcontrol", {_value}, "ベッド管理", "あり", "なし")
   else if {_article} is "friendlyfire":
@@ -106,18 +107,19 @@ function setRule(_player: player, _article: string, _value: string):
   #else if {_article} is "hopper":
   #  updateRuleItem({_player}, "rule_enable_hopper", {_value}, "ホッパー", "利用可", "利用不可")
 
-function presetRule(_player: player, _preset: string):
+function presetRule(player: player, preset: string):
   if {_preset} is "team":
-    send "<gray>プリセットルール: チーム戦(サバイバロイヤル)<reset>" to {_player}
+    set {rule_preset_name} = "<light blue>サバイバロイヤル<white>(チーム戦)"
     set {rule_enable_bedcontrol} to 1
     set {rule_enable_friendlyfire} to 0
     set {rule_enable_nametag} to 1
     set {rule_enable_strongtnt} to 1
     set {rule_enable_autotnt} to 0
     set {rule_enable_eggbomb} to 1
+    send "<dark blue>プリセットルール: %{rule_preset_name}%<reset>" to {_player}
 
-  else if  {_value} is "team-notag":
-    send "<gray>プリセットルール: チーム戦(名無しサバロワ)<reset>" to {_player}
+  else if {_preset} is "team-notag":
+    set {rule_preset_name} = "<light blue>名無しサバロワ<white>(チーム戦)"
     set {rule_enable_bedcontrol} to 1
     set {rule_enable_friendlyfire} to 0
     set {rule_enable_nametag} to 0
@@ -125,8 +127,8 @@ function presetRule(_player: player, _preset: string):
     set {rule_enable_autotnt} to 0
     set {rule_enable_eggbomb} to 1
 
-  else if  {_value} is "battleroyal":
-    send "<gray>プリセットルール: 個人戦(バトルロワイヤル)<reset>" to {_player}
+  else if {_preset} is "battleroyal":
+    set {rule_preset_name} = "<light green>バトルロワイヤル<white>(個人戦)"
     set {rule_enable_bedcontrol} to 0
     set {rule_enable_friendlyfire} to 1
     set {rule_enable_nametag} to 0
@@ -134,8 +136,8 @@ function presetRule(_player: player, _preset: string):
     set {rule_enable_autotnt} to 0
     set {rule_enable_eggbomb} to 0
 
-  else if  {_value} is "tntroyal":
-    send "<gray>プリセットルール: 個人戦(TNTロワイヤル)<reset>" to {_player}
+  else if {_preset} is "tntroyal":
+    set {rule_preset_name} = "<magenta>TNTロワイヤル<white>(個人戦)"
     set {rule_enable_bedcontrol} to 0
     set {rule_enable_friendlyfire} to 1
     set {rule_enable_nametag} to 0
@@ -182,12 +184,12 @@ command /rule [<text>] [<text>] [<text>]:
 # Item frameクラフト禁止
 
 on craft of a item frame:
-  if {rule_enable_frame} is 1:
+  if {rule_enable_frame} is 0:
     message "{@HEADER} <light red>アイテムフレームのクラフトは禁止されています<reset>"
     cancel event
 
 on place of a item frame:
-  if {rule_enable_frame} is 1:
+  if {rule_enable_frame} is 0:
     message "{@HEADER} <light red>アイテムフレームの設置は禁止されています<reset>"
     cancel event
 
@@ -196,12 +198,12 @@ on place of a item frame:
 # Hopperクラフト禁止
 
 on craft of a hopper:
-  if {rule_enable_hopper} is 1:
+  if {rule_enable_hopper} is 0:
     message "{@HEADER} <light red>ホッパーのクラフトは禁止されています<reset>"
     cancel event
 
 on place of a hopper:
-  if {rule_enable_hopper} is 1:
+  if {rule_enable_hopper} is 0:
     message "{@HEADER} <light red>ホッパーの設置は禁止されています<reset>"
     cancel event
 
