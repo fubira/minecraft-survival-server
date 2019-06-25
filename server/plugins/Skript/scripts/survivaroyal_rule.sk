@@ -151,7 +151,7 @@ function presetRule(_player: player, _preset: string):
 
 #
 # ルール設定コマンド
-command /rule [<text>] [<text>]:
+command /rule [<text>] [<text>] [<text>]:
   description: Survivor Game Rule
   permission: survivor.rule
   usage: /rule <command> [allow/deny]
