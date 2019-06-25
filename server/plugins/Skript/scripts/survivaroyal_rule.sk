@@ -137,7 +137,7 @@ function presetRule(player: player, preset: string) :: boolean:
     set {rule_enable_eggbomb} to 0
 
   else if {_preset} is "tntroyal":
-    set {rule_preset_name} to "<red>TNTロワイヤル<light green>(個人戦)"
+    set {rule_preset_name} to "<light red>TNTロワイヤル<light green>(個人戦)"
     set {rule_enable_bedcontrol} to 0
     set {rule_enable_friendlyfire} to 1
     set {rule_enable_nametag} to 0
