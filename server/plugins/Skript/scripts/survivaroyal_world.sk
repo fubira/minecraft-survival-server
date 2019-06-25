@@ -1,7 +1,7 @@
 options:
   HEADER: <gray>[<dark green>SurvivaRoyal<gray>]<reset>
   SERVER_ROOT_DIR: /data
-  TEMPLATES_DIR: templates
+  TEMPLATE_DIR: template
   WORLD_DIR: world
 
 variables:
@@ -9,12 +9,12 @@ variables:
   {world_execute_param}   = ""
   
 function loadWorld(player: player, command: string, param: string):
-  if skutil dir "{@TEMPLATES_DIR}/%{_param}%" exists:
+  if skutil dir "{@TEMPLATE_DIR}/%{_param}%" exists:
     broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を復元します"
     execute command "/dynmap cancelrender world"
     execute command "/mv delete {@WORLD_DIR}"
     execute command "/mv confirm"
-    copy dir "{@TEMPLATES_DIR}/%{_param}%" to "/"
+    copy dir "{@TEMPLATE_DIR}/%{_param}%" to "/"
     rename dir "/%{_param}%" to "/world"
     execute command "/mv import world normal"
     execute command "/dynmap fullrender world"
@@ -24,15 +24,15 @@ function loadWorld(player: player, command: string, param: string):
     send "{@HEADER} World [<yellow>%{_param}%<reset>] が見つかりません" to {_player}
 
 function saveWorld(player: player, command: string, param: string):
-  if skutil dir "{@TEMPLATES_DIR}/%{_param}%" exists:
+  if skutil dir "{@TEMPLATE_DIR}/%{_param}%" exists:
     send "{@HEADER} World [<yellow>%{_param}%<reset>] はすでに存在しています。先に<gold> /world delete <white>を実行してください" to {_player}
   else:
-    copy dir "/world" to "{@TEMPLATES_DIR}/%{_param}%"
+    copy dir "/world" to "{@TEMPLATE_DIR}/%{_param}%"
     broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を保存しました"
 
 function deleteWorld(player: player, command: string, param: string):
-  if skutil dir "{@TEMPLATES_DIR}/%{_param}%" exists:
-    delete dir "{@TEMPLATES_DIR}/%{_param}%"
+  if skutil dir "{@TEMPLATE_DIR}/%{_param}%" exists:
+    delete dir "{@TEMPLATE_DIR}/%{_param}%"
     broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を削除しました"
   else:
     send "{@HEADER} World [<yellow>%{_param}%<reset>] は存在しません" to {_player}
@@ -53,11 +53,11 @@ command /world [<text>] [<text>]:
     set {_value} to the 2nd argument
 
     if {_cmd} is "list":
-      set {_dir::*} to files in dir "{@TEMPLATES_DIR}"
+      set {_dir::*} to files in dir "{@TEMPLATE_DIR}"
       set {_templates} to ""
       loop {_dir::*}:
         set {_template} to loop-value
-        replace all "{@SERVER_ROOT_DIR}/{@TEMPLATES_DIR}/" in {_template} with ""
+        replace all "{@SERVER_ROOT_DIR}/{@TEMPLATE_DIR}/" in {_template} with ""
         set {_templates} to "%{_templates}%, %{_template}%"
 
       send "{@HEADER} World: <yellow>%{_templates}%" to player
@@ -102,6 +102,4 @@ command /world [<text>] [<text>]:
       message "<white>  現在の world を Template として保存します"
       message "<gold>/world delete [template_name]"
       message "<white>  指定した Template を削除します"
-
-
-        
+    
