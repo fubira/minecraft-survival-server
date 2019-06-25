@@ -13,9 +13,10 @@ variables:
   {rule_enable_hopper} = 1
 
 function showRule():
-  broadcast "{@HEADER} <gray>==== <gold>ゲームルール <gray>====<reset>"
   if {rule_preset_name} is not "":
-    broadcast "{@HEADER} <white>[%{rule_preset_name}%]<reset>"
+    broadcast "{@HEADER} <gray>=== <gold>ゲームルール::<white>%{rule_preset_name}% <gray>====<reset>"
+  else:
+    broadcast "{@HEADER} <gray>=== <gold>ゲームルール <gray>====<reset>"
 
   if {rule_enable_bedcontrol} is 0:
     broadcast "{@HEADER} <white>ベッド争奪ルール ... <light red>なし<reset>"
