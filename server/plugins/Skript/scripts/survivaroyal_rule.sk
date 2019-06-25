@@ -81,7 +81,7 @@ function setNameTag():
 
 function updateRuleItem(player: player, variable: string, value: string, desc: string, desc_allow: string, desc_deny: string):
   set {rule_preset_name} to "カスタムルール"
-  if {_value} is "allow":
+  if {_value} is "on":
     set {%{_variable}%} to 1
     send "ルール設定 %{_desc}% ... <yellow>%{_desc_allow}%<reset>" to {_player}
   else:
@@ -137,7 +137,7 @@ function presetRule(player: player, preset: string) :: boolean:
     set {rule_enable_eggbomb} to 0
 
   else if {_preset} is "tntroyal":
-    set {rule_preset_name} to "<magenta>TNTロワイヤル<light green>(個人戦)"
+    set {rule_preset_name} to "<red>TNTロワイヤル<light green>(個人戦)"
     set {rule_enable_bedcontrol} to 0
     set {rule_enable_friendlyfire} to 1
     set {rule_enable_nametag} to 0
@@ -145,12 +145,12 @@ function presetRule(player: player, preset: string) :: boolean:
     set {rule_enable_autotnt} to 1
     set {rule_enable_eggbomb} to 0
   else:
-    send "<gray>不明なルール名です: %{_preset}%" to {_player}
-    return false;
+    send "不正なルール名です: %{_preset}%" to {_player}
+    return false
 
   setNameTag()
   setFriendlyFire()
-  return true;
+  return true
 
 
 #
@@ -158,7 +158,7 @@ function presetRule(player: player, preset: string) :: boolean:
 command /rule [<text>] [<text>] [<text>]:
   description: Survivor Game Rule
   permission: survivor.rule
-  usage: /rule <command> [allow/deny]
+  usage: /rule <command> [on/off]
   trigger:
     set {_cmd} to the 1st argument
     set {_value} to the 2nd argument
@@ -177,9 +177,9 @@ command /rule [<text>] [<text>] [<text>]:
       message "<white>  現在のルールをブロードキャストします。"
       message "<light red>/rule preset [team | team-notag | battleroyal | tntroyal]"
       message "<white>  プリセットルールを適用します。"
-      message "<light red>/rule set <article> [allow | deny]"
+      message "<light red>/rule set <article> [on | off]"
       message "<white>  ルールを個別に設定します。"
-      message "<light red>  article: <yellow>bed, friendlyfire, nametag, strongtnt, autotnt, eggbomb"
+      message "<light red>  article: <yellow>bedcontrol, friendlyfire, nametag, strongtnt, autotnt, eggbomb"
 
     if {survivaroyal_game_running} is 1:
       message "<light red>※ゲーム進行中です。ルール変更には十分注意してください<reset>"
