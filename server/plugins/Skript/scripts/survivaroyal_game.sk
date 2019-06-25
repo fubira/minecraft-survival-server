@@ -24,9 +24,11 @@ command /sr <text>:
     set {_cmd} to the 1st argument
 
     if {_cmd} is "reload":
+      message "{@HEADER} SurvivaRoyalスクリプトをリロードします"
       execute console command "/skript reload survivaroyal_game.sk"
       execute console command "/skript reload survivaroyal_rule.sk"
       execute console command "/skript reload survivaroyal_team.sk"
+      message "{@HEADER} 完了."
 
     else if {_cmd} is "start":
       if {survivaroyal_game_running} is 1:
