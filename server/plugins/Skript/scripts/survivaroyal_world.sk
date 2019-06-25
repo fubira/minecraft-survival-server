@@ -24,7 +24,7 @@ function loadWorld(player: player, command: string, param: string):
     send "{@HEADER} World [<yellow>%{_param}%<reset>] が見つかりません" to {_player}
 
 function saveWorld(player: player, command: string, param: string):
-  if skutil dir "{@TEMPLATE_DIR}" doesn't exists:
+  if skutil dir "{@TEMPLATE_DIR}" doesn't exist:
     create directory "{@TEMPLATE_DIR}"
 
   if skutil dir "{@TEMPLATE_DIR}/%{_param}%" exists:
