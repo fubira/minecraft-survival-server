@@ -29,7 +29,9 @@ function saveWorld(player: player, command: string, param: string):
   else if {_param} is "world":
     send "{@HEADER} テンプレート名は <yellow>world<reset> 以外の名前にしてください" to {_player}
   else:
+    broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] をテンプレートとして保存します"
     copy dir "/world" to "{@TEMPLATE_DIR}/"
+    broadcast "rename dir {@TEMPLATE_DIR}/world {@TEMPLATE_DIR}/%{_param}%"
     rename dir "{@TEMPLATE_DIR}/world" to "{@TEMPLATE_DIR}/%{_param}%"
     broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を保存しました"
 
@@ -61,7 +63,11 @@ command /world [<text>] [<text>]:
       loop {_dir::*}:
         set {_template} to loop-value
         replace all "{@SERVER_ROOT_DIR}/{@TEMPLATE_DIR}/" in {_template} with ""
-        set {_templates} to "%{_templates}%, %{_template}%"
+        if skutil dir "{@TEMPLATE_DIR}/%{_template}%" is exists:
+          if {_templates} is "":
+            set {_templates} to {_template}
+          else:
+            set {_templates} to "%{_templates}%, %{_template}%"
 
       send "{@HEADER} World: <yellow>%{_templates}%" to player
 
