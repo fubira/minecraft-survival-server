@@ -2,11 +2,49 @@ options:
   HEADER: <gray>[<dark green>SurvivaRoyal<gray>]<reset>
   SERVER_ROOT_DIR: /data
   TEMPLATES_DIR: templates
+  ARENA_DIR: world
+
+variables:
+  {world_execute_command} = ""
+  {world_execute_param}   = ""
+  
+function loadWorld(player: player, command: string, param: string):
+  if skutil dir "{@TEMPLATES_DIR}/%{_param}%" exists:
+    broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を復元します"
+    execute command "/dynmap cancelrender world"
+    execute command "/mv delete {@WORLD_DIR}"
+    execute command "/mv confirm"
+    copy dir "{@TEMPLATES_DIR}/%{_param}%" to "/"
+    rename dir "/%{_param}%" to "/world"
+    execute command "/mv import world normal"
+    execute command "/dynmap fullrender world"
+    broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] が復元されました"
+  else:
+    send "{@HEADER} World [<yellow>%{_param}%<reset>] が見つかりません" to {_player}
+
+function saveWorld(player: player, command: string, param: string):
+  if skutil dir "{@TEMPLATES_DIR}/%{_param}%" exists:
+    send "{@HEADER} World [<yellow>%{_param}%<reset>] はすでに存在しています。先に<gold> /world delete <white>を実行してください" to {_player}
+  else:
+    copy dir "/world" to "{@TEMPLATES_DIR}/%{_param}%"
+    broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を保存しました"
+
+function deleteWorld(player: player, command: string, param: string):
+  if skutil dir "{@TEMPLATES_DIR}/%{_param}%" exists:
+    delete dir "{@TEMPLATES_DIR}/%{_param}%"
+    broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を削除しました"
+  else:
+    send "{@HEADER} World [<yellow>%{_param}%<reset>] は存在しません" to {_player}
+
+function clearCommand():
+  set {world_execute_command} to ""
+  set {world_execute_param} to ""
+
 
 #
 # ルール設定コマンド
 command /world [<text>] [<text>]:
-  description: SurvivaRoyal Game World Manager
+  description: SurvivaRoyal World Template Manager
   permission: survivaroyal.control
   usage: /world <command> [<value>]
   trigger:
@@ -15,12 +53,54 @@ command /world [<text>] [<text>]:
 
     if {_cmd} is "list":
       set {_dir::*} to files in dir "{@TEMPLATES_DIR}"
-      set {_worlds} to ""
+      set {_templates} to ""
       loop {_dir::*}:
-        set {_world} to loop-value
-        replace all "{@SERVER_ROOT_DIR}/{@TEMPLATES_DIR}/" in {_world} with ""
-        set {_worlds} to "%{_worlds}%, %{_world}%"
+        set {_template} to loop-value
+        replace all "{@SERVER_ROOT_DIR}/{@TEMPLATES_DIR}/" in {_template} with ""
+        set {_templates} to "%{_templates}%, %{_template}%"
 
-      send "{@HEADER} World Template: <yellow>%{_worlds}%" to player
+      send "{@HEADER} World: <yellow>%{_templates}%" to player
 
-    else if {_cmd} is "reload":
+    else if {_cmd} is "confirm":
+      if {world_execute_command} is "load":
+        loadWorld(player, {world_execute_command}, {world_execute_param});
+      else if {world_execute_command} is "save":
+        saveWorld(player, {world_execute_command}, {world_execute_param});
+      else if {world_execute_command} is "delete":
+        deleteWorld(player, {world_execute_command}, {world_execute_param});
+      else:
+        if {world_execute_command} is "":
+          message "{@HEADER} <light_red>コマンドが指定されていません"
+        else:
+          message "{@HEADER} <light_red>不正なコマンドです: <gold>%{world_execute_command}%"
+      clearCommand()
+
+    else if {_cmd} is "load":
+      set {world_execute_command} to {_cmd} 
+      set {world_execute_param} to {_value} 
+      send "{@HEADER} <light green> 本当に World [<yellow>%{_value}%<light green>] を復元してよろしいですか?" to player
+      send "{@HEADER} <light green> 問題なければ <gold>/world confirm <light green>を実行してください" to player
+    else if {_cmd} is "save":
+      set {world_execute_command} to {_cmd} 
+      set {world_execute_param} to {_value} 
+      send "{@HEADER} <light green> 本当に World [<yellow>%{_value}%<light green>] を保存してよろしいですか?" to player
+      send "{@HEADER} <light green> 問題なければ <gold>/world confirm <light green>を実行してください" to player
+    else if {_cmd} is "delete":
+      set {world_execute_command} to {_cmd} 
+      set {world_execute_param} to {_value} 
+      send "{@HEADER} <light green> 本当に World [<yellow>%{_value}%<light green>] を削除してよろしいですか?" to player
+      send "{@HEADER} <light green> 問題なければ <gold>/world confirm <light green>を実行してください" to player
+
+    else:
+      message "{@HEADER} Usage: world"
+      message "<gold>/world list"
+      message "<white>  World Template一覧の表示"
+      message "<gold>/world load [template_name]"
+      message "<white>  指定した Template を world として復元します"
+      message "<gold>/world save [template_name]"
+      message "<white>  現在の world を Template として保存します"
+      message "<gold>/world delete [template_name]"
+      message "<white>  指定した Template を削除します"
+
+
+        

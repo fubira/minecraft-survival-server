@@ -104,7 +104,7 @@ command /sr <text>:
         message "{@HEADER} SurvivaRoyalは開催されていません"
 
     else:
-      message "{@HEADER} /sr [reload|start|stop|info|score|give]"
+      message "{@HEADER} <gold>/sr [reload|start|stop|info|score|give]"
 
 
 #

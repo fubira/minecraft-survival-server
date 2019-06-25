@@ -173,13 +173,13 @@ command /rule [<text>] [<text>] [<text>]:
         showRule()
     else:
       message "{@HEADER} Usage: rule"
-      message "<light red>/rule show"
+      message "<gold>/rule show"
       message "<white>  現在のルールをブロードキャストします。"
-      message "<light red>/rule preset [team | team-notag | battleroyal | tntroyal]"
+      message "<gold>/rule preset [team | team-notag | battleroyal | tntroyal]"
       message "<white>  プリセットルールを適用します。"
-      message "<light red>/rule set <article> [on | off]"
+      message "<gold>/rule set <article> [on | off]"
       message "<white>  ルールを個別に設定します。"
-      message "<light red>  article: <yellow>bedcontrol, friendlyfire, nametag, strongtnt, autotnt, eggbomb"
+      message "<gold>  article: <yellow>bedcontrol, friendlyfire, nametag, strongtnt, autotnt, eggbomb"
 
     if {survivaroyal_game_running} is 1:
       message "<light red>※ゲーム進行中です。ルール変更には十分注意してください<reset>"
