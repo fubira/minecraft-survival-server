@@ -28,14 +28,12 @@ function saveWorld(player: player, command: string, param: string):
     create directory "{@TEMPLATE_DIR}"
 
   if skutil dir "{@TEMPLATE_DIR}/%{_param}%" exists:
-    send "{@HEADER} World [<yellow>%{_param}%<reset>] はすでに存在しています。先に<gold> /world delete <white>を実行してください" to {_player}
+    send "{@HEADER} World [<yellow>%{_param}%<reset>] はすでに存在しています。先に<gold> /world delete %{_param}%<white>を実行してください" to {_player}
   else if {_param} is "world":
     send "{@HEADER} テンプレート名は <yellow>world<reset> 以外の名前にしてください" to {_player}
   else:
     broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] をテンプレートとして保存します"
-    copy dir "/world" to "{@TEMPLATE_DIR}/"
-    broadcast "rename dir {@TEMPLATE_DIR}/world {@TEMPLATE_DIR}/%{_param}%"
-    rename dir "{@TEMPLATE_DIR}/world" to "{@TEMPLATE_DIR}/%{_param}%"
+    run bash command "cp -rf /data/world /data/{@TEMPLATE_DIR}/%{_param}%"
     broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を保存しました"
 
 function deleteWorld(player: player, command: string, param: string):
