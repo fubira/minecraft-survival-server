@@ -10,14 +10,30 @@ variables:
   
 function loadWorld(player: player, command: string, param: string):
   broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を復元します"
+  set {_template_dir} to "{@TEMPLATE_DIR}/%{_param}%"
+  set {_template_yml} to "{@TEMPLATE_DIR}/%{_param}%.yml"
+  if skutil file {_template_yml} exists:
+    set {_border_center} to yaml value "border.center" from file {_template_yml}
+    if {_border_center} is not "spawn":
+      set {_border_center_x} to yaml value "border.center.x" from file {_template_yml}
+      set {_border_center_z} to yaml value "border.center.z" from file {_template_yml}
+    set {_border_radius_x} to yaml value "border.radius_z" from file {_template_yml}
+    set {_border_radius_z} to yaml value "border.radius_x" from file {_template_yml}
+
   execute command "/dynmap cancelrender world"
   execute command "/mv delete {@WORLD_DIR}"
   execute command "/mv confirm"
-  copy dir "{@TEMPLATE_DIR}/%{_param}%" to "/"
+  copy dir "%{_template_dir}%" to "/"
   rename dir "/%{_param}%" to "/world"
   execute command "/mv import world normal"
   execute command "/dynmap fullrender world"
-  execute command "/wb world set 1200 1200 spawn"
+  if {_border_width} is 0:
+    execute command "/wb world clear"
+  else:
+    if {_border_center} is "spawn":
+      execute command "/wb world set %{_border_width}% %{_border_height}% spawn"
+    else:
+      execute command "/wb world set %{_border_width}% %{_border_height}% %{_border_radius_x}% %{_border_radius_z}% "
   broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] が復元されました"
 
 function saveWorld(player: player, command: string, param: string):
