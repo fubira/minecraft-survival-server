@@ -9,43 +9,38 @@ variables:
   {world_execute_param}   = ""
   
 function loadWorld(player: player, command: string, param: string):
-  if skutil dir "{@TEMPLATE_DIR}/%{_param}%" exists:
-    broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を復元します"
-    execute command "/dynmap cancelrender world"
-    execute command "/mv delete {@WORLD_DIR}"
-    execute command "/mv confirm"
-    copy dir "{@TEMPLATE_DIR}/%{_param}%" to "/"
-    rename dir "/%{_param}%" to "/world"
-    execute command "/mv import world normal"
-    execute command "/dynmap fullrender world"
-    execute command "/wb world set 1200 1200 spawn"
-    broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] が復元されました"
-  else:
-    send "{@HEADER} World [<yellow>%{_param}%<reset>] が見つかりません" to {_player}
+  broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を復元します"
+  execute command "/dynmap cancelrender world"
+  execute command "/mv delete {@WORLD_DIR}"
+  execute command "/mv confirm"
+  copy dir "{@TEMPLATE_DIR}/%{_param}%" to "/"
+  rename dir "/%{_param}%" to "/world"
+  execute command "/mv import world normal"
+  execute command "/dynmap fullrender world"
+  execute command "/wb world set 1200 1200 spawn"
+  broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] が復元されました"
 
 function saveWorld(player: player, command: string, param: string):
   if skutil dir "{@TEMPLATE_DIR}" doesn't exist:
     create directory "{@TEMPLATE_DIR}"
 
-  if skutil dir "{@TEMPLATE_DIR}/%{_param}%" exists:
-    send "{@HEADER} World [<yellow>%{_param}%<reset>] はすでに存在しています。先に<gold> /world delete %{_param}%<white>を実行してください" to {_player}
-  else if {_param} is "world":
-    send "{@HEADER} テンプレート名は <yellow>world<reset> 以外の名前にしてください" to {_player}
-  else:
-    broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] をテンプレートとして保存します"
-    run bash command "cp -rf /data/world /data/{@TEMPLATE_DIR}/%{_param}%"
-    broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を保存しました"
+  broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] をテンプレートとして保存します"
+  run bash command "cp -rf /data/world /data/{@TEMPLATE_DIR}/%{_param}%"
+  broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を保存しました"
 
 function deleteWorld(player: player, command: string, param: string):
-  if skutil dir "{@TEMPLATE_DIR}/%{_param}%" exists:
-    delete dir "{@TEMPLATE_DIR}/%{_param}%"
-    broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を削除しました"
-  else:
-    send "{@HEADER} World [<yellow>%{_param}%<reset>] は存在しません" to {_player}
+  delete dir "{@TEMPLATE_DIR}/%{_param}%"
+  broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を削除しました"
 
 function clearCommand():
   set {world_execute_command} to ""
   set {world_execute_param} to ""
+
+function reserveCommand(player: player, command: string, param: string, action: string):
+  set {world_execute_command} to {_command} 
+  set {world_execute_param} to {_param} 
+  send "{@HEADER} <light green>World [<yellow>%{_param}%<light green>] を%{_action}%してもよろしいですか?" to {_player}
+  send "{@HEADER} <light green>問題なければ <gold>/world confirm <light green>を実行してください" to {_player}
 
 
 #
@@ -53,10 +48,10 @@ function clearCommand():
 command /world [<text>] [<text>]:
   description: SurvivaRoyal World Template Manager
   permission: survivaroyal.control
-  usage: /world <command> [<value>]
+  usage: /world <command> [<param>]
   trigger:
     set {_cmd} to the 1st argument
-    set {_value} to the 2nd argument
+    set {_param} to the 2nd argument
 
     if {_cmd} is "list":
       set {_dir::*} to files in dir "{@TEMPLATE_DIR}"
@@ -75,10 +70,13 @@ command /world [<text>] [<text>]:
     else if {_cmd} is "confirm":
       if {world_execute_command} is "load":
         loadWorld(player, {world_execute_command}, {world_execute_param})
+
       else if {world_execute_command} is "save":
         saveWorld(player, {world_execute_command}, {world_execute_param})
+
       else if {world_execute_command} is "delete":
         deleteWorld(player, {world_execute_command}, {world_execute_param})
+
       else:
         if {world_execute_command} is "":
           message "{@HEADER} <light_red>コマンドが指定されていません"
@@ -87,20 +85,25 @@ command /world [<text>] [<text>]:
       clearCommand()
 
     else if {_cmd} is "load":
-      set {world_execute_command} to {_cmd} 
-      set {world_execute_param} to {_value} 
-      send "{@HEADER} <light green> 本当に World [<yellow>%{_value}%<light green>] を復元してよろしいですか?" to player
-      send "{@HEADER} <light green> 問題なければ <gold>/world confirm <light green>を実行してください" to player
+      if skutil dir "{@TEMPLATE_DIR}/%{_param}%" doesn't exist:
+        send "{@HEADER} World [<yellow>%{_param}%<reset>] は存在しません" to {_player}
+        exit
+      reserveCommand(player, {_cmd}, {_param}, "復元")
+
     else if {_cmd} is "save":
-      set {world_execute_command} to {_cmd} 
-      set {world_execute_param} to {_value} 
-      send "{@HEADER} <light green> 本当に World [<yellow>%{_value}%<light green>] を保存してよろしいですか?" to player
-      send "{@HEADER} <light green> 問題なければ <gold>/world confirm <light green>を実行してください" to player
+      if skutil dir "{@TEMPLATE_DIR}/%{_param}%" exists:
+        send "{@HEADER} World [<yellow>%{_param}%<reset>] はすでに存在しています。先に<gold> /world delete %{_param}%<white>を実行してください" to {_player}
+        exit
+      if {_param} is "world":
+        send "{@HEADER} テンプレート名は <yellow>world<reset> 以外の名前にしてください" to {_player}
+        exit
+      reserveCommand(player, {_cmd}, {_param}, "保存")
+
     else if {_cmd} is "delete":
-      set {world_execute_command} to {_cmd} 
-      set {world_execute_param} to {_value} 
-      send "{@HEADER} <light green> 本当に World [<yellow>%{_value}%<light green>] を削除してよろしいですか?" to player
-      send "{@HEADER} <light green> 問題なければ <gold>/world confirm <light green>を実行してください" to player
+      if skutil dir "{@TEMPLATE_DIR}/%{_param}%" doesn't exist:
+        send "{@HEADER} World [<yellow>%{_param}%<reset>] は存在しません" to {_player}
+        exit
+      reserveCommand(player, {_cmd}, {_param}, "削除")
 
     else:
       message "{@HEADER} Usage: world"
