@@ -27,13 +27,16 @@ function loadWorld(player: player, command: string, param: string):
   rename dir "/%{_param}%" to "/world"
   execute command "/mv import world normal"
   execute command "/dynmap fullrender world"
-  if {_border_width} is not set:
+  if {_border_center} is not set:
     execute command "/wb world clear"
+    broadcast "{@HEADER} No border"
   else:
     if {_border_center} is "spawn":
       execute command "/wb world set %{_border_radius_x}% %{_border_radius_z}% spawn"
+      broadcast "{@HEADER} Border (spawn) -> [%{_border_radius_x}%, %{_border_radius_z}%]"
     else:
       execute command "/wb world set %{_border_radius_x}% %{_border_radius_z}% %{_border_center_x}% %{_border_center_z}% "
+      broadcast "{@HEADER} Border (%{_border_center_x}%, %{_border_center_z}%) -> [%{_border_radius_x}%, %{_border_radius_z}%]"
   broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] が復元されました"
 
 function saveWorld(player: player, command: string, param: string):
