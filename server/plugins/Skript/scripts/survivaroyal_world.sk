@@ -17,8 +17,8 @@ function loadWorld(player: player, command: string, param: string):
     if {_border_center} is not "spawn":
       set {_border_center_x} to yaml value "border.center.x" from file {_template_yml}
       set {_border_center_z} to yaml value "border.center.z" from file {_template_yml}
-    set {_border_radius_x} to yaml value "border.radius_z" from file {_template_yml}
-    set {_border_radius_z} to yaml value "border.radius_x" from file {_template_yml}
+    set {_border_radius_x} to yaml value "border.radius_x" from file {_template_yml}
+    set {_border_radius_z} to yaml value "border.radius_z" from file {_template_yml}
 
   execute command "/dynmap cancelrender world"
   execute command "/mv delete {@WORLD_DIR}"
@@ -31,9 +31,9 @@ function loadWorld(player: player, command: string, param: string):
     execute command "/wb world clear"
   else:
     if {_border_center} is "spawn":
-      execute command "/wb world set %{_border_width}% %{_border_height}% spawn"
+      execute command "/wb world set %{_border_radius_x}% %{_border_radius_z}% spawn"
     else:
-      execute command "/wb world set %{_border_width}% %{_border_height}% %{_border_radius_x}% %{_border_radius_z}% "
+      execute command "/wb world set %{_border_radius_x}% %{_border_radius_z}% %{_border_center_x}% %{_border_center_z}% "
   broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] が復元されました"
 
 function saveWorld(player: player, command: string, param: string):
