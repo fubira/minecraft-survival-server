@@ -1,0 +1,11 @@
+enabledWorlds:
+- world
+allowNaturalSpawn: true
+onlyNerfNatural: true
+muteSound: false
+disableAI: false
+health: 20.0
+damageModifier: 1.0
+fixedSize:
+  enabled: false
+  value: 1

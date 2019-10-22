@@ -16,10 +16,12 @@ fill-memory-tolerance: 500
 bypass-list-uuids: []
 prevent-block-place: false
 prevent-mob-spawn: false
+dynmap-border-hideByDefault: false
+dynmap-border-priority: 0
 worlds:
   world:
-    x: -150.0
-    z: -150.0
-    radiusX: 1100
-    radiusZ: 1100
+    x: 0.4880439403277308
+    z: 0.5519613109892354
+    radiusX: 500
+    radiusZ: 500
     wrapping: false

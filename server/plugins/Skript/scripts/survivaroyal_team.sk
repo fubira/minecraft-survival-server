@@ -16,12 +16,12 @@ on script load:
   set {tchathead.green} to "<gray>[<gold>TEAM <light green>GREEN<gray>]<reset>"
   set {tchathead.blue} to "<gray>[<gold>TEAM <light blue>BLUE<gray>]<reset>"
 
-  execute command "/scoreboard teams add red 赤"
-  execute command "/scoreboard teams option red color red"
-  execute command "/scoreboard teams add blue 青"
-  execute command "/scoreboard teams option blue color blue"
-  execute command "/scoreboard teams add green 緑"
-  execute command "/scoreboard teams option green color green"
+  execute command "/team add red ""赤"" "
+  execute command "/team modify red color red"
+  execute command "/team add blue ""青"" "
+  execute command "/team modify blue color blue"
+  execute command "/team add green ""緑"" "
+  execute command "/team modify green color green"
 
 #
 # チームに参加する
@@ -40,8 +40,8 @@ command /join <text> [<player>]:
 
     if {_team} is "red" or "green" or "blue":
       set {team.%{_player}%} to {_team}
-      execute command "/scoreboard teams join %{team.%{_player}%}% %{_player}%"
-      message "/scoreboard teams join %{team.%{_player}%}% %{_player}%"
+      execute command "/team join %{team.%{_player}%}% %{_player}%"
+      message "/team join %{team.%{_player}%}% %{_player}%"
 
     if {_team} is "red":
       broadcast "{@HEADER} %{_player}%が<light red>赤チーム<reset>に参加しました"
@@ -69,7 +69,7 @@ command /leave [<text>]:
       stop
 
     execute command "/w %{_player}% チームから離脱しました。おつかれさまでした"
-    execute command "/scoreboard teams leave %{_player}%"
+    execute command "/team leave %{_player}%"
     delete {team.%{_player}%}
 
 #
@@ -154,6 +154,6 @@ on chat:
 on join:
   if {survivaroyal_game_running} is 1:
     if {team.%player%} is set:
-      execute command "/scoreboard teams join %{team.%{_player}%}% %{_player}%"
+      execute command "/team join %{team.%{_player}%}% %{_player}%"
 
 

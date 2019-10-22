@@ -1,71 +1,156 @@
 # This is the SpectatorPlus configuration file. It can be edited in-game
 # using the /spec config command.
-# 
+
 # If you don't see the comments below, explaining each configuration option,
 # see https://github.com/pgmann/SpectatorPlus/blob/master/SpectatorPlus/config.yml .
-# 
-# 
-# 
+
+
+
 # All the tools available in the spectators' hotbar
 tools:
-  teleporter:
-    enabled: true
-    item: COMPASS
-    inspector: true
-    health: true
-    location: true
-  arenaChooser:
-    enabled: true
-    item: WATCH
-    playersCount: true
-    technicalInfos: true
-  tools:
-    enabled: true
-    item: MAGMA_CREAM
-    glowEffectIfActive: true
-    speed: true
-    nightVision: true
-    divingSuit: true
-    noClipMode: true
-    tpToDeath:
-      enabled: true
-      displayCause: true
-  inspector:
-    enabled: true
-    item: FEATHER
-  leave:
-    enabled: true
-    item: BED
-  newbieMode: true
+    teleporter:
+        enabled: true
+        item: COMPASS
+        
+        # Right-click on a head on the TP menu to see the inventory of this player?
+        inspector: true
+        
+        # Display the health of the players in the tooltip, on the TP menu?
+        health: true
+        
+        # Display the relative location of the players in the tooltip, on the TP menu?
+        location: true
+    
+    # Enable the arena selector in arena mode (clock)?
+    # Tip: don't disable that except if you're using a plugin to put players into arenas automatically.
+    arenaChooser:
+        enabled: true
+        item: CLOCK
+
+        # Set to true to display the number of players in this arena in the tooltip
+        playersCount: true
+
+        # Set to true to display technical information to the players with the `spectate.admin.arena` permission.
+        technicalInfos: true
+    
+    # Speed, night or underwater vision, teleportation to death location
+    tools:
+        enabled: true
+        item: MAGMA_CREAM
+        
+        glowEffectIfActive: true
+        
+        # What spectators can get from the spectators' tools?
+        speed: true         # They can get speed
+        nightVision: true   # They can get night-vision and water breathing
+        divingSuit: true    # They can get some Depth-Strider-III boots
+        noClipMode: true    # They can get a no-clip mode (i.e. the vanilla spectator mode)
+        
+        tpToDeath:
+            enabled: true
+            # Display the cause of the death in the tooltip? (Example: « You starved to death ».)
+            displayCause: true
+    
+    # The inspector allows spectators to punch a player to see their inventory and stats (e.g. XP, Armour, etc.)
+    inspector:
+        enabled: true
+        item: FEATHER
+        
+    # This tool allows a spectator to click with this item to leave spectate mode (same as the "/spec off" command)
+    leave:
+        enabled: true
+        item: RED_BED
+    
+    # Add "(Right-click)" in the name of the spectators' tools (teleporter, etc.)?
+    newbieMode: true
+
+
 chat:
-  spectatorChat: false
-  shout:
-    enabled: true
-    prefix: '>'
-  blockCommands:
-    enabled: true
-    adminBypass: true
-    whitelist:
-    - /login
-    - /spec
-  autocompleteSpectators:
-    forPlayers: false
-    forSpectators: true
+    # Enable spectator-only chat, invisible to non-specs?
+    spectatorChat: true
+    
+    # Allows a spectator's chat to be visible to non-spectators.
+    # - The user must have the permission spectate.admin.shout
+    # - Their message must start with the configured prefix, by default an exclamation mark
+    shout:
+        enabled: true
+        prefix: "!"
+
+    # Block commands while spectating?
+    blockCommands:
+        enabled: true
+
+        # Allow anyone with spectate.admin.bypasswhitelist to bypass command blocking?
+        adminBypass: true
+        
+        # Commands allowed even without the bypass permission.
+        # The /me command is always available.
+        # Type the beginning of the command �? the plugin will accept all commands starting with that.
+        # Initial / is required.
+        whitelist:
+            - /login
+
+    autocompleteSpectators:
+        # Non-spectators still see spectators when they auto-complete for names. Without that option, as the
+        # server auto-completes with the names of the players this player can see, the spectators are not listed.
+        forPlayers: false
+
+        # If spectators don't see spectators, they will not be able to autocomplete against their names (same logic
+        # as above). Except if this option is set to true.
+        forSpectators: true
+
+
 spectators:
-  tabList:
-    prefix: false
-    health: false
-  spectatorsSeeSpectators: false
-  useVanillaMode: false
-  reduceDebugInfo: false
+    # These settings will change the Scoreboard used, and restore the old one when spectator mode is disabled.
+    # If you see another plugin's sidebar/infos on players list disappearing when you enable the spectator mode,
+    # try to disable this.
+    tabList:
+        prefix: false   # Prefix spectator names in the tab list?
+        health: false   # Display player's health to spectators in the tab list?
+
+    
+    # See other spectators when you're spectating?
+    # Requires spectators.tabList.prefix to be true.
+    spectatorsSeeSpectators: false
+    
+    # Use vanilla spectate mode (gamemode 3) instead of adventure mode.
+    # Same as no-clip mode tool, but mandatory.
+    useVanillaMode: false
+
+    # Spectators will have reduced debug info force-enabled.
+    reduceDebugInfo: false
+
+
+# What to do when the spectator mode is changed (enabled or disabled)?
 onSpectatorModeChanged:
-  teleportation:
-    toSpawnWithoutLobby: false
-    usingSpawnCommand: false
-  saveSpectators: true
+    teleportation:
+        # Teleport the player to the spawn if there isn't any Main Lobby set
+        toSpawnWithoutLobby: false
+        
+        # When teleporting the players to the spawn (without a main lobby set), use the /spawn command, or
+        # the spawn point of the current world?
+        usingSpawnCommand: false
+        
+        # Should a list of spectating players be used to re-enable spectate mode when players rejoin?
+        # Disable with caution - setting this to false means spectators can exit spectator mode by leaving and rejoining the game!
+    saveSpectators: true
+
+
+# Enable Skript integration? Only set to true if needed.
+# /!\ If the Skript integration is enabled, the interaction events are not cancelled,
+#     and you'll have to cancel these events using a skript. Else, spectators will be
+#     able to interact with the world, pressing buttons, opening doors, etc.
+#     See https://github.com/pgmann/SpectatorPlus/pull/38 .
 skriptIntegration: false
+
+# Show spectatorplus plugin messages to spectators?
 outputMessages: true
+
+# Enable spectate mode when a player dies?
 spectatorModeOnDeath: false
+
+# Should spectators be stopped from going out of the boundary of the arena they're in?
+# Stops them from generating far-off chunks.
 enforceBoundaries:
-  arenas: false
-  lobby: 0
+    arenas: false  # Cannot quit the arena
+    lobby: 0       # Cannot quit the spectator lobby (max x blocks from it are allowed in a sphere; if 0 or negative, disabled)

@@ -1,7 +1,6 @@
 portals:
   green:
     entryfee:
-      currency: -1
       amount: 0.0
     safeteleport: true
     teleportnonplayers: false
@@ -12,7 +11,6 @@ portals:
     destination: e:world:-785.0,66.0,-227.0:0.0:0.0
   red:
     entryfee:
-      currency: -1
       amount: 0.0
     safeteleport: true
     teleportnonplayers: false
@@ -23,7 +21,6 @@ portals:
     destination: e:world:252.0,93.0,872.0:0.0:0.0
   blue:
     entryfee:
-      currency: -1
       amount: 0.0
     safeteleport: true
     teleportnonplayers: false

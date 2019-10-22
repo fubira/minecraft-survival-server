@@ -22,7 +22,8 @@ messages:
   modifyworld.items.enchant: Sorry, &a$1&4 is too dangerous
   modifyworld.vehicle.enter.boat: You are too heavy for this &a$1
   modifyworld.vehicle.enter.minecart: Sorry, but &a$1&4 is too small
-  modifyworld.vehicle.destroy: This &a$1&4 is legal property of &bUnited States of America
+  modifyworld.vehicle.destroy: This &a$1&4 is legal property of &bUnited States of
+    America
   modifyworld.tame: This &a$1&4 is too ferocious
   modifyworld.bucket.fill: This bucket is holey
   modifyworld.bucket.empty: You suddenly realized you still need &a$1

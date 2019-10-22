@@ -104,6 +104,8 @@ Score:
   Per kill: 2
 
 Should:
+  # Show the kit menu the player previously had open if they click the close button in the kit preview GUI.
+  Show kit menu on preview close: true
   # If a player should automatically respawn when they die, without the respawn GUI showing up.
   Auto-respawn: false
   # If the plugin to clear a player's inventory when choosing a kit.

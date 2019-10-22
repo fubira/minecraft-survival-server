@@ -1,2 +1,2 @@
-var dynmapversion = "3.0-beta-4-213";
+var dynmapversion = "3.0-beta-5-218";
 

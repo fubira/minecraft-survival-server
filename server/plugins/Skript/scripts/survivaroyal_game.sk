@@ -78,7 +78,7 @@ command /sr <text>:
           add 1 to {_blue_members}
 
       broadcast "{@HEADER} <yellow>生存者数<reset> ... <light red>赤<gray>[<white>%{_red_members}%<gray>] <light blue>青<gray>[<white>%{_blue_members}%<gray>] <light green>緑<gray>[<white>%{_green_members}%<gray>]"
-      broadcast "{@HEADER} <light cyan>ポイント<reset> ... <light red>赤<gray>[<white>%{_red_point}%<gray>] <light blue>青<gray>[<white>%{_blue_point}%<gray>] <light green>緑<gray>[<white>%{_green_point}%<gray>]"
+      # broadcast "{@HEADER} <light cyan>ポイント<reset> ... <light red>赤<gray>[<white>%{_red_point}%<gray>] <light blue>青<gray>[<white>%{_blue_point}%<gray>] <light green>緑<gray>[<white>%{_green_point}%<gray>]"
 
     else if {_cmd} is "give":
       if {survivaroyal_game_running} is 1:

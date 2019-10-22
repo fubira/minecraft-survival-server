@@ -33,20 +33,20 @@ function showRule():
   else:
     broadcast "{@HEADER} <white>ネームタグ ... <yellow>あり<reset>"
 
-  if {rule_enable_strongtnt} is 0:
-    # broadcast "{@HEADER} <white>TNT威力 ... <light red>通常<reset>"
-  else:
+  if {rule_enable_strongtnt} is not 0:
     broadcast "{@HEADER} <white>TNT威力 ... <yellow>強化<reset>"
+  # else:
+  #   broadcast "{@HEADER} <white>TNT威力 ... <light red>通常<reset>"
 
-  if {rule_enable_autotnt} is 0:
-    # broadcast "{@HEADER} <white>TNT自動着火 ... <light red>なし<reset>"
-  else:
+  if {rule_enable_autotnt} is not 0:
     broadcast "{@HEADER} <white>TNT自動着火 ... <yellow>あり<reset>"
+  # else:
+  #   broadcast "{@HEADER} <white>TNT自動着火 ... <light red>なし<reset>"
 
-  if {rule_enable_eggbomb} is 0:
-    # broadcast "{@HEADER} <white>エッグボム ... <light red>なし<reset>"
-  else:
+  if {rule_enable_eggbomb} is not 0:
     broadcast "{@HEADER} <white>エッグボム ... <yellow>あり<reset>"
+  # else:
+  #   broadcast "{@HEADER} <white>エッグボム ... <light red>なし<reset>"
 
   #if {rule_enable_frame} is 0:
   #  broadcast "{@HEADER} <white>アイテムフレーム ... <light red>利用不可<reset>"
@@ -61,23 +61,23 @@ function showRule():
 
 function setFriendlyFire():
   if {rule_enable_friendlyfire} is 0:
-    execute command "/scoreboard teams option red friendlyfire false"
-    execute command "/scoreboard teams option blue friendlyfire false"
-    execute command "/scoreboard teams option green friendlyfire false"
+    execute command "/team modify red friendlyfire false"
+    execute command "/team modify blue friendlyfire false"
+    execute command "/team modify green friendlyfire false"
   else:
-    execute command "/scoreboard teams option red friendlyfire true"
-    execute command "/scoreboard teams option blue friendlyfire true"
-    execute command "/scoreboard teams option green friendlyfire true"
+    execute command "/team modify red friendlyfire true"
+    execute command "/team modify blue friendlyfire true"
+    execute command "/team modify green friendlyfire true"
 
 function setNameTag():
   if {rule_enable_nametag} is 0:
-    execute command "/scoreboard teams option red nametagVisibility never"
-    execute command "/scoreboard teams option blue nametagVisibility never"
-    execute command "/scoreboard teams option green nametagVisibility never"
+    execute command "/team modify red nametagVisibility never"
+    execute command "/team modify blue nametagVisibility never"
+    execute command "/team modify green nametagVisibility never"
   else:
-    execute command "/scoreboard teams option red nametagVisibility always"
-    execute command "/scoreboard teams option blue nametagVisibility always"
-    execute command "/scoreboard teams option green nametagVisibility always"
+    execute command "/team modify red nametagVisibility always"
+    execute command "/team modify blue nametagVisibility always"
+    execute command "/team modify green nametagVisibility always"
 
 function updateRuleItem(player: player, variable: string, value: string, desc: string, desc_allow: string, desc_deny: string):
   set {rule_preset_name} to "カスタムルール"
@@ -214,7 +214,7 @@ on place of a hopper:
 #
 # Bedクラフト禁止
 
-on craft of a bed:
+on craft of any bed:
   if {rule_enable_bedcontrol} is 1:
     message "{@HEADER} <light red>ベッドのクラフトは禁止されています<reset>"
     cancel event
@@ -289,16 +289,8 @@ every 5 seconds:
 #
 # ベッドの範囲指定、設置チームの記録
 
-on place of a bed:
+on place of any bed:
   if {rule_enable_bedcontrol} is 1:
-    #world is "{@WORLD}":
-      #block's y-coordinate is smaller than 65:
-      #  message "{@HEADER} <light red>y65より下でのベッドの設置はできません<reset>"
-      #  cancel event
-      #block's y-coordinate is larger than 165:
-      #  message "{@HEADER} <light red>y165より上でのベッドの設置はできません<reset>"
-      #  cancel event
-
     # 自チームのベッドが既に存在している場合、警告
     if {bed.%{team.%player%}%} is set:
       if player has permission "survivaroyal.control":
@@ -314,7 +306,7 @@ on place of a bed:
 #
 # Bedを拾ったことを周知する
 
-on pick up of a bed:
+on pick up of any bed:
   if {rule_enable_bedcontrol} is 1:
     set {_player} to player
     set {_team} to {team.%player%}
@@ -326,7 +318,7 @@ on pick up of a bed:
 #
 # ベッドの破壊判定
 
-on break of a bed:
+on break of any bed:
   if {rule_enable_bedcontrol} is 1:
     set {_player} to player
     set {_team} to {team.%player%}
@@ -348,7 +340,7 @@ on break of a bed:
       {_team} is not "blue":
         execute command "/tm %{_team}% %{_player}%が<light blue>青チーム<reset>のベッドを破壊した！"
 
-on burn of a bed:
+on burn of any bed:
   if {rule_enable_bedcontrol} is 1:
     broadcast "{@HEADER} <yellow>どこかでベッドが燃えました<reset>"
 

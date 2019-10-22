@@ -7,7 +7,10 @@ layer:
   layerprio: 0
   minzoom: 0
 use3dregions: false
-infowindow: <div class=\"infowindow\"><span style=\"font-size:120%;">%regionname% (%parent%) - %priority%</span><br /> Owners <span style="font-weight:bold;">%playerowners%<br/>%groupowners%</span><br/>Members <span style="font-weight:bold;">%playermembers%<br/>%groupmembers%</span><br/>Flags<br /><span style="font-weight:bold;">%flags%</span></div>
+infowindow: <div class=\"infowindow\"><span style=\"font-size:120%;">%regionname%
+  (%parent%) - %priority%</span><br /> Owners <span style="font-weight:bold;">%playerowners%<br/>%groupowners%</span><br/>Members
+  <span style="font-weight:bold;">%playermembers%<br/>%groupmembers%</span><br/>Flags<br
+  /><span style="font-weight:bold;">%flags%</span></div>
 regionstyle:
   strokeColor: '#FF8080'
   strokeOpacity: 0.8

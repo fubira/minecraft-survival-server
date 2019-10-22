@@ -2,23 +2,21 @@ var:
   debug: false
   commandsonlyfromconsole: false
 save:
-  enabled: true
-  disablestructuresaving: false
-  forceregioncachedump: true
   interval: 1800
   broadcast: false
+  disablestructuresaving: false
+  forceregioncachedump: true
   onplugindisable: true
 backup:
   enabled: false
   interval: 18000
-  savebefore: true
   broadcast: true
+  savebefore: true
   rateLimit: -1
   localfs:
     enabled: true
     destinationfolders:
     - /mnt/backup/survival
-    zip: true
     worlds:
     - '*'
     MaxNumberOfWorldsBackups: 60
@@ -28,15 +26,15 @@ backup:
     MaxNumberOfOtherFoldersBackups: 15
     excludefolders:
     - plugins/dynmap/web
+    zip: true
   ftp:
     enabled: false
-    sftp: false
     hostname: 14.3.223.82
     port: 21
     login: minecraft
     password: minecraft
+    passive: false
     path: /minecraft-backup/survival-1.8/
-    zip: true
     worlds:
     - '*'
     pluginsfolder: true
@@ -44,12 +42,40 @@ backup:
     excludefolders:
     - plugins/dynmap/web
     maxNumberOfBackups: 720
+    zip: true
+  sftp:
+    enabled: false
+    hostname: 14.3.223.82
+    port: 21
+    login: minecraft
+    password: minecraft
+    path: /minecraft-backup/survival-1.8/
+    worlds:
+    - '*'
+    pluginsfolder: true
+    otherfolders: []
+    excludefolders:
+    - plugins/dynmap/web
+    maxNumberOfBackups: 720
+    zip: true
   script:
     enabled: false
     scriptpaths: []
   dropbox:
     enabled: false
     token: ''
+    path: asw
+    worlds:
+    - '*'
+    pluginsfolder: false
+    otherfolders: []
+    excludefolders: []
+    maxNumberOfBackups: 4
+    zip: false
+  googledrive:
+    enabled: false
+    authfilepath: ''
+    rootfolderid: ''
     path: asw
     worlds:
     - '*'
@@ -72,45 +98,45 @@ purge:
   lwc:
     enabled: true
     deletepurgedblocks: false
-  residence:
-    enabled: true
-    regenpurgedresidence: false
   permissions:
     enabled: true
     savecmd: mansave
   mywarp:
     enabled: true
+  essentials:
+    enabled: true
   dat:
     enabled: true
-crashrestart:
-  enabled: false
-  startdelay: 20
-  scriptpath: ''
-  timeout: 60
+restart:
   juststop: false
-autorestart:
-  enabled: false
-  broadcast: true
-  time:
-  - '14:00'
-  countdown:
-    enabled: true
-    broadcastonsecond:
-    - 60
-    - 30
-    - 10
-    - 9
-    - 8
-    - 7
-    - 6
-    - 5
-    - 4
-    - 3
-    - 2
-    - 1
-  commands: []
-  scriptpath: ''
-  juststop: true
+  oncrash:
+    enabled: false
+    scriptpath: ''
+    timeout: 60
+    checkerstartdelay: 20
+    runonnonpluginstop: false
+  auto:
+    enabled: false
+    broadcast: true
+    scriptpath: ''
+    time:
+    - '14:00'
+    countdown:
+      enabled: true
+      broadcastonsecond:
+      - 60
+      - 30
+      - 10
+      - 9
+      - 8
+      - 7
+      - 6
+      - 5
+      - 4
+      - 3
+      - 2
+      - 1
+    commands: []
 consolecommand:
   timemode:
     enabled: false
@@ -120,10 +146,13 @@ consolecommand:
     intervals: {}
 worldregen:
   newseed: false
+  preserveradius: 0
   savewg: true
   savefactions: true
   savegp: true
   savetowny: true
   savepstones: true
 networkwatcher:
-  warnmainthreadnetwrokaccess: true
+  mainthreadnetaccess:
+    warn: true
+    interrupt: false

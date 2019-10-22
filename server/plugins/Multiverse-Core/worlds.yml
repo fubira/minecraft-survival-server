@@ -25,7 +25,6 @@ worlds:
     entryfee:
       ==: MVEntryFee
       amount: '0.0'
-      currency: '-1'
     hunger: 'false'
     autoHeal: 'true'
     adjustSpawn: 'false'
@@ -50,14 +49,14 @@ worlds:
   world:
     ==: MVWorld
     hidden: 'false'
-    alias: world
+    alias: ''
     color: WHITE
     style: NORMAL
     pvp: 'true'
     scale: '1.0'
-    respawnWorld: lobby
+    respawnWorld: ''
     allowWeather: 'true'
-    difficulty: NORMAL
+    difficulty: EASY
     spawning:
       ==: MVSpawnSettings
       animals:
@@ -73,7 +72,6 @@ worlds:
     entryfee:
       ==: MVEntryFee
       amount: '0.0'
-      currency: '-1'
     hunger: 'true'
     autoHeal: 'true'
     adjustSpawn: 'true'
@@ -82,16 +80,16 @@ worlds:
     keepSpawnInMemory: 'true'
     spawnLocation:
       ==: MVSpawnLocation
-      x: 36.458720566099245
-      y: 131.0
-      z: -22.395608671264764
-      pitch: 85.72853
-      yaw: 175.85992
+      x: 220.5
+      y: 68.0
+      z: 248.5
+      pitch: 0.0
+      yaw: 0.0
     autoLoad: 'true'
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NORMAL
-    seed: '8006241308705104206'
+    seed: '80996262004979'
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
