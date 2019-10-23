@@ -19,6 +19,9 @@ function loadWorld(player: player, command: string, param: string):
       set {_border_center_z} to yaml value "border.center.z" from file {_template_yml}
     set {_border_radius_x} to yaml value "border.radius_x" from file {_template_yml}
     set {_border_radius_z} to yaml value "border.radius_z" from file {_template_yml}
+    set {_point::*} to skutil yaml nodes "point" from file {_template_yml}
+    loop {_point::*}:
+      send "Point: %{loop_index}% %{loop_value}%"
 
   execute command "/dynmap cancelrender world"
   execute command "/mv delete {@WORLD_DIR}"
