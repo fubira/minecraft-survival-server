@@ -10,55 +10,99 @@ variables:
   {survivaroyal_game_nextstar} = 0
 
 # on script load:
+command /exitall:
+  description: Exit all players from arena
+  permission: survivaroyal.exit
+  usage: /exitall
+  trigger:
+    loop all players:
+      if loop-player's world is "world":
+        teleport player to spawn of "lobby"
 
 #
 # Pointコマンド
 
-command /point <text> [<text>]:
-  description: Point manager
-  permission: survivaroyal.point
-
-  usage: /point <set|clean> [label]
+command /ptset <text> [<world>] [<number>] [<number>] [<number>]:
+  description: Point definition
+  permission: survivaroyal.pt.set
+  usage: /ptset [label]
   trigger:
-    set {_cmd} to the 1st argument
+    set {_label} to the 1st argument
+    set {_world} to the 2nd argument
+    set {_x} to the 3rd argument
+    set {_y} to the 4th argument
+    set {_z} to the 5th argument
+    set {_location} to player's location
 
-    if {_cmd} is "set":
-      set {_label} to the 2nd argument
-      if {_label} is not set:
-        message "{@HEADER} Point名を指定してください"
-      else:
-        set {point::%{_label}%} to location of player
-        message "{@HEADER} <gold>%{_label}% <yellow>の座標を設定しました: <reset>[<light blue>%{point::%{_label}%}%<reset>]"
+    if {_world} is not set:
+      set {_world} to player's world
+      set {_x} to player's x-coordinate
+      set {_y} to player's y-coordinate
+      set {_z} to player's z-coordinate
 
-    else if {_cmd} is "list":
-      # Point一覧表示
-      message "{@HEADER} 設定Point一覧"
-      loop {point::*}:
-        message "- <gold>%loop-index% <reset>[<light blue>%loop-value%<reset>]"
-    
-    else if {_cmd} is "clean":
-      set {_label} to the 2nd argument
-      if {_label} is not set:
-        message "{@HEADER} Point名を指定してください"
-      else if {_label} is "all":
-        message "{@HEADER} <yellow>全てのPoint設定をクリアしました"
-        clear {point::*}
-      else:
-        message "{@HEADER} <gold>%{_label}% <yellow>の座標をクリアしました"
-        clear {point::%{_label}%}
+    set {_location} to location at {_x}, {_y}, {_z} in world {_world}
 
+    if {_label} is not set:
+      message "{@HEADER} Point名を指定してください"
     else:
-      message "{@HEADER} Usage: point"
-      message "<gold>/point set [label]"
-      message "<white>  現在の地点を指定した名前で記録します。"
-      message "<gold>/point clean [label]"
-      message "<white>  指定した名前の地点を削除します。"
-      message "<gold>/point clean all"
-      message "<white>  全ての地点を削除します。"
-      message "<gold>/point tp [label]"
-      message "<white>  指定した地点にテレポートします。"
-      message "<gold>/point tp [label] <player>"
-      message "<white>  指定したプレイヤーを指定地点にテレポートします。"
+      set {point.location::%{_label}%} to {_location}
+      message "{@HEADER} <gold>%{_label}% <yellow>の座標を設定しました: <reset>[<light green>%{point.location::%{_label}%}'s world%<reset>](<light blue>%{point.location::%{_label}%}%<reset>)"
+
+command /ptdel <text>:
+  description: Point deletion
+  permission: survivaroyal.pt.del
+  usage: /ptdel [label]
+  trigger:
+    set {_label} to the 1st argument
+    if {_label} is not set:
+      message "{@HEADER} Point名を指定してください"
+    else if {_label} is "all":
+      message "{@HEADER} <yellow>全てのPoint設定をクリアしました"
+      clear {point.location::*}
+    else:
+      message "{@HEADER} <gold>%{_label}% <yellow>の座標をクリアしました"
+      clear {point.location::%{_label}%}
+
+command /ptlist:
+  description: Point list
+  permission: survivaroyal.pt.list
+  usage: /ptlist
+  trigger:
+    message "{@HEADER} 設定Point一覧"
+    loop {point.location::*}:
+      message "- <gold>%loop-index% <reset>[<light green>%loop-value's world%<reset>](<light blue>%loop-value%<reset>)"
+
+command /ptp <text> [<player=%player%>]:
+  description: Point list
+  permission: survivaroyal.pt.list
+  usage: /ptp <label> [player]
+  trigger:
+    set {_label} to the 1st argument
+    set {_player} to the 2nd argument
+    if {_label} is not set:
+      message "{@HEADER} Point名を指定してください"
+    else:
+      set {_location} to {point.location::%{_label}%}
+      if {_location} is not set:
+        message "{@HEADER} Point <gold>%{_label}%<reset> が存在しません" to {_player}
+      else:
+        teleport {_player} to {_location}
+        play sound "ENTITY_ELDER_GUARDIAN_CURSE" with pitch 1.5 to {_player}
+        message "{@HEADER} Point <gold>%{_label}%<reset> に移動しました" to {_player}
+
+#    else:
+#      message "{@HEADER} Usage: point"
+#      message "<gold>/point set [label]"
+#      message "<white>  現在の地点を指定した名前で記録します。"
+#      message "<gold>/point clean [label]"
+#      message "<white>  指定した名前の地点を削除します。"
+#      message "<gold>/point clean all"
+#      message "<white>  全ての地点を削除します。"
+#      message "<gold>/point tp [label]"
+#      message "<white>  指定した地点にテレポートします。"
+#      message "<gold>/point tp [label] <player>"
+#      message "<white>  指定したプレイヤーを指定地点にテレポートします。"
+
 
 
 #
