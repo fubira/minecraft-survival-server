@@ -352,4 +352,4 @@ on respawn:
   if {rule_enable_bedcontrol} is 1:
     if {team.%player%} is set:
       if {bed.%{team.%player%}%} is not set:
-        execute command "/srleave %player%"
+        execute command "/leave %player%"

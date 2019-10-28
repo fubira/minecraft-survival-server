@@ -7,39 +7,52 @@ options:
 variables:
   {world_execute_command} = ""
   {world_execute_param}   = ""
-  
+
 function loadWorld(player: player, command: string, param: string):
   broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] を復元します"
   set {_template_dir} to "{@TEMPLATE_DIR}/%{_param}%"
   set {_template_yml} to "{@TEMPLATE_DIR}/%{_param}%.yml"
   if skutil file {_template_yml} exists:
-    set {_border_center} to yaml value "border.center" from file {_template_yml}
+    set {_border_center} to skutil yaml value "border.center" from file {_template_yml}
     if {_border_center} is not "spawn":
-      set {_border_center_x} to yaml value "border.center.x" from file {_template_yml}
-      set {_border_center_z} to yaml value "border.center.z" from file {_template_yml}
-    set {_border_radius_x} to yaml value "border.radius_x" from file {_template_yml}
-    set {_border_radius_z} to yaml value "border.radius_z" from file {_template_yml}
+      set {_border_center_x} to skutil yaml value "border.center.x" from file {_template_yml}
+      set {_border_center_z} to skutil yaml value "border.center.z" from file {_template_yml}
+    set {_border_radius_x} to skutil yaml value "border.radius_x" from file {_template_yml}
+    set {_border_radius_z} to skutil yaml value "border.radius_z" from file {_template_yml}
     set {_point::*} to skutil yaml nodes "point" from file {_template_yml}
-    loop {_point::*}:
-      send "Point: %{loop_index}% %{loop_value}%"
 
   execute command "/dynmap cancelrender world"
   execute command "/mv delete {@WORLD_DIR}"
   execute command "/mv confirm"
   copy dir "%{_template_dir}%" to "/"
   rename dir "/%{_param}%" to "/world"
-  execute command "/mv import world normal"
-  execute command "/dynmap fullrender world"
+  execute command "/mv import {@WORLD_DIR} normal"
+  execute command "/dynmap fullrender {@WORLD_DIR}"
+  
   if {_border_center} is not set:
-    execute command "/wb world clear"
+    execute command "/wb {@WORLD_DIR} clear"
     broadcast "{@HEADER} No border"
   else:
     if {_border_center} is "spawn":
-      execute command "/wb world set %{_border_radius_x}% %{_border_radius_z}% spawn"
+      execute command "/wb {@WORLD_DIR} set %{_border_radius_x}% %{_border_radius_z}% spawn"
       broadcast "{@HEADER} Border (spawn) -> [%{_border_radius_x}%, %{_border_radius_z}%]"
     else:
-      execute command "/wb world set %{_border_radius_x}% %{_border_radius_z}% %{_border_center_x}% %{_border_center_z}% "
+      execute command "/wb {@WORLD_DIR} set %{_border_radius_x}% %{_border_radius_z}% %{_border_center_x}% %{_border_center_z}% "
       broadcast "{@HEADER} Border (%{_border_center_x}%, %{_border_center_z}%) -> [%{_border_radius_x}%, %{_border_radius_z}%]"
+
+  if {_point::*} is set:
+    loop {_point::*}:
+      set {_pname} to loop-value
+      set {_x} to skutil yaml value "point.%{_pname}%.x" from file {_template_yml}
+      set {_y} to skutil yaml value "point.%{_pname}%.y" from file {_template_yml}
+      set {_z} to skutil yaml value "point.%{_pname}%.z" from file {_template_yml}
+      execute command "/ptset %{_pname}% {@WORLD_DIR} %{_x}% %{_y}% %{_z}%"
+    broadcast "{@HEADER} Pointが設定されました"
+    execute {_player} command "/ptlist"
+  else:
+    broadcast "{@HEADER} Pointは設定されていません。<gold>手動で設定を行ってください。"
+    execute {_player} command "/ptlist"
+
   broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] が復元されました"
 
 function saveWorld(player: player, command: string, param: string):
@@ -66,7 +79,7 @@ function reserveCommand(player: player, command: string, param: string, action: 
 
 
 #
-# ルール設定コマンド
+# ワールド管理コマンド
 command /world [<text>] [<text>]:
   description: SurvivaRoyal World Template Manager
   permission: survivaroyal.control
@@ -101,9 +114,9 @@ command /world [<text>] [<text>]:
 
       else:
         if {world_execute_command} is "":
-          message "{@HEADER} <light_red>コマンドが指定されていません"
+          message "{@HEADER} <light red>コマンドが指定されていません"
         else:
-          message "{@HEADER} <light_red>不正なコマンドです: <gold>%{world_execute_command}%"
+          message "{@HEADER} <light red>不正なコマンドです: <gold>%{world_execute_command}%"
       clearCommand()
 
     else if {_cmd} is "load":
@@ -130,11 +143,11 @@ command /world [<text>] [<text>]:
     else:
       message "{@HEADER} Usage: world"
       message "<gold>/world list"
-      message "<white>  World Template一覧の表示"
+      message "<white>  保存されているワールドの一覧を表示します"
       message "<gold>/world load [template_name]"
-      message "<white>  指定した Template を world として復元します"
+      message "<white>  指定したワールドを world として復元します"
       message "<gold>/world save [template_name]"
-      message "<white>  現在の world を Template として保存します"
+      message "<white>  現在の world をワールドとして保存します"
       message "<gold>/world delete [template_name]"
-      message "<white>  指定した Template を削除します"
+      message "<white>  指定したワールドを削除します"
     

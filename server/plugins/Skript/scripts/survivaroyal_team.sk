@@ -57,7 +57,7 @@ command /join <text> [<player>]:
 
 command /leave [<text>]:
   description: Leave from SurvivaRoyal team
-  usage: /srleave [<player>]
+  usage: /leave [<player>]
   permission: survivaroyal.team.leave
   trigger:
     if arg 1 is not set:
@@ -154,6 +154,6 @@ on chat:
 on join:
   if {survivaroyal_game_running} is 1:
     if {team.%player%} is set:
-      execute command "/team join %{team.%{_player}%}% %{_player}%"
+      execute command "/join %{team.%{_player}%}% %{_player}%"
 
 
