@@ -19,11 +19,11 @@ function loadWorld(player: player, command: string, param: string):
       set {_border_center_z} to skutil yaml value "border.center.z" from file {_template_yml}
     set {_border_radius_x} to skutil yaml value "border.radius_x" from file {_template_yml}
     set {_border_radius_z} to skutil yaml value "border.radius_z" from file {_template_yml}
+
     if skutil yaml "point" in file {_template_yml} does not exist:
       broadcast "{@HEADER} <light red>WARN: チームスポーン地点が未指定です。"
     else:
       set {_point::*} to skutil yaml nodes "point" from file {_template_yml}
-
 
   execute command "/dynmap cancelrender world"
   execute command "/mv delete {@WORLD_DIR}"
@@ -31,6 +31,7 @@ function loadWorld(player: player, command: string, param: string):
   copy dir "%{_template_dir}%" to "/"
   rename dir "/%{_param}%" to "/world"
   execute command "/mv import {@WORLD_DIR} normal"
+  execute command "/mvm set respawnWorld lobby"
   execute command "/dynmap fullrender {@WORLD_DIR}"
   
   if {_border_center} is not set:

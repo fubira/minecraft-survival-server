@@ -230,19 +230,20 @@ on explosion:
 
 #
 # TNT自動着火・スニークで無着火
-
 on place of tnt:
   if {rule_enable_autotnt} is 1:
-    set event-block to air
-    spawn primed tnt at event-location
+    if player is not sneaking:
+      set event-block to air
+      spawn primed tnt at event-location
 
+#
+# TNT右クリックで着火
 on rightclick:
   if clicked block is tnt:
     if {rule_enable_autotnt} is 1:
-      if player is not sneaking:
-        set event-block to air
-        spawn primed tnt at event-location
-        cancel event
+      set event-block to air
+      spawn primed tnt at event-location
+      cancel event
 
 #
 # エッグボム・エンチャントボトルボム  
