@@ -4,6 +4,7 @@ options:
 variables:
   {rule_preset_name} = "カスタムルール"
   {rule_enable_bedcontrol} = 1
+  {rule_enable_seefriendlyinvisibles} = 1
   {rule_enable_friendlyfire} = 1
   {rule_enable_nametag} = 1
   {rule_enable_strongtnt} = 1
@@ -22,6 +23,11 @@ function showRule():
     broadcast "{@HEADER} <white>ベッド争奪ルール ... <light red>なし<reset>"
   else:
     broadcast "{@HEADER} <white>ベッド争奪ルール ... <yellow>あり<reset>"
+
+  if {rule_enable_seefriendlyinvisibles} is 0:
+    broadcast "{@HEADER} <white>透過チームメンバー表示 ... <light red>非表示<reset>"
+  else:
+    broadcast "{@HEADER} <white>透過チームメンバー表示 ... <yellow>半透明表示<reset>"
 
   if {rule_enable_friendlyfire} is 0:
     broadcast "{@HEADER} <white>フレンドリファイア ... <light red>なし<reset>"
@@ -59,6 +65,16 @@ function showRule():
   #  broadcast "{@HEADER} <white>ホッパー ... <yellow>利用可<reset>"
 
 
+function setSeeFriendlyInvisibles():
+  if {rule_enable_seefriendlyinvisibles} is 0:
+    execute command "/team modify red seeFriendlyInvisibles false"
+    execute command "/team modify blue seeFriendlyInvisibles false"
+    execute command "/team modify green seeFriendlyInvisibles false"
+  else:
+    execute command "/team modify red seeFriendlyInvisibles true"
+    execute command "/team modify blue seeFriendlyInvisibles true"
+    execute command "/team modify green seeFriendlyInvisibles true"
+
 function setFriendlyFire():
   if {rule_enable_friendlyfire} is 0:
     execute command "/team modify red friendlyfire false"
@@ -91,6 +107,9 @@ function updateRuleItem(player: player, variable: string, value: string, desc: s
 function setRule(player: player, article: string, value: string):
   if {_article} is "bedcontrol":
     updateRuleItem({_player}, "rule_enable_bedcontrol", {_value}, "ベッド管理", "あり", "なし")
+  else if {_article} is "seeinvisible":
+    updateRuleItem({_player}, "rule_enable_seefriendlyinvisible", {_value}, "透過チームメンバー", "非表示", "半透明")
+    setFriendlyFire()
   else if {_article} is "friendlyfire":
     updateRuleItem({_player}, "rule_enable_friendlyfire", {_value}, "フレンドリファイア", "あり", "なし")
     setFriendlyFire()
@@ -112,6 +131,7 @@ function presetRule(player: player, preset: string) :: boolean:
   if {_preset} is "team":
     set {rule_preset_name} to "<light blue>サバイバロイヤル(チーム戦)"
     set {rule_enable_bedcontrol} to 1
+    set {rule_enable_seefriendlyinvisibles} to 1
     set {rule_enable_friendlyfire} to 0
     set {rule_enable_nametag} to 1
     set {rule_enable_strongtnt} to 1
@@ -121,6 +141,7 @@ function presetRule(player: player, preset: string) :: boolean:
   else if {_preset} is "team-notag":
     set {rule_preset_name} to "<light blue>名無しサバロワ(チーム戦)"
     set {rule_enable_bedcontrol} to 1
+    set {rule_enable_seefriendlyinvisibles} to 1
     set {rule_enable_friendlyfire} to 0
     set {rule_enable_nametag} to 0
     set {rule_enable_strongtnt} to 1
@@ -130,6 +151,7 @@ function presetRule(player: player, preset: string) :: boolean:
   else if {_preset} is "battleroyal":
     set {rule_preset_name} to "<light green>バトルロワイヤル(個人戦)"
     set {rule_enable_bedcontrol} to 0
+    set {rule_enable_seefriendlyinvisibles} to 0
     set {rule_enable_friendlyfire} to 1
     set {rule_enable_nametag} to 0
     set {rule_enable_strongtnt} to 1
@@ -139,6 +161,7 @@ function presetRule(player: player, preset: string) :: boolean:
   else if {_preset} is "tntroyal":
     set {rule_preset_name} to "<light red>TNTロワイヤル<light green>(個人戦)"
     set {rule_enable_bedcontrol} to 0
+    set {rule_enable_seefriendlyinvisibles} to 0
     set {rule_enable_friendlyfire} to 1
     set {rule_enable_nametag} to 0
     set {rule_enable_strongtnt} to 1
@@ -150,6 +173,7 @@ function presetRule(player: player, preset: string) :: boolean:
 
   setNameTag()
   setFriendlyFire()
+  setSeeFriendlyInvisibles()
   return true
 
 
@@ -179,7 +203,7 @@ command /rule [<text>] [<text>] [<text>]:
       message "<white>  プリセットルールを適用します。"
       message "<gold>/rule set <article> [on | off]"
       message "<white>  ルールを個別に設定します。"
-      message "<gold>  article: <yellow>bedcontrol, friendlyfire, nametag, strongtnt, autotnt, eggbomb"
+      message "<gold>  article: <yellow>bedcontrol, seeinvisible, friendlyfire, nametag, strongtnt, autotnt, eggbomb"
 
     if {survivaroyal_game_running} is 1:
       message "<light red>※ゲーム進行中です。ルール変更には十分注意してください<reset>"
@@ -241,9 +265,10 @@ on place of tnt:
 on rightclick:
   if clicked block is tnt:
     if {rule_enable_autotnt} is 1:
-      set event-block to air
-      spawn primed tnt at event-location
-      cancel event
+      if player is not sneaking:
+        set event-block to air
+        spawn primed tnt at event-location
+        cancel event
 
 #
 # エッグボム・エンチャントボトルボム  
