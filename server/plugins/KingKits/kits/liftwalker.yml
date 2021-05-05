@@ -1,0 +1,187 @@
+Name: liftwalker
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 9:
+    Type: Elytra
+    Repair cost: 1
+    Enchantments:
+      Durability: 3
+  Slot 10:
+    Type: Firework Rocket
+    Amount: 64
+  Slot 11:
+    Type: Tipped Arrow
+    Amount: 16
+    Potion:
+      Type: Instant Damage
+      Extended: false
+      Upgraded: false
+  Slot 12:
+    Type: Arrow
+  Slot 13:
+    Type: Golden Apple
+    Amount: 3
+  Slot 14:
+    Type: Potion
+    Potion:
+      Type: Instant Heal
+      Extended: false
+      Upgraded: true
+  Slot 15:
+    Type: Potion
+    Potion:
+      Type: Regen
+      Extended: false
+      Upgraded: false
+  Slot 16:
+    Type: Potion
+    Potion:
+      Type: Slow Falling
+      Extended: true
+      Upgraded: false
+  Slot 17:
+    Type: Cooked Beef
+    Amount: 32
+  Slot 18:
+    Type: Bow
+    Repair cost: 15
+    Enchantments:
+      Arrow Infinite: 1
+      Arrow Damage: 4
+  Slot 19:
+    Type: Trident
+    Enchantments:
+      Impaling: 7
+      Riptide: 7
+      Durability: 7
+  Slot 20:
+    Type: Ender Pearl
+    Amount: 3
+  Slot 21:
+    Type: Golden Boots
+    Attributes:
+      0:
+        UUID: 00000000-0000-0005-0000-000000000001
+        Name: generic.movementSpeed
+        Type: generic.movementSpeed
+        Amount: 0.6
+        Slot: feet
+        Operation: MULTIPLY_PERCENTAGE
+    Enchantments:
+      Frost Walker: 24
+  Slot 22:
+    Type: Tipped Arrow
+    Amount: 32
+    Name: 光の矢(3min)
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Glowing
+        Level: 0
+        Duration: 180.0
+        Ambient: false
+        Particles: true
+  Slot 23:
+    Type: Tipped Arrow
+    Amount: 32
+    Name: ｳﾞｫｴｱｱｱｱ(1min)
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Confusion
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+  Slot 24:
+    Type: Iron Ore
+    Amount: 6
+  Slot 25:
+    Type: Cobblestone
+    Amount: 32
+  Slot 26:
+    Type: Oak Log
+    Amount: 32
+  Slot 27:
+    Type: Iron Sword
+    Name: コンバットナイフ
+    Enchantments:
+      Damage All: 4
+      Durability: 2
+    Item flags:
+    - Hide Enchants
+  Slot 34:
+    Type: Potion
+    Potion:
+      Type: Invisibility
+      Extended: false
+      Upgraded: false
+  Slot 35:
+    Type: Potion
+    Potion:
+      Type: Invisibility
+      Extended: false
+      Upgraded: false
+
+Armour:
+  Helmet:
+    Type: Chainmail Helmet
+    Repair cost: 63
+    Enchantments:
+      Water Worker: 1
+      Protection Environmental: 3
+      Oxygen: 3
+      Durability: 2
+  Chestplate:
+    Type: Chainmail Chestplate
+    Repair cost: 15
+    Enchantments:
+      Protection Environmental: 3
+      Durability: 2
+  Leggings:
+    Type: Chainmail Leggings
+    Repair cost: 7
+    Enchantments:
+      Protection Environmental: 3
+      Durability: 2
+  Boots:
+    Type: Chainmail Boots
+    Repair cost: 31
+    Enchantments:
+      Depth Strider: 3
+      Protection Fall: 4
+      Protection Environmental: 3
+      Durability: 2
+
+Potion effects: {}

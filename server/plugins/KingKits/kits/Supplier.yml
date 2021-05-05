@@ -1,0 +1,130 @@
+Name: Supplier
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Paper
+    Amount: 32
+  Slot 1:
+    Type: Pufferfish
+    Amount: 16
+  Slot 2:
+    Type: Melon Slice
+    Amount: 32
+  Slot 3:
+    Type: Carrot
+    Amount: 32
+  Slot 4:
+    Type: Cow Spawn Egg
+    Amount: 32
+  Slot 5:
+    Type: Horse Spawn Egg
+  Slot 6:
+    Type: Elder Guardian Spawn Egg
+  Slot 7:
+    Type: Ender Pearl
+    Amount: 8
+  Slot 9:
+    Type: Diamond Sword
+  Slot 10:
+    Type: Bow
+  Slot 11:
+    Type: Arrow
+    Amount: 8
+  Slot 12:
+    Type: Iron Axe
+    Repair cost: 1
+    Enchantments:
+      Durability: 3
+  Slot 13:
+    Type: Light Gray Shulker Box
+  Slot 14:
+    Type: Light Gray Shulker Box
+  Slot 15:
+    Type: Prismarine Bricks
+    Amount: 64
+  Slot 16:
+    Type: Diamond Ore
+    Amount: 8
+  Slot 18:
+    Type: Cobblestone
+    Amount: 64
+  Slot 19:
+    Type: Cobblestone
+    Amount: 64
+  Slot 20:
+    Type: Cobblestone
+    Amount: 64
+  Slot 21:
+    Type: Cobblestone
+    Amount: 64
+  Slot 22:
+    Type: Cobblestone
+    Amount: 64
+  Slot 23:
+    Type: Cobblestone
+    Amount: 64
+  Slot 24:
+    Type: Stone
+    Amount: 64
+  Slot 25:
+    Type: Stone
+    Amount: 64
+  Slot 26:
+    Type: Obsidian
+    Amount: 64
+  Slot 27:
+    Type: Cobblestone
+    Amount: 64
+  Slot 28:
+    Type: Cobblestone
+    Amount: 64
+  Slot 29:
+    Type: Cobblestone
+    Amount: 64
+  Slot 30:
+    Type: Cobblestone
+    Amount: 64
+  Slot 31:
+    Type: Cobblestone
+    Amount: 64
+  Slot 32:
+    Type: Cobblestone
+    Amount: 64
+  Slot 33:
+    Type: Stone
+    Amount: 64
+  Slot 34:
+    Type: Stone
+    Amount: 64
+  Slot 35:
+    Type: Coal Block
+    Amount: 64
+
+Armour: {}
+
+Potion effects: {}

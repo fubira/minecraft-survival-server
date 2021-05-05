@@ -1,0 +1,174 @@
+Name: 56Knight
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Iron Sword
+    Name: コンバットナイフ
+    Enchantments:
+      Damage All: 2
+      Damage Undead: 3
+      Sweeping Edge: 3
+  Slot 1:
+    Type: Bow
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 2:
+    Type: Shears
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 3:
+    Type: Cooked Beef
+    Amount: 64
+  Slot 4:
+    Type: Cooked Beef
+    Amount: 64
+  Slot 5:
+    Type: Potion
+    Name: 金リンゴジュース
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Fire Resistance
+        Level: 0
+        Duration: 300.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Health Boost
+        Level: 0
+        Duration: 300.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Absorption
+        Level: 0
+        Duration: 300.0
+        Ambient: false
+        Particles: true
+  Slot 6:
+    Type: Potion
+    Potion:
+      Type: Instant Heal
+      Extended: false
+      Upgraded: true
+  Slot 7:
+    Type: Potion
+    Potion:
+      Type: Regen
+      Extended: true
+      Upgraded: false
+  Slot 8:
+    Type: Potion
+    Potion:
+      Type: Speed
+      Extended: false
+      Upgraded: true
+  Slot 24:
+    Type: Arrow
+    Amount: 36
+  Slot 32:
+    Type: Potion
+    Name: 金リンゴジュース
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Fire Resistance
+        Level: 0
+        Duration: 300.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Health Boost
+        Level: 0
+        Duration: 300.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Absorption
+        Level: 0
+        Duration: 300.0
+        Ambient: false
+        Particles: true
+  Slot 33:
+    Type: Potion
+    Potion:
+      Type: Instant Heal
+      Extended: false
+      Upgraded: true
+  Slot 34:
+    Type: Potion
+    Potion:
+      Type: Regen
+      Extended: true
+      Upgraded: false
+  Slot 35:
+    Type: Potion
+    Potion:
+      Type: Speed
+      Extended: false
+      Upgraded: true
+
+Armour:
+  Helmet:
+    Type: Chainmail Helmet
+    Repair cost: 3
+    Enchantments:
+      Water Worker: 1
+      Binding Curse: 1
+      Protection Environmental: 2
+      Oxygen: 2
+      Vanishing Curse: 1
+  Chestplate:
+    Type: Chainmail Chestplate
+    Enchantments:
+      Binding Curse: 1
+      Protection Environmental: 2
+      Vanishing Curse: 1
+  Leggings:
+    Type: Chainmail Leggings
+    Enchantments:
+      Binding Curse: 1
+      Protection Environmental: 2
+      Vanishing Curse: 1
+  Boots:
+    Type: Chainmail Boots
+    Enchantments:
+      Binding Curse: 1
+      Depth Strider: 2
+      Protection Fall: 2
+      Protection Environmental: 2
+      Vanishing Curse: 1
+
+Potion effects: {}

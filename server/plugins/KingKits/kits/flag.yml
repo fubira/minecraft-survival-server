@@ -1,0 +1,141 @@
+Name: flag
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Enchanted Golden Apple
+  Slot 1:
+    Type: Cooked Porkchop
+    Amount: 32
+  Slot 9:
+    Type: White Wool
+    Amount: 64
+  Slot 10:
+    Type: Rose Red
+    Amount: 32
+  Slot 11:
+    Type: Lapis Lazuli
+    Amount: 32
+  Slot 12:
+    Type: Shield
+  Slot 13:
+    Type: Shears
+  Slot 14:
+    Type: Iron Sword
+    Repair cost: 3
+    Enchantments:
+      Damage All: 2
+      Durability: 2
+  Slot 15:
+    Type: Bow
+    Repair cost: 3
+    Enchantments:
+      Arrow Damage: 2
+      Durability: 2
+  Slot 16:
+    Type: Spectral Arrow
+    Amount: 16
+  Slot 17:
+    Type: Arrow
+    Amount: 48
+  Slot 18:
+    Type: Tnt
+    Amount: 64
+  Slot 19:
+    Type: Flint And Steel
+  Slot 20:
+    Type: Piston
+    Amount: 64
+  Slot 21:
+    Type: Sticky Piston
+    Amount: 64
+  Slot 22:
+    Type: Redstone Block
+    Amount: 64
+  Slot 25:
+    Type: Ender Pearl
+  Slot 26:
+    Type: Potion
+    Name: オランゲーナ
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Fast Digging
+        Level: 2
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Invisibility
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Weakness
+        Level: 2
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+
+Armour:
+  Helmet:
+    Type: Iron Helmet
+    Repair cost: 7
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+  Chestplate:
+    Type: Iron Chestplate
+    Repair cost: 7
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+  Leggings:
+    Type: Iron Leggings
+    Repair cost: 7
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+  Boots:
+    Type: Iron Boots
+    Repair cost: 7
+    Enchantments:
+      Protection Fall: 2
+      Protection Environmental: 2
+      Durability: 2
+
+Potion effects: {}

@@ -1,4 +1,4 @@
-cfg-version: 11
+cfg-version: 12
 message: '&cYou have reached the edge of this world.'
 round-border: false
 debug-mode: false
@@ -19,9 +19,15 @@ prevent-mob-spawn: false
 dynmap-border-hideByDefault: false
 dynmap-border-priority: 0
 worlds:
+  world_nether:
+    x: 0.3087223961785133
+    z: 0.15428861519536397
+    radiusX: 600
+    radiusZ: 600
+    wrapping: false
   world:
-    x: 0.4880439403277308
-    z: 0.5519613109892354
-    radiusX: 500
-    radiusZ: 500
+    x: 0.0
+    z: 0.0
+    radiusX: 900
+    radiusZ: 900
     wrapping: false

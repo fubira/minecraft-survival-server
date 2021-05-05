@@ -18,7 +18,7 @@ worlds:
         name: flat
         title: "Flat"
         prefix: flat
-        perspective: iso_S_90_hires
+        perspective: iso_S_90_lowres
         shader: stdtexture
         lighting: shadows
         mapzoomin: 1
@@ -26,7 +26,7 @@ worlds:
         name: surface
         title: "Surface"
         prefix: t
-        perspective: iso_SE_30_hires
+        perspective: iso_SE_30_lowres
         shader: stdtexture
         lighting: shadows
         mapzoomin: 1

@@ -1,0 +1,131 @@
+Name: ZINGI
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 9:
+    Type: Chainmail Helmet
+    Name: 戦闘用スーツ
+    Attributes:
+      0:
+        UUID: 00000000-0004-ed05-0000-0000000581d8
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 3.0
+        Slot: head
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-000d-3de4-0000-0000000a39e6
+        Name: generic.armorToughness
+        Type: generic.armorToughness
+        Amount: 2.0
+        Slot: head
+        Operation: ADD_NUMBER
+    Enchantments:
+      Durability: 10
+  Slot 10:
+    Type: Chainmail Chestplate
+    Name: 戦闘用スーツ
+    Attributes:
+      0:
+        UUID: 00000000-0004-ed05-0000-0000000581d8
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 8.0
+        Slot: chest
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-000d-3de4-0000-0000000a39e6
+        Name: generic.armorToughness
+        Type: generic.armorToughness
+        Amount: 2.0
+        Slot: chest
+        Operation: ADD_NUMBER
+    Enchantments:
+      Durability: 10
+  Slot 11:
+    Type: Chainmail Leggings
+    Name: 戦闘用スーツ
+    Attributes:
+      0:
+        UUID: 00000000-0004-ed05-0000-0000000581d8
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 6.0
+        Slot: legs
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-000d-3de4-0000-0000000a39e6
+        Name: generic.armorToughness
+        Type: generic.armorToughness
+        Amount: 2.0
+        Slot: legs
+        Operation: ADD_NUMBER
+    Enchantments:
+      Durability: 10
+  Slot 12:
+    Type: Chainmail Boots
+    Name: 戦闘用スーツ
+    Attributes:
+      0:
+        UUID: 00000000-0004-ed05-0000-0000000581d8
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 3.0
+        Slot: feet
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-000d-3de4-0000-0000000a39e6
+        Name: generic.armorToughness
+        Type: generic.armorToughness
+        Amount: 2.0
+        Slot: feet
+        Operation: ADD_NUMBER
+    Enchantments:
+      Protection Fall: 3
+      Durability: 10
+  Slot 13:
+    Type: Glass
+    Amount: 16
+  Slot 14:
+    Type: Bread
+    Amount: 8
+  Slot 15:
+    Type: Potion
+    Potion:
+      Type: Instant Heal
+      Extended: false
+      Upgraded: true
+  Slot 16:
+    Type: Potion
+    Potion:
+      Type: Regen
+      Extended: false
+      Upgraded: false
+
+Armour: {}
+
+Potion effects: {}

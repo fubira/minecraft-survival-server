@@ -1,7 +1,37 @@
 [
   {
+    "uuid": "7e865173-49b2-4951-b299-c495ea871ec6",
+    "name": "goblin1816",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "fa85a060-193c-4e3b-b2cd-22915a3588de",
+    "name": "supportdesk",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "7e137451-13d7-4107-854d-23eb20f886a6",
+    "name": "Lemon_55",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "56b8ba62-ec3b-4bd8-b444-9f554648028d",
+    "name": "tsumasakidachi",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
     "uuid": "05f677fe-cfc8-4e01-b4ff-ba10877bb0ab",
     "name": "temzin",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "3201a83d-27c2-404a-a965-7b85baffff44",
+    "name": "carpet_23",
     "level": 4,
     "bypassesPlayerLimit": false
   }

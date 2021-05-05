@@ -1,0 +1,116 @@
+Name: TDM_1
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Bow
+    Name: べレッタ M92FS
+    Lore:
+    - 軽く誰にでも扱いやすい銃
+    Repair cost: 3
+    Attributes:
+      0:
+        UUID: 00000000-055d-7385-0000-0000055d7385
+        Name: generic.movementSpeed.mccmd
+        Type: generic.movementSpeed
+        Amount: -0.1
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+      1:
+        UUID: 00000000-055d-7386-0000-0000055d7386
+        Name: generic.movementSpeed.mccmd
+        Type: generic.movementSpeed
+        Amount: -0.1
+        Slot: offhand
+        Operation: MULTIPLY_PERCENTAGE
+    Enchantments:
+      Arrow Infinite: 1
+      Arrow Damage: 5
+      Arrow Knockback: 1
+      Vanishing Curse: 1
+  Slot 5:
+    Type: Potion
+    Potion:
+      Type: Instant Heal
+      Extended: false
+      Upgraded: true
+  Slot 6:
+    Type: Potion
+    Potion:
+      Type: Regen
+      Extended: true
+      Upgraded: false
+  Slot 7:
+    Type: Bread
+    Amount: 8
+  Slot 8:
+    Type: Golden Apple
+  Slot 9:
+    Type: Elytra
+    Durability: 382
+  Slot 16:
+    Type: Tipped Arrow
+    Amount: 16
+    Potion:
+      Type: Instant Damage
+      Extended: false
+      Upgraded: true
+  Slot 17:
+    Type: Arrow
+
+Armour:
+  Helmet:
+    Type: Chainmail Helmet
+    Repair cost: 15
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+      Vanishing Curse: 1
+  Chestplate:
+    Type: Chainmail Chestplate
+    Repair cost: 7
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+      Vanishing Curse: 1
+  Leggings:
+    Type: Chainmail Leggings
+    Repair cost: 7
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+      Vanishing Curse: 1
+  Boots:
+    Type: Chainmail Boots
+    Repair cost: 15
+    Enchantments:
+      Protection Fall: 4
+      Protection Environmental: 2
+      Durability: 2
+      Vanishing Curse: 1
+
+Potion effects: {}

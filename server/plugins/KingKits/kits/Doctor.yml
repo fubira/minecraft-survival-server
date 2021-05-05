@@ -1,0 +1,105 @@
+Name: Doctor
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 9:
+    Type: Diamond Sword
+  Slot 10:
+    Type: Bow
+  Slot 11:
+    Type: Arrow
+    Amount: 8
+  Slot 12:
+    Type: Fishing Rod
+    Repair cost: 3
+    Enchantments:
+      Luck: 3
+      Lure: 3
+  Slot 13:
+    Type: Blaze Rod
+    Amount: 16
+  Slot 14:
+    Type: Nether Wart
+    Amount: 32
+  Slot 15:
+    Type: Gunpowder
+    Amount: 32
+  Slot 16:
+    Type: Dragon Breath
+    Amount: 8
+  Slot 17:
+    Type: Gold Ore
+    Amount: 16
+  Slot 18:
+    Type: Enchanted Book
+    Repair cost: 1
+  Slot 19:
+    Type: Enchanted Book
+    Repair cost: 1
+  Slot 20:
+    Type: Enchanted Book
+    Repair cost: 1
+  Slot 21:
+    Type: Enchanted Book
+    Repair cost: 1
+  Slot 22:
+    Type: Enchanted Book
+  Slot 23:
+    Type: Enchanted Book
+  Slot 24:
+    Type: Enchanted Book
+  Slot 25:
+    Type: Enchanted Book
+  Slot 26:
+    Type: Turtle Helmet
+  Slot 27:
+    Type: Enchanted Book
+    Repair cost: 1
+  Slot 28:
+    Type: Enchanted Book
+    Repair cost: 1
+  Slot 29:
+    Type: Enchanted Book
+    Repair cost: 1
+  Slot 30:
+    Type: Enchanted Book
+    Repair cost: 1
+  Slot 31:
+    Type: Enchanted Book
+    Repair cost: 1
+  Slot 32:
+    Type: Enchanted Book
+  Slot 33:
+    Type: Enchanted Book
+  Slot 34:
+    Type: Enchanted Book
+  Slot 35:
+    Type: Enchanted Book
+
+Armour: {}
+
+Potion effects: {}

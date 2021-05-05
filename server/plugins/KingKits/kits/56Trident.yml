@@ -1,0 +1,105 @@
+Name: 56Trident
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Trident
+    Name: ポセイドンの槍
+    Enchantments:
+      Loyalty: 3
+      Damage All: 2
+      Damage Undead: 2
+  Slot 1:
+    Type: Trident
+    Name: Riptide
+    Enchantments:
+      Riptide: 3
+      Damage All: 2
+      Damage Undead: 2
+  Slot 2:
+    Type: Bow
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 3:
+    Type: Shears
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 4:
+    Type: Potion
+    Potion:
+      Type: Strength
+      Extended: true
+      Upgraded: false
+  Slot 5:
+    Type: Potion
+    Potion:
+      Type: Strength
+      Extended: true
+      Upgraded: false
+  Slot 6:
+    Type: Cooked Beef
+    Amount: 64
+  Slot 7:
+    Type: Cooked Beef
+    Amount: 64
+  Slot 35:
+    Type: Arrow
+    Amount: 36
+
+Armour:
+  Helmet:
+    Type: Chainmail Helmet
+    Repair cost: 3
+    Enchantments:
+      Water Worker: 1
+      Binding Curse: 1
+      Protection Environmental: 2
+      Oxygen: 2
+      Vanishing Curse: 1
+  Chestplate:
+    Type: Chainmail Chestplate
+    Enchantments:
+      Binding Curse: 1
+      Protection Environmental: 2
+      Vanishing Curse: 1
+  Leggings:
+    Type: Chainmail Leggings
+    Enchantments:
+      Binding Curse: 1
+      Protection Environmental: 2
+      Vanishing Curse: 1
+  Boots:
+    Type: Chainmail Boots
+    Enchantments:
+      Binding Curse: 1
+      Depth Strider: 2
+      Protection Fall: 2
+      Protection Environmental: 2
+      Vanishing Curse: 1
+
+Potion effects: {}

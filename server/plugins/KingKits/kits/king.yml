@@ -1,0 +1,157 @@
+Name: king
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Golden Sword
+    Name: ぶっとびソード
+    Enchantments:
+      Knockback: 20
+  Slot 1:
+    Type: Diamond Chestplate
+    Repair cost: 1
+    Enchantments:
+      Protection Environmental: 3
+  Slot 2:
+    Type: Diamond Pickaxe
+    Name: Equalizer
+    Repair cost: 1
+    Enchantments:
+      Dig Speed: 4
+      Fire Aspect: 4
+      Knockback: 2
+      Damage All: 5
+      Durability: 1
+  Slot 3:
+    Type: Bow
+    Name: UZISMG 9mm
+    Lore:
+    - 銃の中では初期装弾数が最も多いが重い
+    Attributes:
+      0:
+        UUID: 00000000-055d-7321-0000-0000055d7321
+        Name: generic.movementSpeed.mccmd
+        Type: generic.movementSpeed
+        Amount: -0.6
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+      1:
+        UUID: 00000000-055d-7322-0000-0000055d7322
+        Name: generic.movementSpeed.mccmd
+        Type: generic.movementSpeed
+        Amount: -0.6
+        Slot: offhand
+        Operation: MULTIPLY_PERCENTAGE
+    Enchantments:
+      Arrow Damage: 6
+  Slot 9:
+    Type: Elytra
+    Repair cost: 1
+    Enchantments:
+      Durability: 3
+  Slot 10:
+    Type: Trident
+    Repair cost: 3
+    Enchantments:
+      Impaling: 5
+      Riptide: 3
+  Slot 11:
+    Type: Tipped Arrow
+    Amount: 20
+    Potion:
+      Type: Instant Damage
+      Extended: false
+      Upgraded: false
+  Slot 12:
+    Type: Enchanted Golden Apple
+  Slot 13:
+    Type: Golden Apple
+  Slot 14:
+    Type: Potion
+    Potion:
+      Type: Instant Heal
+      Extended: false
+      Upgraded: true
+  Slot 15:
+    Type: Potion
+    Potion:
+      Type: Regen
+      Extended: false
+      Upgraded: false
+  Slot 16:
+    Type: Potion
+    Potion:
+      Type: Speed
+      Extended: false
+      Upgraded: true
+  Slot 17:
+    Type: Cooked Beef
+    Amount: 32
+  Slot 23:
+    Type: Diamond Ore
+    Amount: 3
+  Slot 24:
+    Type: Iron Ore
+    Amount: 6
+  Slot 25:
+    Type: Cobblestone
+    Amount: 32
+  Slot 26:
+    Type: Oak Log
+    Amount: 32
+
+Armour:
+  Helmet:
+    Type: Chainmail Helmet
+    Repair cost: 15
+    Enchantments:
+      Water Worker: 1
+      Protection Environmental: 2
+      Oxygen: 3
+      Durability: 2
+  Chestplate:
+    Type: Chainmail Chestplate
+    Repair cost: 3
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+  Leggings:
+    Type: Chainmail Leggings
+    Repair cost: 3
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+  Boots:
+    Type: Chainmail Boots
+    Repair cost: 15
+    Enchantments:
+      Depth Strider: 3
+      Protection Fall: 4
+      Protection Environmental: 2
+      Durability: 2
+
+Potion effects: {}

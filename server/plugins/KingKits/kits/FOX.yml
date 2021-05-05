@@ -1,0 +1,205 @@
+Name: FOX
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 40.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Iron Sword
+    Name: 日本刀
+    Lore:
+    - '"強靭な刃"'
+    Enchantments:
+      Knockback: 2
+      Damage All: 40
+  Slot 1:
+    Type: Enchanted Golden Apple
+  Slot 2:
+    Type: Bread
+    Amount: 32
+  Slot 5:
+    Type: Potion
+    Potion:
+      Type: Strength
+      Extended: false
+      Upgraded: false
+  Slot 6:
+    Type: Potion
+    Potion:
+      Type: Speed
+      Extended: false
+      Upgraded: false
+  Slot 7:
+    Type: Potion
+    Potion:
+      Type: Regen
+      Extended: true
+      Upgraded: false
+  Slot 8:
+    Type: Bow
+    Name: コルト・パイソン
+    Lore:
+    - 軽くて強力な最強武器。命中すれば一撃必殺
+    Repair cost: 1
+    Attributes:
+      0:
+        UUID: 00000000-055d-71f5-0000-0000055d71f5
+        Name: generic.movementSpeed.mccmd
+        Type: generic.movementSpeed
+        Amount: -0.1
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+      1:
+        UUID: 00000000-055d-71f6-0000-0000055d71f6
+        Name: generic.movementSpeed.mccmd
+        Type: generic.movementSpeed
+        Amount: -0.1
+        Slot: offhand
+        Operation: MULTIPLY_PERCENTAGE
+    Enchantments:
+      Arrow Fire: 1
+      Arrow Infinite: 1
+      Arrow Damage: 20
+      Arrow Knockback: 2
+  Slot 16:
+    Type: Tipped Arrow
+    Amount: 6
+    Name: 弾丸
+    Potion:
+      Type: Instant Damage
+      Extended: false
+      Upgraded: true
+  Slot 17:
+    Type: Arrow
+
+Armour:
+  Helmet:
+    Type: Chainmail Helmet
+    Attributes:
+      0:
+        UUID: 00000000-0000-0002-0000-000000000003
+        Name: generic.maxHealth
+        Type: generic.maxHealth
+        Amount: 5.0
+        Slot: head
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-0000-0002-0000-000000000002
+        Name: generic.armorToughness
+        Type: generic.armorToughness
+        Amount: 2.0
+        Slot: head
+        Operation: ADD_NUMBER
+      2:
+        UUID: 00000000-0000-0002-0000-000000000001
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 3.0
+        Slot: head
+        Operation: ADD_NUMBER
+    Enchantments:
+      Protection Environmental: 2
+  Chestplate:
+    Type: Chainmail Chestplate
+    Attributes:
+      0:
+        UUID: 00000000-0000-0003-0000-000000000003
+        Name: generic.maxHealth
+        Type: generic.maxHealth
+        Amount: 5.0
+        Slot: chest
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-0000-0003-0000-000000000002
+        Name: generic.armorToughness
+        Type: generic.armorToughness
+        Amount: 2.0
+        Slot: chest
+        Operation: ADD_NUMBER
+      2:
+        UUID: 00000000-0000-0003-0000-000000000001
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 8.0
+        Slot: chest
+        Operation: ADD_NUMBER
+    Enchantments:
+      Protection Environmental: 2
+  Leggings:
+    Type: Chainmail Leggings
+    Attributes:
+      0:
+        UUID: 00000000-0000-0004-0000-000000000003
+        Name: generic.maxHealth
+        Type: generic.maxHealth
+        Amount: 5.0
+        Slot: legs
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-0000-0004-0000-000000000002
+        Name: generic.armorToughness
+        Type: generic.armorToughness
+        Amount: 2.0
+        Slot: legs
+        Operation: ADD_NUMBER
+      2:
+        UUID: 00000000-0000-0004-0000-000000000001
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 6.0
+        Slot: legs
+        Operation: ADD_NUMBER
+    Enchantments:
+      Protection Environmental: 2
+  Boots:
+    Type: Chainmail Boots
+    Repair cost: 1
+    Attributes:
+      0:
+        UUID: 00000000-0000-0005-0000-000000000003
+        Name: generic.maxHealth
+        Type: generic.maxHealth
+        Amount: 5.0
+        Slot: feet
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-0000-0005-0000-000000000002
+        Name: generic.armorToughness
+        Type: generic.armorToughness
+        Amount: 2.0
+        Slot: feet
+        Operation: ADD_NUMBER
+      2:
+        UUID: 00000000-0000-0005-0000-000000000001
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 3.0
+        Slot: feet
+        Operation: ADD_NUMBER
+    Enchantments:
+      Protection Fall: 4
+      Protection Environmental: 2
+
+Potion effects: {}

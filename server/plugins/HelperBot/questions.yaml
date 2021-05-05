@@ -1,0 +1,16 @@
+questions:
+  -
+    question: '(?i)(ルール|rule|るーる)'
+    answer: 'http://kenmomine.wiki.fc2.com/wiki/%E3%82%86%E3%82%8B%E3%82%8D%E3%82%8F' 
+    cooldown: 10
+    broadcast: yes
+  -
+    question: '(?i)(wiki|ウィキ|うぃき)'
+    answer: 'http://kenmomine.wiki.fc2.com/' 
+    cooldown: 10
+    broadcast: yes
+  -
+    question: '(?i)(map|まｐ|マップ|dynmap)'
+    answer: 'http://kenmomine.club:8124/' 
+    cooldown: 10
+    broadcast: yes

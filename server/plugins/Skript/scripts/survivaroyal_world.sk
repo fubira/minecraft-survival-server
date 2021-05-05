@@ -54,6 +54,7 @@ function loadWorld(player: player, command: string, param: string):
       execute command "/ptset %{_pname}% {@WORLD_DIR} %{_x}% %{_y}% %{_z}%"
     broadcast "{@HEADER} Pointが設定されました"
     execute {_player} command "/ptlist"
+    execute {_player} command "/mvm set respawnWorld lobby"
 
   broadcast "{@HEADER} World [<yellow>%{_param}%<reset>] が復元されました"
 

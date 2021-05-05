@@ -1,0 +1,184 @@
+Name: '106'
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 720.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Written Book
+    Book:
+      Title: 取扱説明書-106
+      Author: Lemon_55
+      Pages:
+      - |-
+        【The Old Man】&0
+        &0取扱説明書&0
+        &0「時空間転移」を手に持つとスペクテイターモードとなります。スペク効果が切れる3秒前に水に吸い込まれる音が鳴ります。また、スペクテイターモード中にマウスのホイールボタンをクリックするとプレイヤーにテレポート出来ます。スペクテイターモードは10秒間あるので慌てずにTABキーでプレイヤーを確認してから
+      - |-
+        転移してください。&0
+        &0
+        &0データ&0
+        &0HP 700&0
+        &0AT 24&0
+        &0MS -50%&0
+        &0
+        &0上昇攻撃力は15×1.6=24となっています。バグ修正した上&0
+        &0村人ワンパン検証済みです&0
+        &0
+        &0ご飯ないのは察して
+  Slot 1:
+    Type: Potion
+    Potion:
+      Type: Strength
+      Extended: false
+      Upgraded: true
+  Slot 2:
+    Type: Potion
+    Potion:
+      Type: Strength
+      Extended: false
+      Upgraded: true
+  Slot 3:
+    Type: Potion
+    Potion:
+      Type: Strength
+      Extended: false
+      Upgraded: true
+  Slot 4:
+    Type: Potion
+    Potion:
+      Type: Speed
+      Extended: false
+      Upgraded: false
+  Slot 5:
+    Type: Potion
+    Potion:
+      Type: Speed
+      Extended: false
+      Upgraded: false
+  Slot 6:
+    Type: Potion
+    Potion:
+      Type: Speed
+      Extended: false
+      Upgraded: false
+  Slot 17:
+    Type: Flint
+    Name: 時空間転移
+    Lore:
+    - 10秒間スペクテイターモードとなる
+    - クールダウン300秒
+    Repair cost: 3
+    Enchantments:
+      Arrow Infinite: 1
+      Vanishing Curse: 1
+
+Armour:
+  Helmet:
+    Type: Wither Skeleton Skull
+    Name: The Old Man
+    Repair cost: 1
+    Attributes:
+      0:
+        UUID: 00000000-0000-0002-0000-000000000001
+        Name: generic.maxHealth
+        Type: generic.maxHealth
+        Amount: 700.0
+        Slot: head
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-0000-0002-0000-000000000002
+        Name: generic.movementSpeed
+        Type: generic.movementSpeed
+        Amount: -0.5
+        Slot: head
+        Operation: MULTIPLY_PERCENTAGE
+      2:
+        UUID: 00000000-0000-0002-0000-000000000003
+        Name: generic.attackDamage
+        Type: generic.attackDamage
+        Amount: 15.0
+        Slot: head
+        Operation: ADD_NUMBER
+    Enchantments:
+      Binding Curse: 1
+      Vanishing Curse: 1
+  Chestplate:
+    Type: Leather Chestplate
+    Dye:
+      Red: 0
+      Green: 0
+      Blue: 0
+    Repair cost: 1
+    Attributes:
+      0:
+        UUID: 00000000-0000-0003-0000-000000000001
+        Name: generic.attackDamage
+        Type: generic.attackDamage
+        Amount: 0.2
+        Slot: chest
+        Operation: MULTIPLY_PERCENTAGE
+    Enchantments:
+      Binding Curse: 1
+      Protection Fire: 4
+      Vanishing Curse: 1
+  Leggings:
+    Type: Leather Leggings
+    Dye:
+      Red: 0
+      Green: 0
+      Blue: 0
+    Repair cost: 1
+    Attributes:
+      0:
+        UUID: 00000000-0000-0004-0000-000000000001
+        Name: generic.attackDamage
+        Type: generic.attackDamage
+        Amount: 0.2
+        Slot: legs
+        Operation: MULTIPLY_PERCENTAGE
+    Enchantments:
+      Binding Curse: 1
+      Protection Fire: 4
+      Vanishing Curse: 1
+  Boots:
+    Type: Leather Boots
+    Dye:
+      Red: 0
+      Green: 0
+      Blue: 0
+    Attributes:
+      0:
+        UUID: 00000000-0000-0005-0000-000000000001
+        Name: generic.attackDamage
+        Type: generic.attackDamage
+        Amount: 0.2
+        Slot: feet
+        Operation: MULTIPLY_PERCENTAGE
+    Enchantments:
+      Protection Fall: 4
+      Vanishing Curse: 1
+
+Potion effects: {}

@@ -1,3 +1,11 @@
+database:
+  enabled: false
+  type: mysql
+  host: localhost
+  port: 3306
+  name: nerfphantoms
+  username: user
+  password: '123456'
 enabledWorlds:
 - world
 allowNaturalSpawn: true

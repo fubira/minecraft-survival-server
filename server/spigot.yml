@@ -10,8 +10,9 @@
 # IRC: #spigot @ irc.spi.gt ( http://www.spigotmc.org/pages/irc/ )
 # Forums: http://www.spigotmc.org/
 
-config-version: 11
+config-version: 12
 settings:
+  log-villager-deaths: true
   save-user-cache-on-stop-only: false
   bungeecord: false
   late-bind: false
@@ -60,6 +61,16 @@ stats:
   forced-stats: {}
 world-settings:
   default:
+    end-portal-sound-radius: 0
+    view-distance: default
+    trident-despawn-rate: 1200
+    seed-outpost: 165745296
+    seed-endcity: 10387313
+    seed-bastion: 30084232
+    seed-fortress: 30084232
+    seed-mansion: 10387319
+    seed-fossil: 14357921
+    seed-portal: 34222645
     seed-desert: 14357617
     seed-igloo: 14357618
     seed-jungle: 14357619
@@ -68,6 +79,9 @@ world-settings:
     seed-ocean: 14357621
     verbose: true
     growth:
+      bamboo-modifier: 100
+      sweetberry-modifier: 100
+      kelp-modifier: 100
       beetroot-modifier: 100
       carrot-modifier: 100
       potato-modifier: 100
@@ -82,11 +96,30 @@ world-settings:
       vine-modifier: 100
       cocoa-modifier: 100
     entity-activation-range:
+      raiders: 48
+      villagers: 32
+      flying-monsters: 32
+      villagers-work-immunity-after: 100
+      villagers-work-immunity-for: 20
+      villagers-active-for-panic: true
       water: 16
       tick-inactive-villagers: true
       animals: 32
       monsters: 32
       misc: 16
+      wake-up-inactive:
+        animals-max-per-tick: 4
+        animals-every: 1200
+        animals-for: 100
+        monsters-max-per-tick: 8
+        monsters-every: 400
+        monsters-for: 100
+        villagers-max-per-tick: 4
+        villagers-every: 600
+        villagers-for: 100
+        flying-monsters-max-per-tick: 8
+        flying-monsters-every: 200
+        flying-monsters-for: 100
     entity-tracking-range:
       players: 128
       animals: 64
@@ -119,7 +152,6 @@ world-settings:
     enable-zombie-pigmen-portal-spawns: true
     arrow-despawn-rate: 1200
     wither-spawn-sound-radius: 0
-    view-distance: 10
     hanging-tick-frequency: 100
     zombie-aggressive-towards-villager: true
     mob-spawn-range: 4
@@ -154,7 +186,11 @@ world-settings:
     clear-tick-list: false
     squid-spawn-range:
       min: 45.0
+  worldeditregentempworld:
+    verbose: false
 advancements:
-  disable-saving: false
+  disable-saving: true
   disabled:
-  - minecraft:story/disabled
+  - '*'
+players:
+  disable-saving: true

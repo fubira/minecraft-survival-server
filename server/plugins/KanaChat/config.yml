@@ -2,3 +2,7 @@ user:
   temzin:
     kanachat: true
     kanji: true
+  tsumasakidachi:
+    kanachat: false
+  supportdesk:
+    kanachat: true

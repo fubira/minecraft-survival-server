@@ -11,8 +11,8 @@
 #
 regions:
     lounge:
-        min: {x: -98.0, y: 137.0, z: -6.0}
-        max: {x: -52.0, y: 172.0, z: 70.0}
+        min: {x: -98, y: 137, z: -6}
+        max: {x: -52, y: 172, z: 70}
         members: {}
         flags: {enderpearl: deny, item-drop: deny, use: allow, item-pickup: deny,
             interact: allow, chest-access: allow}
@@ -21,8 +21,8 @@ regions:
         type: cuboid
         priority: 0
     boxselect:
-        min: {x: 33.0, y: 160.0, z: 20.0}
-        max: {x: 47.0, y: 164.0, z: 31.0}
+        min: {x: 33, y: 160, z: 20}
+        max: {x: 47, y: 164, z: 31}
         members: {}
         flags: {build: allow, use: allow, interact: allow, chest-access: allow}
         owners: {}
@@ -30,7 +30,8 @@ regions:
         priority: 0
     __global__:
         members: {}
-        flags: {build: deny, use: allow, interact: allow, chest-access: allow, feed-min-hunger: 20}
+        flags: {other-explosion: deny, build: deny, use: allow, interact: allow, chest-access: allow,
+            feed-min-hunger: 20}
         owners:
             unique-ids: [2f8c5fe8-1312-492a-b3eb-77a3034e8878]
         type: global

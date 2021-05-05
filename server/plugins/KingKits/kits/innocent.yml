@@ -1,0 +1,129 @@
+Name: innocent
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Wooden Sword
+    Name: 木刀
+    Repair cost: 1
+    Attributes:
+      0:
+        UUID: 00000000-0005-a004-0000-00000008b66e
+        Name: generic.attackSpeed
+        Type: generic.attackSpeed
+        Amount: 3.0
+        Slot: mainhand
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-0001-a718-0000-000000052336
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 3.0
+        Slot: mainhand
+        Operation: ADD_NUMBER
+    Enchantments:
+      Damage All: 5
+  Slot 1:
+    Type: Bread
+    Amount: 3
+  Slot 2:
+    Type: Mushroom Stew
+  Slot 3:
+    Type: Potion
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Speed
+        Level: 2
+        Duration: 3600.0
+        Ambient: false
+        Particles: true
+  Slot 4:
+    Type: Potion
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Regeneration
+        Level: 0
+        Duration: 3600.0
+        Ambient: false
+        Particles: true
+  Slot 5:
+    Type: Potion
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Invisibility
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+  Slot 6:
+    Type: Splash Potion
+    Name: クイックヒール
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Heal
+        Level: 12
+        Duration: 1.0
+        Ambient: false
+        Particles: true
+  Slot 7:
+    Type: Totem Of Undying
+
+Armour:
+  Helmet:
+    Type: Chainmail Helmet
+    Enchantments:
+      Protection Environmental: 2
+  Chestplate:
+    Type: Chainmail Chestplate
+    Enchantments:
+      Protection Environmental: 2
+  Leggings:
+    Type: Chainmail Leggings
+    Enchantments:
+      Protection Environmental: 2
+  Boots:
+    Type: Chainmail Boots
+    Enchantments:
+      Protection Environmental: 2
+
+Potion effects: {}

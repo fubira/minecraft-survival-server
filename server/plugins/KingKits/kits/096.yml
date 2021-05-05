@@ -1,0 +1,109 @@
+Name: '096'
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 1220.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Written Book
+    Book:
+      Title: 取扱説明書-096
+      Author: Lemon_55
+      Pages:
+      - |
+        【The Shy Guy】&0
+        &0取扱説明書&0
+        &0通常時は透明となります&0
+        &0敵プレイヤーの3m以内に近づくと発狂し始めます&0
+        &0発狂は10秒間続きます&0
+        &0発狂中は全く動けません。耐えましょう。&0
+        &0発狂中の効果&0
+        &0・盲目&0
+        &0・発光&0
+        &0・耐性Ⅰ&0
+      - |-
+        発狂が切れると30秒間覚醒モードになります&0
+        &0覚醒モード中の効果&0
+        &0・攻撃力上昇100&0
+        &0・移動速度上昇10&0
+        &0・跳躍力上昇10&0
+        &0・耐性10&0
+        &0
+        &0覚醒モードが終わると通常時に戻りますが、再び発狂するには覚醒モード突入後から300秒かかります&0
+        &0発狂のクールダウンが終わると金床の甲高い音が響く
+      - 飯ないのは察して
+
+Armour:
+  Helmet:
+    Type: Skeleton Skull
+    Name: The Shy
+    Repair cost: 1
+    Attributes:
+      0:
+        UUID: 00000000-0000-0002-0000-000000000001
+        Name: generic.maxHealth
+        Type: generic.maxHealth
+        Amount: 500.0
+        Slot: head
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-0000-0002-0000-000000000003
+        Name: generic.movementSpeed
+        Type: generic.movementSpeed
+        Amount: 0.1
+        Slot: head
+        Operation: MULTIPLY_PERCENTAGE
+      2:
+        UUID: 00000000-0000-0002-0000-000000000005
+        Name: generic.attackDamage
+        Type: generic.attackDamage
+        Amount: 1.0
+        Slot: head
+        Operation: ADD_NUMBER
+      3:
+        UUID: 00000000-0000-0002-0000-000000000004
+        Name: generic.knockbackResistance
+        Type: generic.knockbackResistance
+        Amount: 1.0
+        Slot: head
+        Operation: MULTIPLY_PERCENTAGE
+      4:
+        UUID: 00000000-0000-0002-0000-000000000002
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 3.0
+        Slot: head
+        Operation: ADD_NUMBER
+    Enchantments:
+      Binding Curse: 1
+      Vanishing Curse: 1
+
+Potion effects:
+  1:
+    Type: Invisibility
+    Level: 0
+    Duration: 1.95
+    Ambient: false
+    Particles: true

@@ -3,5 +3,4 @@ worlds:
   lobby:
     portalgoesto: {}
   world:
-    portalgoesto:
-      NETHER: world_nether
+    portalgoesto: {}

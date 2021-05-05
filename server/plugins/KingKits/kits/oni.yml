@@ -1,0 +1,175 @@
+Name: oni
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 30.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Ghast Tear
+    Name: 邪悪なる悪の力
+    Repair cost: 7
+    Attributes:
+      0:
+        UUID: 00000000-0005-f256-0000-000000008250
+        Name: generic.movementSpeed
+        Type: generic.movementSpeed
+        Amount: 0.3
+        Slot: offhand
+        Operation: MULTIPLY_PERCENTAGE
+      1:
+        UUID: 00000000-0000-3441-0000-00000006c29e
+        Name: generic.attackDamage
+        Type: generic.attackDamage
+        Amount: 3.0
+        Slot: mainhand
+        Operation: ADD_NUMBER
+      2:
+        UUID: 00000000-000e-eb53-0000-00000008f727
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 7.0
+        Slot: mainhand
+        Operation: ADD_NUMBER
+      3:
+        UUID: 00000000-000b-2594-0000-0000000c16e9
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 7.0
+        Slot: offhand
+        Operation: ADD_NUMBER
+    Enchantments:
+      Loot Bonus Blocks: 3
+      Arrow Infinite: 1
+      Durability: 3
+      Vanishing Curse: 1
+  Slot 1:
+    Type: Potion
+    Potion:
+      Type: Slow Falling
+      Extended: false
+      Upgraded: false
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 2:
+    Type: Potion
+    Potion:
+      Type: Jump
+      Extended: false
+      Upgraded: true
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 3:
+    Type: Potion
+    Potion:
+      Type: Jump
+      Extended: false
+      Upgraded: true
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 4:
+    Type: Splash Potion
+    Potion:
+      Type: Slowness
+      Extended: false
+      Upgraded: false
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 5:
+    Type: Splash Potion
+    Potion:
+      Type: Slowness
+      Extended: false
+      Upgraded: false
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 6:
+    Type: Splash Potion
+    Potion:
+      Type: Poison
+      Extended: false
+      Upgraded: false
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 7:
+    Type: Splash Potion
+    Potion:
+      Type: Poison
+      Extended: false
+      Upgraded: false
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 8:
+    Type: Golden Carrot
+    Amount: 64
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+
+Armour:
+  Helmet:
+    Type: Wither Skeleton Skull
+    Name: 鬼の頭
+    Repair cost: 3
+    Attributes:
+      0:
+        UUID: 00000000-0008-ef39-0000-000000093be6
+        Name: generic.maxHealth
+        Type: generic.maxHealth
+        Amount: 10.0
+        Slot: head
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-000e-6e11-0000-00000005d7ed
+        Name: generic.movementSpeed
+        Type: generic.movementSpeed
+        Amount: 0.2
+        Slot: head
+        Operation: MULTIPLY_PERCENTAGE
+      2:
+        UUID: 00000000-0002-79db-0000-0000000d5a5c
+        Name: generic.attackDamage
+        Type: generic.attackDamage
+        Amount: 3.0
+        Slot: head
+        Operation: ADD_NUMBER
+      3:
+        UUID: 00000000-000b-738a-0000-0000000bd546
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 5.0
+        Slot: head
+        Operation: ADD_NUMBER
+    Enchantments:
+      Binding Curse: 1
+      Vanishing Curse: 1
+
+Potion effects: {}

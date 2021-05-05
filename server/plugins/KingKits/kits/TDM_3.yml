@@ -1,0 +1,260 @@
+Name: TDM_3
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Iron Axe
+    Name: 龍殺し
+    Lore:
+    - 高く飛ぶ龍を殺すために作られた槍斧、
+    - 天からの一撃が致命傷となるだろう
+    Repair cost: 1
+    Attributes:
+      0:
+        UUID: 00000000-0000-0001-0000-000000000002
+        Name: generic.knockbackResistance
+        Type: generic.knockbackResistance
+        Amount: 0.8
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+      1:
+        UUID: 00000000-0000-0001-0000-000000000001
+        Name: generic.movementSpeed
+        Type: generic.movementSpeed
+        Amount: -0.7
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+      2:
+        UUID: 00000000-0000-0001-0000-000000000004
+        Name: generic.attackSpeed
+        Type: generic.attackSpeed
+        Amount: -0.9
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+      3:
+        UUID: 00000000-0000-0001-0000-000000000003
+        Name: generic.attackDamage
+        Type: generic.attackDamage
+        Amount: 16.0
+        Slot: mainhand
+        Operation: ADD_NUMBER
+    Enchantments:
+      Dig Speed: 5
+      Durability: 10
+      Vanishing Curse: 1
+  Slot 1:
+    Type: Potion
+    Potion:
+      Type: Strength
+      Extended: false
+      Upgraded: false
+  Slot 2:
+    Type: Potion
+    Name: スターダイバー
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Speed
+        Level: 1
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Jump
+        Level: 9
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Night Vision
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 3:
+    Type: Potion
+    Name: スターダイバー
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Speed
+        Level: 1
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Jump
+        Level: 9
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Night Vision
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 4:
+    Type: Potion
+    Name: スターダイバー
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Speed
+        Level: 1
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Jump
+        Level: 9
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Night Vision
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 5:
+    Type: Potion
+    Name: スターダイバー
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Speed
+        Level: 1
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Jump
+        Level: 9
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Night Vision
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 6:
+    Type: Potion
+    Name: スターダイバー
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Speed
+        Level: 1
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Jump
+        Level: 9
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Night Vision
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 7:
+    Type: Bread
+    Amount: 8
+  Slot 8:
+    Type: Golden Apple
+  Slot 9:
+    Type: Elytra
+    Durability: 382
+
+Armour:
+  Helmet:
+    Type: Chainmail Helmet
+    Repair cost: 15
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+      Vanishing Curse: 1
+  Chestplate:
+    Type: Chainmail Chestplate
+    Repair cost: 7
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+      Vanishing Curse: 1
+  Leggings:
+    Type: Chainmail Leggings
+    Repair cost: 7
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+      Vanishing Curse: 1
+  Boots:
+    Type: Chainmail Boots
+    Repair cost: 15
+    Enchantments:
+      Protection Fall: 4
+      Protection Environmental: 2
+      Durability: 2
+      Vanishing Curse: 1
+
+Potion effects: {}

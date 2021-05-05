@@ -1,0 +1,95 @@
+Name: list
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 9:
+    Type: Elytra
+  Slot 10:
+    Type: Iron Sword
+    Repair cost: 3
+    Enchantments:
+      Damage All: 3
+  Slot 11:
+    Type: Bow
+    Repair cost: 3
+    Enchantments:
+      Arrow Infinite: 1
+      Arrow Damage: 2
+  Slot 12:
+    Type: Arrow
+  Slot 13:
+    Type: Golden Apple
+  Slot 14:
+    Type: Potion
+    Potion:
+      Type: Invisibility
+      Extended: false
+      Upgraded: false
+  Slot 15:
+    Type: Potion
+    Potion:
+      Type: Regen
+      Extended: false
+      Upgraded: false
+  Slot 16:
+    Type: Potion
+    Potion:
+      Type: Instant Heal
+      Extended: false
+      Upgraded: true
+  Slot 17:
+    Type: Bread
+    Amount: 16
+
+Armour:
+  Helmet:
+    Type: Chainmail Helmet
+    Repair cost: 3
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+  Chestplate:
+    Type: Chainmail Chestplate
+    Repair cost: 3
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+  Leggings:
+    Type: Chainmail Leggings
+    Repair cost: 3
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+  Boots:
+    Type: Chainmail Boots
+    Repair cost: 7
+    Enchantments:
+      Protection Fall: 4
+      Protection Environmental: 2
+      Durability: 2
+
+Potion effects: {}

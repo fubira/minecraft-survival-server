@@ -248,7 +248,8 @@ on craft of any bed:
 # TNT強化
 
 on explosion:
-  entity is tnt:
+  set {_entity} to entity
+  if entity is primed tnt:
     if {rule_enable_strongtnt} is 1:
       make an explosion with power 6 at entity
 
@@ -271,13 +272,18 @@ on rightclick:
         cancel event
 
 #
-# エッグボム・エンチャントボトルボム  
+# エッグボム・エンチャントボトルボム
+
 on projectile hit:
+  set {_projectile} to projectile
   if {rule_enable_eggbomb} is 1:
-    if projectile is bottle of enchanting:
-      create explosion of power 3 at the projectile 
-    if projectile is egg:
+    if "%{_projectile}%" is "egg":
       create explosion of power 1 at the projectile 
+
+    if "%{_projectile}%" is "bottleof enchanting":
+      create explosion of power 3 at the projectile
+
+
 
 
 #

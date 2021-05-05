@@ -16,7 +16,7 @@ backup:
   localfs:
     enabled: true
     destinationfolders:
-    - /mnt/backup/survival
+    - /backup/survival
     worlds:
     - '*'
     MaxNumberOfWorldsBackups: 60

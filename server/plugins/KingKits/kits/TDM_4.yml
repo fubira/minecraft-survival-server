@@ -1,0 +1,353 @@
+Name: TDM_4
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Diamond Sword
+    Name: 神武【双剣】
+    Repair cost: 1
+    Attributes:
+      0:
+        UUID: 00000000-0000-0001-0000-000000000005
+        Name: generic.knockbackResistance
+        Type: generic.knockbackResistance
+        Amount: 1.0
+        Slot: mainhand
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-0000-0006-0000-000000000004
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 2.0
+        Slot: offhand
+        Operation: ADD_NUMBER
+      2:
+        UUID: 00000000-0000-0001-0000-000000000002
+        Name: generic.movementSpeed
+        Type: generic.movementSpeed
+        Amount: -0.1
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+      3:
+        UUID: 00000000-0000-0006-0000-000000000003
+        Name: generic.movementSpeed
+        Type: generic.movementSpeed
+        Amount: 0.1
+        Slot: offhand
+        Operation: MULTIPLY_PERCENTAGE
+      4:
+        UUID: 00000000-0000-0001-0000-000000000006
+        Name: generic.attackSpeed
+        Type: generic.attackSpeed
+        Amount: -0.6
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+      5:
+        UUID: 00000000-0000-0001-0000-000000000001
+        Name: generic.attackDamage
+        Type: generic.attackDamage
+        Amount: 11.0
+        Slot: mainhand
+        Operation: ADD_NUMBER
+    Enchantments:
+      Durability: 10
+      Vanishing Curse: 1
+  Slot 1:
+    Type: Iron Sword
+    Name: 神無【双剣】
+    Repair cost: 1
+    Attributes:
+      0:
+        UUID: 00000000-0000-0006-0000-000000000004
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 3.0
+        Slot: offhand
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-0000-0001-0000-000000000001
+        Name: generic.movementSpeed
+        Type: generic.movementSpeed
+        Amount: 0.3
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+      2:
+        UUID: 00000000-0000-0006-0000-000000000002
+        Name: generic.movementSpeed
+        Type: generic.movementSpeed
+        Amount: 0.15
+        Slot: offhand
+        Operation: MULTIPLY_PERCENTAGE
+      3:
+        UUID: 00000000-0000-0001-0000-000000000005
+        Name: generic.attackSpeed
+        Type: generic.attackSpeed
+        Amount: -0.6
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+      4:
+        UUID: 00000000-0000-0001-0000-000000000003
+        Name: generic.attackDamage
+        Type: generic.attackDamage
+        Amount: 6.0
+        Slot: mainhand
+        Operation: ADD_NUMBER
+    Enchantments:
+      Fire Aspect: 2
+      Knockback: 4
+      Vanishing Curse: 1
+  Slot 2:
+    Type: Potion
+    Potion:
+      Type: Strength
+      Extended: true
+      Upgraded: false
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 3:
+    Type: Potion
+    Name: 騙し討ち
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Speed
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Jump
+        Level: 1
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Invisibility
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Night Vision
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 4:
+    Type: Potion
+    Name: 騙し討ち
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Speed
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Jump
+        Level: 1
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Invisibility
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Night Vision
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 5:
+    Type: Potion
+    Name: 騙し討ち
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Speed
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Jump
+        Level: 1
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Invisibility
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Night Vision
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 6:
+    Type: Potion
+    Name: 騙し討ち
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Speed
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Jump
+        Level: 1
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Invisibility
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Night Vision
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 7:
+    Type: Potion
+    Name: 騙し討ち
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Speed
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Jump
+        Level: 1
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Invisibility
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Night Vision
+        Level: 0
+        Duration: 60.0
+        Ambient: false
+        Particles: true
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 8:
+    Type: Ender Pearl
+    Amount: 2
+    Repair cost: 1
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 9:
+    Type: Elytra
+    Durability: 382
+  Slot 10:
+    Type: Golden Apple
+  Slot 11:
+    Type: Bread
+    Amount: 8
+
+Armour:
+  Helmet:
+    Type: Chainmail Helmet
+    Repair cost: 15
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+      Vanishing Curse: 1
+  Chestplate:
+    Type: Chainmail Chestplate
+    Repair cost: 7
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+      Vanishing Curse: 1
+  Leggings:
+    Type: Chainmail Leggings
+    Repair cost: 7
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+      Vanishing Curse: 1
+  Boots:
+    Type: Chainmail Boots
+    Repair cost: 15
+    Enchantments:
+      Protection Fall: 4
+      Protection Environmental: 2
+      Durability: 2
+      Vanishing Curse: 1
+
+Potion effects: {}

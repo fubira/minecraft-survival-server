@@ -1,0 +1,137 @@
+Name: fisherman
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Trident
+    Attributes:
+      0:
+        UUID: 00000000-0000-0001-0000-000000000001
+        Name: generic.movementSpeed
+        Type: generic.movementSpeed
+        Amount: 0.1
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+    Enchantments:
+      Impaling: 7
+      Riptide: 5
+      Durability: 3
+  Slot 1:
+    Type: Fishing Rod
+    Repair cost: 3
+    Enchantments:
+      Luck: 3
+      Lure: 3
+  Slot 9:
+    Type: Elytra
+  Slot 10:
+    Type: Bow
+    Repair cost: 7
+    Enchantments:
+      Arrow Infinite: 1
+      Arrow Damage: 3
+  Slot 11:
+    Type: Tipped Arrow
+    Amount: 16
+    Potion:
+      Type: Instant Damage
+      Extended: false
+      Upgraded: false
+  Slot 12:
+    Type: Arrow
+  Slot 13:
+    Type: Golden Apple
+  Slot 14:
+    Type: Potion
+    Potion:
+      Type: Instant Heal
+      Extended: false
+      Upgraded: true
+  Slot 15:
+    Type: Potion
+    Potion:
+      Type: Regen
+      Extended: false
+      Upgraded: false
+  Slot 16:
+    Type: Potion
+    Potion:
+      Type: Speed
+      Extended: false
+      Upgraded: true
+  Slot 17:
+    Type: Cooked Cod
+    Amount: 48
+  Slot 20:
+    Type: Tropical Fish Bucket
+  Slot 21:
+    Type: Cod Bucket
+  Slot 22:
+    Type: Salmon Bucket
+  Slot 23:
+    Type: Pufferfish Bucket
+  Slot 24:
+    Type: Iron Ore
+    Amount: 6
+  Slot 25:
+    Type: Cobblestone
+    Amount: 32
+  Slot 26:
+    Type: Oak Log
+    Amount: 32
+
+Armour:
+  Helmet:
+    Type: Chainmail Helmet
+    Repair cost: 15
+    Enchantments:
+      Water Worker: 1
+      Protection Environmental: 2
+      Oxygen: 3
+      Durability: 2
+  Chestplate:
+    Type: Chainmail Chestplate
+    Repair cost: 3
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+  Leggings:
+    Type: Chainmail Leggings
+    Repair cost: 3
+    Enchantments:
+      Protection Environmental: 2
+      Durability: 2
+  Boots:
+    Type: Chainmail Boots
+    Repair cost: 15
+    Enchantments:
+      Depth Strider: 3
+      Protection Fall: 4
+      Protection Environmental: 2
+      Durability: 2
+
+Potion effects: {}

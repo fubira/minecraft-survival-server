@@ -27,102 +27,84 @@ GUI:
 
 Items:
   Slot 0:
+    Type: Lead
+    Amount: 8
+  Slot 1:
+    Type: Saddle
+  Slot 2:
+    Type: Saddle
+  Slot 3:
+    Type: Iron Horse Armor
+  Slot 4:
+    Type: Iron Horse Armor
+  Slot 5:
+    Type: Iron Boots
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Slot 6:
+    Type: Iron Leggings
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Slot 7:
+    Type: Iron Chestplate
+    Enchantments:
+      Protection Projectile: 1
+      Protection Environmental: 2
+      Durability: 1
+  Slot 8:
+    Type: Iron Helmet
+    Enchantments:
+      Protection Environmental: 1
+      Durability: 1
+  Slot 20:
+    Type: Cooked Beef
+    Amount: 32
+  Slot 21:
+    Type: Bow
+    Name: 騎士の弓
+    Enchantments:
+      Arrow Damage: 1
+  Slot 22:
+    Type: Shield
+    Name: 騎士の盾
+    Block state: {}
+  Slot 23:
     Type: Iron Sword
     Name: 騎士の剣
     Enchantments:
       Damage All: 3
       Durability: 2
-  Slot 1:
-    Type: Shield
-    Name: 騎士の盾
-    Block state:
-      Base:
-        Red: 25
-        Green: 25
-        Blue: 25
-  Slot 2:
-    Type: Bow
-    Name: 騎士の弓
-    Enchantments:
-      Arrow Damage: 1
-  Slot 3:
-    Type: Cooked Beef
-    Amount: 32
-  Slot 4:
-    Type: Golden Apple
-    Durability: 1
-  Slot 6:
-    Type: Sign
-    Amount: 16
-  Slot 7:
-    Type: Compass
-  Slot 8:
-    Type: Book
-    Name: 騎士の心得
-  Slot 9:
-    Type: Iron Helmet
-    Enchantments:
-      Protection Environmental: 1
-      Durability: 1
-  Slot 10:
-    Type: Iron Chestplate
-    Enchantments:
-      Protection Environmental: 2
-      Protection Projectile: 1
-      Durability: 1
-  Slot 11:
-    Type: Iron Leggings
-    Enchantments:
-      Protection Environmental: 1
-      Durability: 1
-  Slot 12:
-    Type: Iron Boots
-    Enchantments:
-      Protection Environmental: 1
-      Durability: 1
-  Slot 13:
-    Type: Torch
-    Amount: 64
-  Slot 14:
-    Type: Emerald
-    Amount: 16
-  Slot 17:
-    Type: Note Block
-    Amount: 16
-  Slot 18:
-    Type: Monster Egg
-    Egg: Horse
-  Slot 19:
-    Type: Iron Barding
-  Slot 20:
-    Type: Iron Barding
-  Slot 21:
-    Type: Saddle
-  Slot 22:
-    Type: Saddle
-  Slot 23:
-    Type: Leash
-    Amount: 8
   Slot 24:
-    Type: Name Tag
-    Amount: 2
+    Type: Potion
+    Potion:
+      Type: Strength
+      Extended: false
+      Upgraded: false
   Slot 25:
-    Type: Fence
-    Amount: 16
+    Type: Potion
+    Potion:
+      Type: Strength
+      Extended: false
+      Upgraded: false
   Slot 26:
-    Type: Arrow
-    Amount: 64
+    Type: Potion
+    Potion:
+      Type: Regen
+      Extended: false
+      Upgraded: true
   Slot 27:
     Type: Potion
     Potion:
-      Type: Instant Heal
-      Extended: false
+      Type: Regen
+      Extended: true
       Upgraded: false
   Slot 28:
     Type: Potion
     Potion:
-      Type: Instant Heal
-      Extended: false
+      Type: Regen
+      Extended: true
       Upgraded: false
   Slot 29:
     Type: Potion
@@ -139,33 +121,24 @@ Items:
   Slot 31:
     Type: Potion
     Potion:
-      Type: Regen
-      Extended: true
+      Type: Instant Heal
+      Extended: false
       Upgraded: false
   Slot 32:
     Type: Potion
     Potion:
-      Type: Regen
-      Extended: true
+      Type: Instant Heal
+      Extended: false
       Upgraded: false
   Slot 33:
-    Type: Potion
-    Potion:
-      Type: Regen
-      Extended: false
-      Upgraded: true
+    Type: Arrow
+    Amount: 64
   Slot 34:
-    Type: Potion
-    Potion:
-      Type: Strength
-      Extended: false
-      Upgraded: false
+    Type: Oak Fence
+    Amount: 16
   Slot 35:
-    Type: Potion
-    Potion:
-      Type: Strength
-      Extended: false
-      Upgraded: false
+    Type: Name Tag
+    Amount: 2
 
 Armour: {}
 

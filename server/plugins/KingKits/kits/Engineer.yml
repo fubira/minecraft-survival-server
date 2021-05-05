@@ -1,0 +1,100 @@
+Name: Engineer
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 9:
+    Type: Diamond Sword
+  Slot 10:
+    Type: Bow
+  Slot 11:
+    Type: Arrow
+    Amount: 8
+  Slot 12:
+    Type: Elytra
+  Slot 13:
+    Type: Trident
+  Slot 14:
+    Type: Conduit
+  Slot 15:
+    Type: Iron Ore
+    Amount: 64
+  Slot 16:
+    Type: Iron Ore
+    Amount: 64
+  Slot 18:
+    Type: Tnt
+    Amount: 64
+  Slot 19:
+    Type: Tnt
+    Amount: 64
+  Slot 20:
+    Type: Redstone Block
+    Amount: 32
+  Slot 21:
+    Type: Dispenser
+    Amount: 16
+  Slot 22:
+    Type: Slime Block
+    Amount: 64
+  Slot 23:
+    Type: Magma Block
+    Amount: 32
+  Slot 24:
+    Type: Soul Sand
+    Amount: 32
+  Slot 25:
+    Type: Sponge
+    Amount: 4
+  Slot 27:
+    Type: Evoker Spawn Egg
+    Amount: 2
+  Slot 28:
+    Type: Magma Cream
+    Amount: 16
+  Slot 29:
+    Type: Fermented Spider Eye
+    Amount: 16
+  Slot 30:
+    Type: Ghast Tear
+    Amount: 16
+  Slot 31:
+    Type: Quartz
+    Amount: 64
+  Slot 32:
+    Type: Experience Bottle
+    Amount: 8
+    Name: '[爆発物] M67 破片手榴弾 [危険]'
+  Slot 33:
+    Type: Flint
+    Amount: 64
+  Slot 34:
+    Type: Feather
+    Amount: 60
+
+Armour: {}
+
+Potion effects: {}

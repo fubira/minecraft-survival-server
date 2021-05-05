@@ -1,0 +1,1894 @@
+Name: '049'
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 720.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Shears
+    Repair cost: 1
+    Attributes:
+      0:
+        UUID: 00000000-0000-0001-0000-000000000001
+        Name: generic.movementSpeed
+        Type: generic.movementSpeed
+        Amount: -0.1
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+      1:
+        UUID: 00000000-0000-0001-0000-000000000001
+        Name: generic.attackDamage
+        Type: generic.attackDamage
+        Amount: 12.5
+        Slot: mainhand
+        Operation: ADD_NUMBER
+      2:
+        UUID: 00000000-0000-0001-0000-000000000001
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 3.0
+        Slot: mainhand
+        Operation: ADD_NUMBER
+      3:
+        UUID: 00000000-0000-0001-0000-000000000001
+        Name: generic.attackSpeed
+        Type: generic.attackSpeed
+        Amount: 1.0
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+    Enchantments:
+      Vanishing Curse: 1
+  Slot 1:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 2:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 3:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 4:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 5:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 6:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 7:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 8:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 9:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 10:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 11:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 12:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 13:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 14:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 15:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 16:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 17:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 18:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 19:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 20:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 21:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 22:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 23:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 24:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 25:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 26:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 27:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 28:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 29:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 30:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 31:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 32:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 33:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 34:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+  Slot 35:
+    Type: Splash Potion
+    Name: 治療薬
+    Potion:
+      Type: Uncraftable
+      Extended: false
+      Upgraded: false
+    Custom potion effects:
+      Potion 1:
+        Type: Slow Digging
+        Level: 2
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 2:
+        Type: Confusion
+        Level: 0
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 3:
+        Type: Blindness
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 4:
+        Type: Hunger
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 5:
+        Type: Weakness
+        Level: 1
+        Duration: 30.0
+        Ambient: false
+        Particles: true
+      Potion 6:
+        Type: Poison
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+      Potion 7:
+        Type: Wither
+        Level: 0
+        Duration: 10.0
+        Ambient: false
+        Particles: true
+
+Armour:
+  Helmet:
+    Type: Dragon Head
+    Name: The Plague Doctor
+    Repair cost: 1
+    Attributes:
+      0:
+        UUID: 00000000-0000-0002-0000-000000000001
+        Name: generic.maxHealth
+        Type: generic.maxHealth
+        Amount: 700.0
+        Slot: head
+        Operation: ADD_NUMBER
+      1:
+        UUID: 00000000-0000-0002-0000-000000000002
+        Name: generic.movementSpeed
+        Type: generic.movementSpeed
+        Amount: -0.1
+        Slot: head
+        Operation: MULTIPLY_PERCENTAGE
+    Enchantments:
+      Binding Curse: 1
+      Vanishing Curse: 1
+  Chestplate:
+    Type: Leather Chestplate
+    Dye:
+      Red: 94
+      Green: 94
+      Blue: 94
+    Attributes:
+      0:
+        UUID: 00000000-0000-0003-0000-000000000001
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 1.0
+        Slot: chest
+        Operation: ADD_NUMBER
+    Enchantments:
+      Binding Curse: 1
+      Protection Environmental: 1
+      Vanishing Curse: 1
+  Leggings:
+    Type: Leather Leggings
+    Dye:
+      Red: 94
+      Green: 94
+      Blue: 94
+    Attributes:
+      0:
+        UUID: 00000000-0000-0004-0000-000000000001
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 1.0
+        Slot: legs
+        Operation: ADD_NUMBER
+    Enchantments:
+      Binding Curse: 1
+      Protection Environmental: 1
+      Vanishing Curse: 1
+  Boots:
+    Type: Leather Boots
+    Dye:
+      Red: 94
+      Green: 94
+      Blue: 94
+    Repair cost: 3
+    Attributes:
+      0:
+        UUID: 00000000-0000-0005-0000-000000000001
+        Name: generic.armor
+        Type: generic.armor
+        Amount: 1.0
+        Slot: feet
+        Operation: ADD_NUMBER
+    Enchantments:
+      Binding Curse: 1
+      Protection Fall: 4
+      Protection Environmental: 1
+      Vanishing Curse: 1
+
+Potion effects: {}

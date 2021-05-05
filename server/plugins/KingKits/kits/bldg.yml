@@ -1,0 +1,130 @@
+Name: bldg
+
+Command alias: false
+
+Description: []
+
+Cost: 0.0
+
+Cooldown: 0.0
+
+Max health: 20.0
+
+Walk speed: 0.2
+
+Auto-unlock score: -1
+
+Breakable items: true
+
+Commands: []
+
+Killstreak commands: {}
+
+GUI:
+  Position: -1
+  Item:
+    Type: Diamond Sword
+
+Items:
+  Slot 0:
+    Type: Iron Sword
+    Name: 日本刀
+    Enchantments:
+      Damage All: 7
+  Slot 8:
+    Type: Bow
+    Name: ベレッタM92FS
+    Attributes:
+      0:
+        UUID: 00000000-0008-2ff0-0000-0000000c5cb7
+        Name: generic.movementSpeed
+        Type: generic.movementSpeed
+        Amount: -0.1
+        Slot: mainhand
+        Operation: MULTIPLY_PERCENTAGE
+    Enchantments:
+      Arrow Infinite: 1
+      Arrow Damage: 3
+  Slot 9:
+    Type: Diamond Helmet
+    Repair cost: 1
+    Enchantments:
+      Durability: 1
+  Slot 10:
+    Type: Diamond Chestplate
+    Repair cost: 1
+    Enchantments:
+      Durability: 1
+  Slot 11:
+    Type: Diamond Leggings
+    Repair cost: 1
+    Enchantments:
+      Durability: 1
+  Slot 12:
+    Type: Diamond Boots
+    Repair cost: 3
+    Enchantments:
+      Protection Fall: 4
+      Durability: 1
+  Slot 13:
+    Type: Glass
+    Amount: 16
+  Slot 14:
+    Type: Bread
+    Amount: 32
+  Slot 15:
+    Type: Potion
+    Potion:
+      Type: Instant Heal
+      Extended: false
+      Upgraded: true
+  Slot 16:
+    Type: Potion
+    Potion:
+      Type: Regen
+      Extended: false
+      Upgraded: false
+  Slot 17:
+    Type: Arrow
+  Slot 18:
+    Type: Elytra
+    Durability: 289
+  Slot 19:
+    Type: Tnt
+    Amount: 48
+  Slot 20:
+    Type: Flint And Steel
+    Name: チャッカマン
+    Repair cost: 3
+    Enchantments:
+      Arrow Fire: 1
+      Durability: 3
+  Slot 21:
+    Type: Trident
+    Repair cost: 1
+    Enchantments:
+      Riptide: 3
+  Slot 22:
+    Type: Golden Apple
+  Slot 23:
+    Type: Ender Pearl
+    Amount: 16
+  Slot 24:
+    Type: Potion
+    Potion:
+      Type: Turtle Master
+      Extended: false
+      Upgraded: true
+  Slot 25:
+    Type: Potion
+    Potion:
+      Type: Slow Falling
+      Extended: false
+      Upgraded: false
+  Slot 26:
+    Type: Firework Rocket
+    Amount: 48
+
+Armour: {}
+
+Potion effects: {}

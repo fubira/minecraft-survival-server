@@ -1,4 +1,4 @@
-Name: police
+Name: Police
 
 Command alias: false
 
@@ -84,8 +84,8 @@ Armour:
       Green: 153
       Blue: 216
     Enchantments:
-      Protection Environmental: 3
       Protection Projectile: 1
+      Protection Environmental: 3
   Leggings:
     Type: Leather Leggings
     Name: 制服
