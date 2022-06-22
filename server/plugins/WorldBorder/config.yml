@@ -13,11 +13,14 @@ player-killed-bad-spawn: false
 deny-enderpearl: true
 fill-autosave-frequency: 30
 fill-memory-tolerance: 500
-bypass-list-uuids: []
+bypass-list-uuids:
+- 05f677fe-cfc8-4e01-b4ff-ba10877bb0ab
 prevent-block-place: false
 prevent-mob-spawn: false
 dynmap-border-hideByDefault: false
 dynmap-border-priority: 0
+dynmap-border-layer-label: WorldBorder
+no-players-toggle: false
 worlds:
   world_nether:
     x: 0.3087223961785133

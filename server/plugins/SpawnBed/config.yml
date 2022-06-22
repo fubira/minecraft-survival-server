@@ -29,19 +29,19 @@ goblin1816:
   Z: 201
   World: world
 torolavo:
-  X: 344
-  Y: 66
-  Z: 168
+  X: -375
+  Y: 65
+  Z: -423
   World: world
 fubira:
-  X: -253
-  Y: 72
-  Z: 213
+  X: -236
+  Y: 60
+  Z: 375
   World: world
 tsumasakidachi:
-  X: -237
-  Y: 109
-  Z: 224
+  X: -375
+  Y: 65
+  Z: -423
   World: world
 wanwanchan:
   X: 344
@@ -49,9 +49,9 @@ wanwanchan:
   Z: 168
   World: world
 dokurokamen:
-  X: -268
-  Y: 66
-  Z: 227
+  X: -375
+  Y: 65
+  Z: -423
   World: world
 kamesa:
   X: 225
@@ -74,9 +74,9 @@ vyxyvy:
   Z: -117
   World: world
 nekonekokun:
-  X: 7
-  Y: 90
-  Z: -402
+  X: -376
+  Y: 65
+  Z: -423
   World: world
 terazo_block:
   X: 8

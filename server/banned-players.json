@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "uuid": "4c9d8f38-f865-46ce-a198-ee1ba0fdc6ba",
+    "name": "tnbtrooper",
+    "created": "2021-11-13 01:27:08 +0900",
+    "source": "Server",
+    "expires": "forever",
+    "reason": "Banned by an operator."
+  }
+]
